@@ -1,7 +1,6 @@
 #ifndef LIVRO_H
 #define LIVRO_H
 
-#include "Autor.h"
 #include <string>
 
 class Livro {
@@ -9,12 +8,12 @@ class Livro {
     std::string titulo;
     int anoPublicacao;
     std::string editora;
-    Autor autor;
+    std::string autor;
     std::string genero;
   
   public:
     Livro();
-    Livro(std::string titulo, int anoPublicacao, std::string editora, Autor autor,
+    Livro(std::string titulo, int anoPublicacao, std::string editora, std::string autor,
           std::string genero);
     ~Livro();
   
@@ -24,10 +23,12 @@ class Livro {
     void setAnoPublicacao(int ano);
     std::string getEditora();
     void setEditora(std::string editora);
-    Autor getAutor();
-    void setAutor();
+    std::string getAutor();
+    void setAutor(std::string autor);
     std::string getGenero();
     void setGenero(std::string genero);
 };
+
+
 
 #endif

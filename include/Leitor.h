@@ -1,6 +1,7 @@
 #ifndef Leitor_H
 #define Leitor_H
 
+#include <iostream>
 #include "Livro.h"
 #include "Pessoa.h"
 
@@ -13,7 +14,7 @@ class Leitor : public Pessoa {
 
   public:
     Leitor();
-    Leitor(Livro livro, int dia, int mes, int ano);
+    Leitor(std::string nome, int rg, Livro livro, int dia, int mes, int ano);
     ~Leitor();
   
     Livro getLivro();
@@ -25,7 +26,9 @@ class Leitor : public Pessoa {
     int getAno();
     void setAno(int ano);
   
-    void printDetail() override;
+    void printDetails() override;
 };
+
+
 
 #endif
