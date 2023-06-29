@@ -18,6 +18,14 @@ int Autor::getAnoNascimento() { return anoNascimento; }
 
 void Autor::setAnoNascimento(int ano) { this->anoNascimento = ano; }
 
+std::string Autor::toString(){
+  
+  std::string retorno = this->nome + ";" + std::to_string(this->rg) + ";" 
+        + this->nacionalidade + ";" + std::to_string(this->anoNascimento)+"\n";
+
+  return retorno;
+}
+
 void Autor::printDetails() {
   std::cout<<"Nome: "<<nome<<"\nNatural de: "<<nacionalidade;
 }

@@ -2,47 +2,34 @@
 
 Leitor::Leitor(){}
 
-Leitor::Leitor(std::string nome, int rg, Livro livro, int dia, int mes, int ano) : Pessoa(nome, rg){
-  this->livro = livro;
-  this->dia = dia;
-  this->mes = mes;
-  this->ano = ano;
+Leitor::Leitor(std::string nome, int rg) : Pessoa(nome, rg){
+  this->livro = "Nenhum livro alugado";
+  this->dataAluguel = "00/00/0000";
 }
 
 Leitor::~Leitor(){}
 
-Livro Leitor::getLivro(){
+std::string Leitor::getLivro(){
   return livro;
 }
 
-void Leitor::setLivro(Livro livro){
+void Leitor::setLivro(std::string livro){
   this->livro = livro;
 }
 
-int Leitor::getDia(){
-  return dia;
+std::string Leitor::getDataALuguel(){
+  return dataAluguel;
 }
 
-void Leitor::setDia(int dia){
-  this->dia = dia;
+void Leitor::setDataAluguel(std::string data){
+  this->dataAluguel = data;
 }
 
-int Leitor::getMes(){
-  return mes;
-}
-
-void Leitor::setMes(int mes){
-  this->mes = mes;
-}
-
-int Leitor::getAno(){
-  return ano;
-}
-
-void Leitor::setAno(int ano){
-  this->ano = ano;
+std::string Leitor::toString(){
+  std::string retorno = this->nome + ";" + std::to_string(this->rg) + ";" + dataAluguel + ";" + livro + "\n";
+  return retorno;
 }
 
 void Leitor::printDetails(){
-  std::cout<<"Nome: "<<getNome()<<"\nData do aluguel: "<<getDia()<<"/"<<getMes()<<"/"<<getAno()<<"\nLivro alugado: "<<livro.getTitulo()<<std::endl;
+  std::cout<<"Nome: "<<getNome()<<"\nData do aluguel: "<<getDataALuguel()<<"\nLivro alugado: "<<getLivro()<<std::endl;
 }

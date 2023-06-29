@@ -27,6 +27,8 @@ class Livro {
     void setAutor(std::string autor);
     std::string getGenero();
     void setGenero(std::string genero);
+
+    std::string toString();
 };
 
 
