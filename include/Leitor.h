@@ -7,25 +7,21 @@
 
 class Leitor : public Pessoa {
   private:
-    Livro livro;
-    int dia; // dia que alugou o livro
-    int mes;
-    int ano;
+    std::string livro;
+    std::string dataAluguel;
 
   public:
     Leitor();
-    Leitor(std::string nome, int rg, Livro livro, int dia, int mes, int ano);
+    Leitor(std::string nome, int rg);
     ~Leitor();
   
-    Livro getLivro();
-    void setLivro(Livro livro);
-    int getDia();
-    void setDia(int dia);
-    int getMes();
-    void setMes(int mes);
-    int getAno();
-    void setAno(int ano);
+    std::string getLivro();
+    void setLivro(std::string livro);
+    std::string getDataALuguel();
+    void setDataAluguel(std::string data);
+    
   
+    std::string toString();
     void printDetails() override;
 };
 

@@ -52,3 +52,9 @@ std::string Livro::getGenero(){
 void Livro::setGenero(std::string genero){
   this->genero = genero;
 }
+
+std::string Livro::toString(){
+  std::string retorno = this->titulo + ";" + std::to_string(this->anoPublicacao) + ";" + this->editora + ";" + this->autor + ";" + this->genero + "\n";
+
+  return retorno;
+}

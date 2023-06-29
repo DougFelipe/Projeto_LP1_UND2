@@ -16,6 +16,7 @@ class Editora{
     void setNome(std::string nome);
     int getAnoFundacao();
     void setAnoFundacao(int ano);
+    std::string toString();
 };
 
 

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "../include/Autor.h"
 #include "../include/Leitor.h"
 #include "../include/Livro.h"
@@ -6,23 +7,117 @@
 
 template <class E>
 void cadastrar(E obj, std::string nomeArquivo){
+      std::ofstream arquivo;
+        // continua a escrita sem apagar o conteudo
+        arquivo.open(nomeArquivo, std::ios::app);
+        if (arquivo.is_open()) {
+            arquivo << obj.toString();
 
+            arquivo.close();
+        }
 }
 
+void escreverAutor(){
+    std::string nome;
+    int rg;
+    std::string nacion;
+    int ano;
+
+    std::cout<<"Digite o nome:";
+    std::cin.ignore(); 
+    std::getline(std::cin, nome);
+
+    std::cout<<"Digite o RG:";
+    std::cin>>rg;
+    
+    std::cout<<"Digite onde ele nasceu:";
+    std::cin.ignore(); 
+    std::getline(std::cin, nacion);
+
+    std::cout<<"Digite seu ano de nascimento:";
+    std::cin>>ano;
+
+    Autor autor(nome, rg, nacion, ano);
+    cadastrar(autor, "data/autor.txt");
+}
+
+void escreverLeitor(){
+    std::string nome;
+    int rg;
+
+    std::cout<<"Digite o nome:";
+    std::cin.ignore(); 
+    std::getline(std::cin, nome);
+
+    std::cout<<"Digite o RG:";
+    std::cin>>rg;
+
+    Leitor leitor(nome, rg);
+    cadastrar(leitor, "data/leitor.txt");
+    
+}
+
+void escreverEditora(){
+    std::string nome;
+    int ano;
+
+    std::cout<<"Digite o nome da empresa:";
+    std::cin.ignore(); 
+    std::getline(std::cin, nome);
+
+    std::cout<<"Digite o ano de sua fundacao:";
+    std::cin>>ano;
+
+    Editora editora(nome, ano);
+    cadastrar(editora, "data/editora.txt");
+    
+}
+
+void escrevreLivro(){
+    std::string titulo, autor, editora, genero;
+    int ano;
+
+    std::cout<<"Digite o Titulo do livro:";
+    std::cin.ignore(); 
+    std::getline(std::cin, titulo);
+
+    std::cout<<"Digite o ano do seu lançamento:";
+    std::cin>>ano;
+
+    std::cout<<"Digite o autor do livro:";
+    std::cin.ignore(); 
+    std::getline(std::cin, autor);
+
+    //verifica se existe autor
+
+    std::cout<<"Digite a editora do livro:";
+    std::getline(std::cin, editora);
+
+    //verifica se existe editora
+
+    std::cout<<"Qual o genero do livro:";
+    std::getline(std::cin, genero);
+
+    Livro livro(titulo, ano, editora, autor, genero);
+    cadastrar(livro, "data/livro.txt");
+}
 int main()
 {
-    int mainMenuOp, start;
+    int mainMenuOp;
 
     std::cout << ">>>>>>>> SISTEMA DE GERENCIAMENTO DE BIBLIOTECA <<<<<<<<" << std::endl;
     std::cout << "Digite 1 para: Continuar" << std::endl;
     std::cout << "Pressione qualquer tecla diferente de 1 para sair" << std::endl;
 
-    std::cin >> start;
+    std::cin >> mainMenuOp;
 
-  if (start > 1) return 0; // Encerra o programa se a entrada for diferente de 1
+  if (mainMenuOp != 1){
+    std::cout<<"Voce encerrou o programa!"<<std::endl;
+    return 0; 
+  } // Encerra o programa se a entrada for diferente de 1
 
 
-    do // EM LOOPING ATÉ QUE O USUÁRIO DIGITE 2 PARA SAIR DO PROGRAMA
+    do // EM LOOPING ATÉ QUE O USUÁRIO DIGITE 9 PARA SAIR DO PROGRAMA
     {
     std::cout << ">>>>>>>> MENU DO SISTEMA DE GERENCIAMENTO DE BIBLIOTECA <<<<<<<<\n" << std::endl;
     std::cout << ">>>>>>>>                ESCOLHA UMA OPÇÃO               <<<<<<<<\n" << std::endl;
@@ -52,19 +147,19 @@ int main()
         switch (mainMenuOp)
         {
         case 1:
-            // Lógica para cadastrar livro
+            escrevreLivro();
             break;
 
         case 2:
-            // Lógica para cadastrar editora
+            escreverEditora();
             break;
 
         case 3:
-            // Lógica para cadastrar autor
+            escreverAutor();
             break;
 
         case 4:
-            // Lógica para cadastrar leitor
+            escreverLeitor();
             break;
 
         case 5:
@@ -92,7 +187,7 @@ int main()
                 break;
 
             default:
-                std::cout << "Opção Inválida" << std::endl;
+                std::cout << "Opção Inválida\n" << std::endl;
                 break;
             }
         }
@@ -177,14 +272,14 @@ int main()
         break;
 
         case 9:
-         return 0;
+         std::cout<<"Voce encerrou o programa!"<<std::endl;
          break;
 
         default:
             std::cout << "Opção Inválida" << std::endl;
             break;
         }
-    } while (start < 2);
+    } while (mainMenuOp != 9);
     return 0;
 }
  

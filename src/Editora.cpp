@@ -24,3 +24,8 @@ int Editora::getAnoFundacao(){
 void Editora::setAnoFundacao(int ano){
   this->anoFundacao = ano;
 }
+
+std::string Editora::toString(){
+  std::string retorno = this->nome + ";" + std::to_string(this->anoFundacao) + "\n";
+  return retorno;
+}

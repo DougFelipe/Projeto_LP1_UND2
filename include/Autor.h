@@ -19,7 +19,7 @@ public:
   void setNacionalidade(std::string nacionalidade);
   int getAnoNascimento();
   void setAnoNascimento(int ano);
-
+  std::string toString();
   void printDetails() override;
 };
 
