@@ -1,2 +1,4 @@
 Joao carlos;47478;00/00/0000;Nenhum livro alugado
 Matheus Henrique;789789;00/00/0000;Nenhum livro alugado
+Gabruel;1478;00/00/0000;Nenhum livro alugado
+gab silva;14563;00/00/0000;Nenhum livro alugado
