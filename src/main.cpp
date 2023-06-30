@@ -6,6 +6,7 @@
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);
+    
     int mainMenuOp;
     
     Biblioteca *biblioteca = new Biblioteca();
