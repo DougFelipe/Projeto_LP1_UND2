@@ -58,3 +58,36 @@ std::string Livro::toString(){
 
   return retorno;
 }
+
+Livro* Livro::toModel(std::string linha){
+            size_t pos = 0;
+  
+            // Separando os atributos por ponto vírgula
+            pos = linha.find(";");
+            this->titulo = linha.substr(0, pos);
+            linha.erase(0, pos + 1);
+
+            pos = linha.find(";");
+            this->anoPublicacao = stoi(linha.substr(0, pos));//convert int
+            linha.erase(0, pos + 1);
+
+            pos = linha.find(";");
+            this->editora= linha.substr(0, pos);
+            linha.erase(0, pos + 1);
+
+            pos = linha.find(";");
+            this->autor = linha.substr(0, pos);
+            linha.erase(0, pos + 1);
+            
+            this->genero = linha;
+
+            return this;
+}
+
+void Livro::printDetails(){
+    std::cout<<"Titulo: "<<this->titulo
+    <<"\nAno de publicação: "<<this->anoPublicacao
+    <<"\nAutor: "<<this->autor
+    <<"\nEditora: "<<this->editora
+    <<"\nGenero: "<<this->genero<<std::endl;
+}

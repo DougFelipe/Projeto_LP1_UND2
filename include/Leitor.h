@@ -22,6 +22,7 @@ class Leitor : public Pessoa {
     
   
     std::string toString();
+    Leitor* toModel(std::string linha);
     void printDetails() override;
 };
 

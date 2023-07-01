@@ -26,6 +26,31 @@ std::string Autor::toString(){
   return retorno;
 }
 
+Autor* Autor::toModel(std::string linha){
+    // Separando os atributos por vírgula e imprimindo individualmente
+            size_t pos = 0;
+  
+            // Separando os atributos por ponto vírgula
+            pos = linha.find(";");
+            this->nome = linha.substr(0, pos);
+            linha.erase(0, pos + 1);
+
+            pos = linha.find(";");
+            this->rg = stoi(linha.substr(0, pos));//convert int
+            linha.erase(0, pos + 1);
+
+            pos = linha.find(";");
+            this->nacionalidade = linha.substr(0, pos);
+            linha.erase(0, pos + 1);
+            
+            this->anoNascimento = stoi(linha);
+
+            return this;
+}
+
 void Autor::printDetails() {
-  std::cout<<"Nome: "<<nome<<"\nNatural de: "<<nacionalidade;
+  std::cout<<"Nome: "<<nome
+  <<"\nRG: "<<rg
+  <<"\nNascionalidade: "<<nacionalidade
+  <<"\nNascido no ano de: "<<anoNascimento<<std::endl;
 }
