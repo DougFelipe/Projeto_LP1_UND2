@@ -30,6 +30,32 @@ std::string Leitor::toString(){
   return retorno;
 }
 
+Leitor* Leitor::toModel(std::string linha){
+   // Separando os atributos por vírgula e imprimindo individualmente
+            size_t pos = 0;
+  
+            // Separando os atributos por ponto vírgula
+            pos = linha.find(";");
+            this->nome = linha.substr(0, pos);
+            linha.erase(0, pos + 1);
+
+            pos = linha.find(";");
+            this->rg = stoi(linha.substr(0, pos));//convert int
+            linha.erase(0, pos + 1);
+
+            pos = linha.find(";");
+            this->dataAluguel = linha.substr(0, pos);
+            linha.erase(0, pos + 1);
+            
+            this->livro = linha;
+
+            return this;
+}
+
 void Leitor::printDetails(){
-  std::cout<<"Nome: "<<getNome()<<"\nData do aluguel: "<<getDataALuguel()<<"\nLivro alugado: "<<getLivro()<<std::endl;
+  std::cout<<"Nome: "<<this->nome
+  <<"\nRG: "<<this->rg
+  <<"\nData do aluguel: "<<this->dataAluguel
+  <<"\nLivro alugado: "<<this->livro
+  <<std::endl;
 }

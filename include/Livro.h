@@ -2,7 +2,7 @@
 #define LIVRO_H
 
 #include <string>
-
+#include <iostream>
 class Livro {
   private:
     std::string titulo;
@@ -29,6 +29,8 @@ class Livro {
     void setGenero(std::string genero);
 
     std::string toString();
+    void printDetails();
+    Livro* toModel(std::string linha);
 };
 
 

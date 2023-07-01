@@ -2,6 +2,7 @@
 #define EDITORA_H
 
 #include <string>
+#include <iostream>
 
 class Editora{
   private:
@@ -17,6 +18,8 @@ class Editora{
     int getAnoFundacao();
     void setAnoFundacao(int ano);
     std::string toString();
+    void printDetails();
+    Editora* toModel(std::string linha);
 };
 
 

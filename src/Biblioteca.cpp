@@ -1,5 +1,6 @@
 #include "Biblioteca.h"
 #include "ListaEncadeada.h"
+#include <vector>
 
 template <class E>
 void Biblioteca::cadastrar(E obj, std::string nomeArquivo){
@@ -12,6 +13,35 @@ void Biblioteca::cadastrar(E obj, std::string nomeArquivo){
             arquivo.close();
         }
 }
+
+template <class E>
+void Biblioteca::ler(std::string nomeArquivo){
+   std::vector<E> imp;
+    // Lendo o arquivo de texto e imprimindo na tela
+    std::ifstream arquivoLeitura(nomeArquivo);
+    if (arquivoLeitura.is_open()) {
+        std::string linha;
+        while (std::getline(arquivoLeitura, linha)) {
+            E objeto;
+            imp.push_back(*objeto.toModel(linha));
+        }
+        arquivoLeitura.close();
+    } else {
+        std::cout << "Erro ao abrir o arquivo " <<nomeArquivo<< std::endl;
+        return;
+    }
+
+    for ( E objeto : imp) {
+            objeto.printDetails();
+            std::cout << "------------------------" << std::endl;
+        } 
+        
+        
+}
+
+
+
+
 
 void Biblioteca::escreverAutor(){
     std::string nome;
@@ -96,4 +126,148 @@ void Biblioteca::escrevreLivro(){
 
     Livro livro(titulo, ano, editora, autor, genero);
     cadastrar(livro, "data/livro.txt");
+}
+
+
+void Biblioteca::buscarEditora(){
+     // Menu das opções para editora
+            int optionMenu;
+            std::cout << "Escolha uma opção no menu de editora:\n" << std::endl;
+            std::cout << "1. Alterar editora\n" << std::endl;
+            std::cout << "2. Remover editora\n" << std::endl;
+            std::cout << "3. Ver todos os dados\n"<<std::endl;
+            std::cout << "4. Procurar por uma editora\n"<<std::endl;
+
+            std::cin >> optionMenu;
+
+            switch (optionMenu)
+            {
+            case 1:
+                // Lógica para alterar editora
+                break;
+
+            case 2:
+                // Lógica para remover editora
+                break;
+            case 3:{
+                ler<Editora>("data/editora.txt");
+                std::cin.ignore();
+                getchar();
+                }   
+                break;
+            case 4:
+                //logica para buscar uma editora
+                break;
+            default:
+                std::cout << "Opção Inválida" << std::endl;
+                break;
+            }
+} 
+
+void Biblioteca::buscarAutor(){
+     // Lógica para buscar autor
+            int optionMenu;
+            std::cout << "Escolha uma opção no menu de autor:\n" << std::endl;
+            std::cout << "1. Alterar autor\n" << std::endl;
+            std::cout << "2. Remover autor\n" << std::endl;
+            std::cout << "3. Ver todos os dados\n"<<std::endl;
+            std::cout << "4. Procurar por um Autor\n"<<std::endl;
+            std::cin >> optionMenu;
+
+            switch (optionMenu)
+            {
+            case 1:
+                // Lógica para alterar autor
+                break;
+
+            case 2:
+                // Lógica para remover autor
+                break;
+            case 3:{
+                ler<Autor>("data/autor.txt");
+                std::cin.ignore();
+                getchar();
+                }   
+                break;
+            case 4:
+                //logica para buscar um autor
+                break;
+            default:
+                std::cout << "Opção Inválida" << std::endl;
+                break;
+            }
+} 
+
+void Biblioteca::buscarLeitor(){
+     // Lógica para buscar leitor
+            int optionMenu;
+            std::cout << "Escolha uma opção para buscar leitor:\n" << std::endl;
+            std::cout << "1. Alterar leitor\n" << std::endl;
+            std::cout << "2. Remover leitor\n" << std::endl;
+            std::cout << "3. Ver todos os dados\n"<<std::endl;
+            std::cout << "4. Procurar por um Leitor\n"<<std::endl;
+            std::cin >> optionMenu;
+
+            switch (optionMenu)
+            {
+            case 1:
+                // Lógica para alterar leitor
+                break;
+
+            case 2:
+                // Lógica para remover leitor
+                break;
+            case 3:{
+                ler<Leitor>("data/leitor.txt");
+                std::cin.ignore();
+                getchar();
+                }   
+                break;
+            case 4:
+                //logica para buscar um Leitor
+                break;
+            default:
+                std::cout << "Opção Inválida" << std::endl;
+                break;
+            }
+}
+
+void Biblioteca::buscarLivro(){
+     // Lógica para buscar livro
+            int optionMenu;
+            std::cout << "Escolha uma opção no menu de livros:\n" << std::endl;
+            std::cout << "1. Alterar livro\n" << std::endl;
+            std::cout << "2. Remover livro\n" << std::endl;
+            std::cout << "3. Alugar livro\n" << std::endl;
+            std::cout << "4. Ver todos os dados\n"<<std::endl;
+            std::cout << "5. Procurar por um Leitor\n"<<std::endl;
+            std::cin >> optionMenu;
+
+            switch (optionMenu)
+            {
+            case 1:
+                // Lógica para alterar livro
+                break;
+
+            case 2:
+                // Lógica para remover livro
+                break;
+            case 3:
+            // Lógica para alugar livro
+                break;
+            case 4:
+                {
+                ler<Livro>("data/livro.txt");
+                std::cin.ignore();
+                getchar();
+                }   
+                break;
+            case 5:
+                
+                break;
+
+            default:
+                std::cout << "Opção Inválida\n" << std::endl;
+                break;
+            }
 }

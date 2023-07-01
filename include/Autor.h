@@ -20,6 +20,8 @@ public:
   int getAnoNascimento();
   void setAnoNascimento(int ano);
   std::string toString();
+  Autor* toModel(std::string linha);
+
   void printDetails() override;
 };
 
