@@ -1,8 +1,23 @@
+/**
+ * @file main.cpp
+ * @brief Arquivo principal do programa de gerenciamento de uma Biblioteca
+ * @author Leandro Barbosa da Silva 20220054875
+ * @author Douglas Felipe de Lima Silva 20220054131
+ * @since 13/06/2023
+ * @date 11/07/2023
+ */
+
 #include <iostream>
 #include <fstream>
 #include <Windows.h> 
 #include "../include/Biblioteca.h"
 
+
+/**
+ * @brief Função principal que inicia o sistema.
+ * @details Aqui fica logalizado o Menu inicial, onde é direcionado para o metodo especifico da funcionalidade.
+ * @return 0
+ */
 int main()
 {
     SetConsoleOutputCP(CP_UTF8);

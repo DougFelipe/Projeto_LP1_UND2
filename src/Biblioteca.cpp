@@ -16,14 +16,14 @@ void Biblioteca::cadastrar(E obj, std::string nomeArquivo){
 
 template <class E>
 void Biblioteca::ler(std::string nomeArquivo){
-   std::vector<E> imp;
+   ListaEncadeada<E> lista;
     // Lendo o arquivo de texto e imprimindo na tela
     std::ifstream arquivoLeitura(nomeArquivo);
     if (arquivoLeitura.is_open()) {
         std::string linha;
         while (std::getline(arquivoLeitura, linha)) {
             E objeto;
-            imp.push_back(*objeto.toModel(linha));
+           lista.adicionarFim(*objeto.toModel(linha));
         }
         arquivoLeitura.close();
     } else {
@@ -31,11 +31,13 @@ void Biblioteca::ler(std::string nomeArquivo){
         return;
     }
 
-    for ( E objeto : imp) {
-            objeto.printDetails();
-            std::cout << "------------------------" << std::endl;
-        } 
+    std::cout << "\n-------------------------" << std::endl;
+    lista.imprimir();
         
+        std::cout<<"[Enter] Voltar ";
+        
+        std::cin.ignore();
+        getchar();
         
 }
 
@@ -49,18 +51,18 @@ void Biblioteca::escreverAutor(){
     std::string nacion;
     int ano;
 
-    std::cout<<"Digite o nome:";
+    std::cout<<"Digite o nome: ";
     std::cin.ignore(); 
     std::getline(std::cin, nome);
 
-    std::cout<<"Digite o RG:";
+    std::cout<<"Digite o RG: ";
     std::cin>>rg;
     
-    std::cout<<"Digite onde ele nasceu:";
+    std::cout<<"Digite onde ele nasceu: ";
     std::cin.ignore(); 
     std::getline(std::cin, nacion);
 
-    std::cout<<"Digite seu ano de nascimento:";
+    std::cout<<"Digite seu ano de nascimento: ";
     std::cin>>ano;
 
     Autor autor(nome, rg, nacion, ano);
@@ -71,11 +73,11 @@ void Biblioteca::escreverLeitor(){
     std::string nome;
     int rg;
 
-    std::cout<<"Digite o nome:";
+    std::cout<<"Digite o nome: ";
     std::cin.ignore(); 
     std::getline(std::cin, nome);
 
-    std::cout<<"Digite o RG:";
+    std::cout<<"Digite o RG: ";
     std::cin>>rg;
 
     Leitor leitor(nome, rg);
@@ -87,11 +89,11 @@ void Biblioteca::escreverEditora(){
     std::string nome;
     int ano;
 
-    std::cout<<"Digite o nome da empresa:";
+    std::cout<<"Digite o nome da empresa: ";
     std::cin.ignore(); 
     std::getline(std::cin, nome);
 
-    std::cout<<"Digite o ano de sua fundacao:";
+    std::cout<<"Digite o ano de sua fundacao: ";
     std::cin>>ano;
 
     Editora editora(nome, ano);
@@ -103,25 +105,25 @@ void Biblioteca::escrevreLivro(){
     std::string titulo, autor, editora, genero;
     int ano;
 
-    std::cout<<"Digite o Titulo do livro:";
+    std::cout<<"Digite o Titulo do livro: ";
     std::cin.ignore(); 
     std::getline(std::cin, titulo);
 
-    std::cout<<"Digite o ano do seu lançamento:";
+    std::cout<<"Digite o ano do seu lançamento: ";
     std::cin>>ano;
 
-    std::cout<<"Digite o autor do livro:";
+    std::cout<<"Digite o autor do livro: ";
     std::cin.ignore(); 
     std::getline(std::cin, autor);
 
     //verifica se existe autor
 
-    std::cout<<"Digite a editora do livro:";
+    std::cout<<"Digite a editora do livro: ";
     std::getline(std::cin, editora);
 
     //verifica se existe editora
 
-    std::cout<<"Qual o genero do livro:";
+    std::cout<<"Qual o genero do livro: ";
     std::getline(std::cin, genero);
 
     Livro livro(titulo, ano, editora, autor, genero);
@@ -149,11 +151,8 @@ void Biblioteca::buscarEditora(){
             case 2:
                 // Lógica para remover editora
                 break;
-            case 3:{
+            case 3:
                 ler<Editora>("data/editora.txt");
-                std::cin.ignore();
-                getchar();
-                }   
                 break;
             case 4:
                 //logica para buscar uma editora
@@ -183,11 +182,8 @@ void Biblioteca::buscarAutor(){
             case 2:
                 // Lógica para remover autor
                 break;
-            case 3:{
+            case 3:
                 ler<Autor>("data/autor.txt");
-                std::cin.ignore();
-                getchar();
-                }   
                 break;
             case 4:
                 //logica para buscar um autor
@@ -217,11 +213,8 @@ void Biblioteca::buscarLeitor(){
             case 2:
                 // Lógica para remover leitor
                 break;
-            case 3:{
+            case 3:
                 ler<Leitor>("data/leitor.txt");
-                std::cin.ignore();
-                getchar();
-                }   
                 break;
             case 4:
                 //logica para buscar um Leitor
@@ -256,11 +249,7 @@ void Biblioteca::buscarLivro(){
             // Lógica para alugar livro
                 break;
             case 4:
-                {
                 ler<Livro>("data/livro.txt");
-                std::cin.ignore();
-                getchar();
-                }   
                 break;
             case 5:
                 
