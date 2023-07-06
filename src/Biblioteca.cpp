@@ -1,6 +1,6 @@
 #include "Biblioteca.h"
-#include "ListaEncadeada.h"
-#include <vector>
+#include "ListaEncadeada.hpp"
+
 
 template <class E>
 void Biblioteca::cadastrar(E obj, std::string nomeArquivo){
