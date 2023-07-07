@@ -14,6 +14,7 @@
 #include "../include/Leitor.h"
 #include "../include/Livro.h"
 #include "../include/Editora.h"
+#include "../include/Ordenacao.h"
 
 /**
  * @brief Classe que representa uma Biblioteca.
