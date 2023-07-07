@@ -91,3 +91,21 @@ void Livro::printDetails(){
     <<"\nEditora: "<<this->editora
     <<"\nGenero: "<<this->genero<<std::endl;
 }
+
+bool Livro::comparar(std::string valor){
+  if (valor.size() != titulo.size())
+        return false;
+
+    for (size_t i = 0; i < valor.size(); ++i) {
+        if (std::toupper(valor[i]) != std::toupper(titulo[i]))
+            return false;
+    }
+
+    return true;
+}
+
+void Livro::alterar(){
+  std::cout<<"Digite o novo titulo: ";
+
+    std::getline(std::cin, titulo);
+}

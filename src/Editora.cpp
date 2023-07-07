@@ -47,4 +47,21 @@ Editora* Editora::toModel(std::string linha){
             this->anoFundacao = stoi(linha);
 
             return this;
+}
+
+bool Editora::comparar(std::string valor){
+  if (valor.size() != nome.size())
+        return false;
+
+    for (size_t i = 0; i < valor.size(); ++i) {
+        if (std::toupper(valor[i]) != std::toupper(nome[i]))
+            return false;
     }
+
+    return true;
+}
+
+void Editora::alterar(){
+  std::cout<<"Digite o novo nome da Editora: ";
+    std::getline(std::cin, nome);
+}

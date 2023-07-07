@@ -1,3 +1,2 @@
-Joao pedro;123123;00/00/0000;Nenhum livro alugado
-Jo∆o Marcos;333333;00/00/0000;Nenhum livro alugado
+Joao Vitor;123123;00/00/0000;Nenhum livro alugado
 Rafael Barbosa;147258;00/00/0000;Nenhum livro alugado

@@ -9,6 +9,7 @@
 #include <string>
 #include <iostream>
 
+
 /**
  * @brief Classe que representa uma Editora.
  *
@@ -87,6 +88,10 @@ class Editora{
    * @return A Editora* preenchida com as informações recebidas.
    */
     Editora* toModel(std::string linha);
+
+    bool comparar(std::string valor);
+
+    void alterar();
 };
 
 #endif

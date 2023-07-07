@@ -14,7 +14,6 @@
 #include "../include/Leitor.h"
 #include "../include/Livro.h"
 #include "../include/Editora.h"
-#include "../include/Ordenacao.h"
 
 /**
  * @brief Classe que representa uma Biblioteca.
@@ -42,6 +41,9 @@ public:
    */
   template <class E>
   void ler(std::string nomeArquivo);
+
+  template <class E>
+  void alterar(std::string nomeArquivo);
 
   /**
    * @brief Recebe os dados do Autor que serão armazenados. 

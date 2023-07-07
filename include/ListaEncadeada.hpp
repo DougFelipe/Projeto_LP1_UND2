@@ -72,6 +72,8 @@ public:
    * @brief Imprime os elementos da lista.
    */
     void imprimir() const;
+
+    std::string alterar(std::string valor);
 };
 
 template <class P>
@@ -210,6 +212,22 @@ void ListaEncadeada<P>::imprimir() const {
         atual = atual->proximo;
     }
     std::cout << std::endl;
+}
+
+template <class P>
+std::string ListaEncadeada<P>::alterar(std::string valor){
+     std::string retorno;
+     No<P>* atual = cabeca;
+    while (atual != nullptr) {
+        if(atual->valor.comparar(valor)){
+            atual->valor.printDetails();
+            atual->valor.alterar();
+        }
+        retorno += atual->valor.toString();
+        atual = atual->proximo;      
+    }
+
+    return retorno;
 }
 
 #endif  

@@ -59,3 +59,21 @@ void Leitor::printDetails(){
   <<"\nLivro alugado: "<<this->livro
   <<std::endl;
 }
+
+bool Leitor::comparar(std::string valor){
+ if (valor.size() != nome.size())
+        return false;
+
+    for (size_t i = 0; i < valor.size(); ++i) {
+        if (std::toupper(valor[i]) != std::toupper(nome[i]))
+            return false;
+    }
+
+    return true;
+}
+
+void Leitor::alterar(){
+  std::cout<<"Digite o novo nome do Leitor: ";
+ 
+    std::getline(std::cin, nome);
+}

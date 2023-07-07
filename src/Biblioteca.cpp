@@ -41,7 +41,39 @@ void Biblioteca::ler(std::string nomeArquivo){
         
 }
 
+template <class E>
+void Biblioteca::alterar(std::string nomeArquivo){
+    ListaEncadeada<E> lista;
+    // Lendo o arquivo de texto e imprimindo na tela
+    std::ifstream arquivoLeitura(nomeArquivo);
+    if (arquivoLeitura.is_open()) {
+        std::string linha;
+        while (std::getline(arquivoLeitura, linha)) {
+            E objeto;
+           lista.adicionarFim(*objeto.toModel(linha));
+        }
+        arquivoLeitura.close();
+    } else {
+        std::cout << "Erro ao abrir o arquivo " <<nomeArquivo<< std::endl;
+        return;
+    }
 
+
+    std::cout<<"Digite o nome para buscar: ";
+    std::string valor;
+    std::cin.ignore(); 
+    std::getline(std::cin, valor);
+
+
+
+    
+    std::ofstream file;
+    file.open(nomeArquivo);
+    if(file.is_open()){
+        file << lista.alterar(valor);
+    }
+
+}
 
 
 
@@ -145,7 +177,7 @@ void Biblioteca::buscarEditora(){
             switch (optionMenu)
             {
             case 1:
-                // Lógica para alterar editora
+                alterar<Editora>("data/editora.txt");
                 break;
 
             case 2:
@@ -176,7 +208,7 @@ void Biblioteca::buscarAutor(){
             switch (optionMenu)
             {
             case 1:
-                // Lógica para alterar autor
+                alterar<Autor>("data/autor.txt");
                 break;
 
             case 2:
@@ -207,7 +239,7 @@ void Biblioteca::buscarLeitor(){
             switch (optionMenu)
             {
             case 1:
-                // Lógica para alterar leitor
+                alterar<Leitor>("data/leitor.txt");
                 break;
 
             case 2:
@@ -239,7 +271,7 @@ void Biblioteca::buscarLivro(){
             switch (optionMenu)
             {
             case 1:
-                // Lógica para alterar livro
+               alterar<Livro>("data/livro.txt");
                 break;
 
             case 2:

@@ -10,6 +10,7 @@
 #include "Livro.h"
 #include "Pessoa.h"
 
+
 /**
  * @brief Classe que representa um autor.
  *
@@ -89,6 +90,10 @@ class Leitor : public Pessoa {
    * @brief Imprime todos os valores do Leitor. 
    */
     void printDetails() override;
+
+    bool comparar(std::string valor);
+
+    void alterar();
 };
 
 #endif

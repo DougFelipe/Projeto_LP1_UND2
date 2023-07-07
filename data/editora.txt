@@ -1,4 +1,3 @@
 Happer;2001
 Darkside;1980
-Pandora;2010
-L¢gica a‡Æo;2015
+PANDORA;2010

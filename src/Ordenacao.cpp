@@ -1,4 +1,4 @@
-#include "OrdenacaoLivros.h"
+#include "Ordenacao.h"
 
 // Ordenação pelo título 
 void ordenarPorTitulo(Livro* livros, int n) 

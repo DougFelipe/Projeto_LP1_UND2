@@ -9,6 +9,7 @@
 #include <string>
 #include <iostream>
 
+
 /**
  * @brief Classe que representa um Livro.
  *
@@ -137,6 +138,10 @@ class Livro {
    * @return o Livro* preenchido com as informações recebidas.
    */
     Livro* toModel(std::string linha);
+
+    bool comparar(std::string valor);
+
+    void alterar();
 };
 
 #endif

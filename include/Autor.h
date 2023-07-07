@@ -85,6 +85,10 @@ public:
    * @brief Imprime todos os valores do Autor. 
    */
   void printDetails() override;
+
+  bool comparar(std::string valor);
+
+  void alterar();
 };
 
 #endif
