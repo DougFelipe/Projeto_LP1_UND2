@@ -1,6 +1,25 @@
 #include "Biblioteca.h"
-#include "ListaEncadeada.h"
-#include <vector>
+#include "ListaEncadeada.hpp"
+
+
+template <class E>
+int Biblioteca::pegarUltimoId(std::string nomeArquivo){
+    ListaEncadeada<E> lista;
+    std::ifstream arquivoLeitura(nomeArquivo);
+    if (arquivoLeitura.is_open()) {
+        std::string linha;
+        while (std::getline(arquivoLeitura, linha)) {
+            E objeto;
+           lista.adicionarFim(*objeto.toModel(linha));
+        }
+
+        arquivoLeitura.close();
+    } 
+
+    if(lista.vazia()){
+        return 1;
+    } else return lista.getCauda()->valor.getId() + 1;
+}
 
 template <class E>
 void Biblioteca::cadastrar(E obj, std::string nomeArquivo){
@@ -27,11 +46,15 @@ void Biblioteca::ler(std::string nomeArquivo){
         }
         arquivoLeitura.close();
     } else {
-        std::cout << "Erro ao abrir o arquivo " <<nomeArquivo<< std::endl;
+        std::cout << "Nenhum dado encontrado!"<<std::endl;
+        std::cout<<"[Enter] Voltar ";
+        
+        std::cin.ignore();
+        getchar();
         return;
     }
 
-    std::cout << "\n-------------------------" << std::endl;
+    std::cout << "\n---------------------------" << std::endl;
     lista.imprimir();
         
         std::cout<<"[Enter] Voltar ";
@@ -41,31 +64,54 @@ void Biblioteca::ler(std::string nomeArquivo){
         
 }
 
+template <class E>
+void Biblioteca::modificarArquivo(std::string nomeArquivo, int op){
+    ListaEncadeada<E> lista;
+    // Lendo o arquivo de texto e imprimindo na tela
+    std::ifstream arquivoLeitura(nomeArquivo);
+    if (arquivoLeitura.is_open()) {
+        std::string linha;
+        while (std::getline(arquivoLeitura, linha)) {
+            E objeto;
+           lista.adicionarFim(*objeto.toModel(linha));
+        }
+        arquivoLeitura.close();
+    } else {
+        std::cout << "Erro ao abrir o arquivo " <<nomeArquivo<< std::endl;
+        return;
+    }
 
+
+    std::cout<<"Digite o codigo para buscar: ";
+    int valor;
+    std::cin>>valor;
+
+    std::ofstream file;
+    file.open(nomeArquivo);
+    if(file.is_open()){
+        file << lista.alterar(valor, op);
+    }
+
+}
 
 
 
 void Biblioteca::escreverAutor(){
     std::string nome;
-    int rg;
     std::string nacion;
     int ano;
 
     std::cout<<"Digite o nome: ";
     std::cin.ignore(); 
     std::getline(std::cin, nome);
-
-    std::cout<<"Digite o RG: ";
-    std::cin>>rg;
     
     std::cout<<"Digite onde ele nasceu: ";
-    std::cin.ignore(); 
     std::getline(std::cin, nacion);
 
     std::cout<<"Digite seu ano de nascimento: ";
     std::cin>>ano;
 
-    Autor autor(nome, rg, nacion, ano);
+    Autor autor(pegarUltimoId<Autor>("data/autor.txt"), nome, nacion, ano);
     cadastrar(autor, "data/autor.txt");
 }
 
@@ -80,7 +126,7 @@ void Biblioteca::escreverLeitor(){
     std::cout<<"Digite o RG: ";
     std::cin>>rg;
 
-    Leitor leitor(nome, rg);
+    Leitor leitor(pegarUltimoId<Leitor>("data/leitor.txt"), nome, rg);
     cadastrar(leitor, "data/leitor.txt");
     
 }
@@ -96,7 +142,7 @@ void Biblioteca::escreverEditora(){
     std::cout<<"Digite o ano de sua fundacao: ";
     std::cin>>ano;
 
-    Editora editora(nome, ano);
+    Editora editora(pegarUltimoId<Editora>("data/editora.txt"),nome, ano);
     cadastrar(editora, "data/editora.txt");
     
 }
@@ -126,7 +172,7 @@ void Biblioteca::escrevreLivro(){
     std::cout<<"Qual o genero do livro: ";
     std::getline(std::cin, genero);
 
-    Livro livro(titulo, ano, editora, autor, genero);
+    Livro livro(pegarUltimoId<Livro>("data/livro.txt"),titulo, ano, editora, autor, genero);
     cadastrar(livro, "data/livro.txt");
 }
 
@@ -145,11 +191,11 @@ void Biblioteca::buscarEditora(){
             switch (optionMenu)
             {
             case 1:
-                // Lógica para alterar editora
+                modificarArquivo<Editora>("data/editora.txt", 1);
                 break;
 
             case 2:
-                // Lógica para remover editora
+                 modificarArquivo<Editora>("data/editora.txt", 2);
                 break;
             case 3:
                 ler<Editora>("data/editora.txt");
@@ -176,11 +222,11 @@ void Biblioteca::buscarAutor(){
             switch (optionMenu)
             {
             case 1:
-                // Lógica para alterar autor
+                modificarArquivo<Autor>("data/autor.txt", 1);
                 break;
 
             case 2:
-                // Lógica para remover autor
+                modificarArquivo<Autor>("data/autor.txt", 2);
                 break;
             case 3:
                 ler<Autor>("data/autor.txt");
@@ -207,11 +253,11 @@ void Biblioteca::buscarLeitor(){
             switch (optionMenu)
             {
             case 1:
-                // Lógica para alterar leitor
+                modificarArquivo<Leitor>("data/leitor.txt", 1);
                 break;
 
             case 2:
-                // Lógica para remover leitor
+                modificarArquivo<Leitor>("data/leitor.txt", 2);
                 break;
             case 3:
                 ler<Leitor>("data/leitor.txt");
@@ -239,11 +285,11 @@ void Biblioteca::buscarLivro(){
             switch (optionMenu)
             {
             case 1:
-                // Lógica para alterar livro
+               modificarArquivo<Livro>("data/livro.txt",1);
                 break;
 
             case 2:
-                // Lógica para remover livro
+                 modificarArquivo<Livro>("data/livro.txt",2);
                 break;
             case 3:
             // Lógica para alugar livro

@@ -72,6 +72,16 @@ public:
    * @brief Imprime os elementos da lista.
    */
     void imprimir() const;
+
+    /**
+   * @brief Retorna uma string com a alteração feita na lista.
+   * @param valor É o valor que sera usado na busca
+   * @param op Codigo da operação: 1 - Alterar | 2 - Remover
+   * @return string com as alterações feita
+   */
+    std::string alterar(int valor, int op);
+
+    No<P>* getCauda();
 };
 
 template <class P>
@@ -211,5 +221,39 @@ void ListaEncadeada<P>::imprimir() const {
     }
     std::cout << std::endl;
 }
+
+template <class P>
+std::string ListaEncadeada<P>::alterar(int valor, int op){
+     std::string retorno;
+     No<P>* atual = cabeca;
+    while (atual != nullptr) {
+        if(atual->valor.getId() == valor){
+            std::cout<<std::endl;
+            atual->valor.printDetails();
+            std::cout<<std::endl;
+
+            if(op == 1){
+            atual->valor.alterar();
+            } else {
+                std::cout<<"Removido com sucesso!!"<<std::endl;
+                atual = atual->proximo;
+                continue;
+            }
+            
+        }
+        retorno += atual->valor.toString();
+        atual = atual->proximo;      
+    }
+
+    return retorno;
+}
+
+
+
+template <class P>
+No<P>* ListaEncadeada<P>::getCauda(){
+    return this->cauda;
+}
+
 
 #endif  

@@ -1,4 +1,2 @@
-Happer;2001
-Darkside;1980
-Pandora;2010
-L¢gica a‡Æo;2015
+1;Pandora;2001
+2;Happer collins;2005

@@ -10,6 +10,7 @@
 #include "Livro.h"
 #include "Pessoa.h"
 
+
 /**
  * @brief Classe que representa um autor.
  *
@@ -18,6 +19,7 @@
  */
 class Leitor : public Pessoa {
   private:
+    int rg;
     std::string livro;
     std::string dataAluguel;
 
@@ -34,7 +36,7 @@ class Leitor : public Pessoa {
    * @param nome O nome do Autor.
    * @param rg O RG do Autor.
    */
-    Leitor(std::string nome, int rg);
+    Leitor(int id, std::string nome, int rg);
 
   /**
    * @brief Destrutor da classe Leitor.
@@ -89,6 +91,13 @@ class Leitor : public Pessoa {
    * @brief Imprime todos os valores do Leitor. 
    */
     void printDetails() override;
+
+    bool comparar(std::string valor);
+
+    /**
+   * @brief Altera os dados do Leitor. 
+   */
+    void alterar();
 };
 
 #endif

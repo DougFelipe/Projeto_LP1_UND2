@@ -35,7 +35,7 @@ public:
    * @param nacionalidade O país onde o Autor nasceu.
    * @param anoNascimento O ano que o autor nasceu.
    */
-  Autor(std::string nome, int rg, std::string nacionalidade, int anoNascimento) ;
+  Autor(int id, std::string nome, std::string nacionalidade, int anoNascimento) ;
   
   /**
    * @brief Obtém a nacionalidade do autor.
@@ -85,6 +85,13 @@ public:
    * @brief Imprime todos os valores do Autor. 
    */
   void printDetails() override;
+
+  bool comparar(std::string valor);
+
+  /**
+   * @brief Altera os dados do Autor.
+   */
+  void alterar();
 };
 
 #endif
