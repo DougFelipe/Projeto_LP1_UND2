@@ -1,2 +1,3 @@
-1;Senhor dos aneis;1850;HApper collins;JK Tolkien;Aventura
+1;Senhor dos aneis: A sociedade do anel;1850;HApper collins;JK Tolkien;Aventura
 2;Percy Jackson;1950;Pandora;Rick Riordan;Acao
+3;O pequeno principe;2005;teste;ALguem;Infantil

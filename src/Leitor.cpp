@@ -81,6 +81,6 @@ bool Leitor::comparar(std::string valor){
 
 void Leitor::alterar(){
   std::cout<<"Digite o novo nome do Leitor: ";
- 
+ std::cin.ignore();
     std::getline(std::cin, nome);
 }

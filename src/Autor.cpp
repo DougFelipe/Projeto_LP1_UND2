@@ -69,5 +69,6 @@ bool Autor::comparar(std::string valor){
 
 void Autor::alterar(){
   std::cout<<"Digite o novo nome do autor: ";
+  std::cin.ignore();
   std::getline(std::cin, nome);
 }

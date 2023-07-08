@@ -14,10 +14,11 @@ int Biblioteca::pegarUltimoId(std::string nomeArquivo){
         }
 
         arquivoLeitura.close();
-        return lista.getCauda()->valor.getId() + 1;
-    } else {
+    } 
+
+    if(lista.vazia()){
         return 1;
-    }
+    } else return lista.getCauda()->valor.getId() + 1;
 }
 
 template <class E>
@@ -53,7 +54,7 @@ void Biblioteca::ler(std::string nomeArquivo){
         return;
     }
 
-    std::cout << "\n------------------------" << std::endl;
+    std::cout << "\n---------------------------" << std::endl;
     lista.imprimir();
         
         std::cout<<"[Enter] Voltar ";
@@ -64,7 +65,7 @@ void Biblioteca::ler(std::string nomeArquivo){
 }
 
 template <class E>
-void Biblioteca::alterar(std::string nomeArquivo){
+void Biblioteca::modificarArquivo(std::string nomeArquivo, int op){
     ListaEncadeada<E> lista;
     // Lendo o arquivo de texto e imprimindo na tela
     std::ifstream arquivoLeitura(nomeArquivo);
@@ -81,15 +82,14 @@ void Biblioteca::alterar(std::string nomeArquivo){
     }
 
 
-    std::cout<<"Digite o nome para buscar: ";
-    std::string valor;
-    std::cin.ignore(); 
-    std::getline(std::cin, valor);
+    std::cout<<"Digite o codigo para buscar: ";
+    int valor;
+    std::cin>>valor;
 
     std::ofstream file;
     file.open(nomeArquivo);
     if(file.is_open()){
-        file << lista.alterar(valor);
+        file << lista.alterar(valor, op);
     }
 
 }
@@ -191,11 +191,11 @@ void Biblioteca::buscarEditora(){
             switch (optionMenu)
             {
             case 1:
-                alterar<Editora>("data/editora.txt");
+                modificarArquivo<Editora>("data/editora.txt", 1);
                 break;
 
             case 2:
-                // Lógica para remover editora
+                 modificarArquivo<Editora>("data/editora.txt", 2);
                 break;
             case 3:
                 ler<Editora>("data/editora.txt");
@@ -222,11 +222,11 @@ void Biblioteca::buscarAutor(){
             switch (optionMenu)
             {
             case 1:
-                alterar<Autor>("data/autor.txt");
+                modificarArquivo<Autor>("data/autor.txt", 1);
                 break;
 
             case 2:
-                // Lógica para remover autor
+                modificarArquivo<Autor>("data/autor.txt", 2);
                 break;
             case 3:
                 ler<Autor>("data/autor.txt");
@@ -253,11 +253,11 @@ void Biblioteca::buscarLeitor(){
             switch (optionMenu)
             {
             case 1:
-                alterar<Leitor>("data/leitor.txt");
+                modificarArquivo<Leitor>("data/leitor.txt", 1);
                 break;
 
             case 2:
-                // Lógica para remover leitor
+                modificarArquivo<Leitor>("data/leitor.txt", 2);
                 break;
             case 3:
                 ler<Leitor>("data/leitor.txt");
@@ -285,11 +285,11 @@ void Biblioteca::buscarLivro(){
             switch (optionMenu)
             {
             case 1:
-               alterar<Livro>("data/livro.txt");
+               modificarArquivo<Livro>("data/livro.txt",1);
                 break;
 
             case 2:
-                // Lógica para remover livro
+                 modificarArquivo<Livro>("data/livro.txt",2);
                 break;
             case 3:
             // Lógica para alugar livro

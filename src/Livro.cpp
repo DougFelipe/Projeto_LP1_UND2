@@ -121,6 +121,6 @@ bool Livro::comparar(std::string valor){
 
 void Livro::alterar(){
   std::cout<<"Digite o novo titulo: ";
-
-    std::getline(std::cin, titulo);
+  std::cin.ignore();
+  std::getline(std::cin, titulo);
 }

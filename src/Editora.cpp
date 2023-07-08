@@ -76,5 +76,6 @@ bool Editora::comparar(std::string valor){
 
 void Editora::alterar(){
   std::cout<<"Digite o novo nome da Editora: ";
+  std::cin.ignore();
     std::getline(std::cin, nome);
 }

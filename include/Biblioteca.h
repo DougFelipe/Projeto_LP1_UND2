@@ -24,6 +24,14 @@ class Biblioteca {
 
 public:
 
+  
+  /**
+   * @brief Função template que retorna o ultimo id do objeto cadastrato.
+   *
+   * @tparam E A classe a ser utilizada na operação.
+   * @param nomeArquivo O nome do arquivo onde será feito o cadastro.
+   * @return o ultimo id cadastrado ou 1, caso seja o primeiro cadastro.
+   */
   template <class E>
   int pegarUltimoId(std::string nomeArquivo);  
 
@@ -46,8 +54,15 @@ public:
   template <class E>
   void ler(std::string nomeArquivo);
 
+  /**
+   * @brief Função template para realizar a alteração do arquivo.
+   *
+   * @tparam E A classe a ser utilizada na operação.
+   * @param nomeArquivo O nome do arquivo onde será feito o cadastro.
+   * @param Codigo da operação: 1 - Alterar | 2 - Remover
+   */
   template <class E>
-  void alterar(std::string nomeArquivo);
+  void modificarArquivo(std::string nomeArquivo, int op);
 
   /**
    * @brief Recebe os dados do Autor que serão armazenados. 
