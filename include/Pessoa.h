@@ -13,8 +13,8 @@
  */
 class Pessoa {
 protected:
+  int id;
   std::string nome;
-  int rg;
 
 public:
 
@@ -29,8 +29,12 @@ public:
    * @param nome O nome da Pessoa.
    * @param rg O RG da Pessoa.
    */
-  Pessoa(std::string nome, int rg);
- 
+  Pessoa(int id, std::string nome);
+  
+  int getId();
+
+  void setId(int id);
+
   /**
    * @brief Obtém o nome da Pessoa.
    *
@@ -44,20 +48,6 @@ public:
    * @param nome O novo nome da Pessoa.
    */
   void setNome(std::string nome);
-
-  /**
-   * @brief Obtém o RG da Pessoa.
-   *
-   * @return RG da Pessoa.
-   */
-  int getRg();
-
-  /**
-   * @brief Define o rg da Pessoa.
-   *
-   * @param rg O novo RG da Pessoa.
-   */
-  void setRg(int rg);
 
   /**
    * @brief Função virtual pura que precisa ser implementada pelas classes derivadas.

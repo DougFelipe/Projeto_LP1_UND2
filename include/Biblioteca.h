@@ -23,6 +23,10 @@
 class Biblioteca {
 
 public:
+
+  template <class E>
+  int pegarUltimoId(std::string nomeArquivo);  
+
   /**
    * @brief Função template para realizar o cadastro de um objeto generico.
    *

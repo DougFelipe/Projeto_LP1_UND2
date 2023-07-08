@@ -18,6 +18,7 @@
  */
 class Livro {
   private:
+    int id;
     std::string titulo;
     int anoPublicacao;
     std::string editora;
@@ -40,7 +41,7 @@ class Livro {
    * @param autor O autor que escreveu o Livro.
    * @param genero O gênero do livro.
    */
-    Livro(std::string titulo, int anoPublicacao, std::string editora, std::string autor,
+    Livro(int id, std::string titulo, int anoPublicacao, std::string editora, std::string autor,
           std::string genero);
 
   /**
@@ -48,6 +49,10 @@ class Livro {
    */
     ~Livro();
   
+    int getId();
+
+    void setId(int id);
+
   /**
    * @brief Obtém o titulo do livro.
    *

@@ -2,9 +2,17 @@
 
 Pessoa::Pessoa() {}
 
-Pessoa::Pessoa(std::string nome, int rg) {
+Pessoa::Pessoa(int id, std::string nome) {
+  this->id = id;
   this->nome = nome;
-  this->rg = rg;
+}
+
+int Pessoa::getId(){
+  return this->id;
+}
+
+void Pessoa::setId(int id){
+  this->id = id;
 }
 
 std::string Pessoa::getNome(){
@@ -13,12 +21,4 @@ std::string Pessoa::getNome(){
 
 void Pessoa::setNome(std::string nome){
   this->nome = nome;
-}
-
-int Pessoa::getRg(){
-  return rg;
-}
-
-void Pessoa::setRg(int rg){
-  this->rg=rg;
 }

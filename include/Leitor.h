@@ -19,6 +19,7 @@
  */
 class Leitor : public Pessoa {
   private:
+    int rg;
     std::string livro;
     std::string dataAluguel;
 
@@ -35,7 +36,7 @@ class Leitor : public Pessoa {
    * @param nome O nome do Autor.
    * @param rg O RG do Autor.
    */
-    Leitor(std::string nome, int rg);
+    Leitor(int id, std::string nome, int rg);
 
   /**
    * @brief Destrutor da classe Leitor.
@@ -93,6 +94,9 @@ class Leitor : public Pessoa {
 
     bool comparar(std::string valor);
 
+    /**
+   * @brief Altera os dados do Leitor. 
+   */
     void alterar();
 };
 

@@ -2,8 +2,9 @@
 
 Livro::Livro(){}
 
-Livro::Livro(std::string titulo, int anoPublicacao, std::string editora, std::string autor,
+Livro::Livro(int id, std::string titulo, int anoPublicacao, std::string editora, std::string autor,
           std::string genero){
+            this->id = id;
             this->titulo = titulo;
             this->anoPublicacao = anoPublicacao;
             this->editora = editora;
@@ -12,6 +13,14 @@ Livro::Livro(std::string titulo, int anoPublicacao, std::string editora, std::st
           }
 
 Livro::~Livro(){}
+
+int Livro::getId(){
+  return this->id;
+}
+
+void Livro::setId(int id){
+  this->id = id;
+}
 
 std::string Livro::getTitulo(){
   return titulo;
@@ -54,7 +63,7 @@ void Livro::setGenero(std::string genero){
 }
 
 std::string Livro::toString(){
-  std::string retorno = this->titulo + ";" + std::to_string(this->anoPublicacao) + ";" + this->editora + ";" + this->autor + ";" + this->genero + "\n";
+  std::string retorno = std::to_string(this->id) + ";" + this->titulo + ";" + std::to_string(this->anoPublicacao) + ";" + this->editora + ";" + this->autor + ";" + this->genero + "\n";
 
   return retorno;
 }
@@ -63,6 +72,11 @@ Livro* Livro::toModel(std::string linha){
             size_t pos = 0;
   
             // Separando os atributos por ponto vírgula
+            
+            pos = linha.find(";");
+            this->id = stoi(linha.substr(0, pos));
+            linha.erase(0, pos + 1);
+
             pos = linha.find(";");
             this->titulo = linha.substr(0, pos);
             linha.erase(0, pos + 1);
@@ -85,7 +99,8 @@ Livro* Livro::toModel(std::string linha){
 }
 
 void Livro::printDetails(){
-    std::cout<<"Titulo: "<<this->titulo
+    std::cout<<"Codigo: "<<id
+    <<"\nTitulo: "<<this->titulo
     <<"\nAno de publicação: "<<this->anoPublicacao
     <<"\nAutor: "<<this->autor
     <<"\nEditora: "<<this->editora

@@ -18,6 +18,7 @@
  */
 class Editora{
   private:
+  int id;
     std::string nome;
     int anoFundacao;
   public:
@@ -32,13 +33,17 @@ class Editora{
    * @param nome O nome da editora.
    * @param anoFundacao O ano em que a editora foi fundada.
    */
-    Editora(std::string nome, int anoFundacao);
+    Editora(int id, std::string nome, int anoFundacao);
 
   /**
    * @brief Destrutor da classe editora.
    *
    */
     ~Editora();
+
+    int getId();
+
+    void setId(int id);
 
   /**
    * @brief Obtém o nome da editora.
@@ -91,6 +96,9 @@ class Editora{
 
     bool comparar(std::string valor);
 
+    /**
+   * @brief Altera os dados da Editora. 
+   */
     void alterar();
 };
 

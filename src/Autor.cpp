@@ -2,8 +2,8 @@
 
 Autor::Autor() {}
 
-Autor::Autor(std::string nome, int rg, std::string nacionalidade,
-             int anoNascimento) : Pessoa(nome, rg){
+Autor::Autor(int id, std::string nome, std::string nacionalidade,
+             int anoNascimento) : Pessoa(id, nome){
   this->nacionalidade = nacionalidade;
   this->anoNascimento = anoNascimento;
 }
@@ -20,7 +20,7 @@ void Autor::setAnoNascimento(int ano) { this->anoNascimento = ano; }
 
 std::string Autor::toString(){
   
-  std::string retorno = this->nome + ";" + std::to_string(this->rg) + ";" 
+  std::string retorno = std::to_string(this->id) + ";" + this->nome + ";" 
         + this->nacionalidade + ";" + std::to_string(this->anoNascimento)+"\n";
 
   return retorno;
@@ -32,11 +32,11 @@ Autor* Autor::toModel(std::string linha){
   
             // Separando os atributos por ponto vírgula
             pos = linha.find(";");
-            this->nome = linha.substr(0, pos);
+            this->id = stoi(linha.substr(0, pos));
             linha.erase(0, pos + 1);
 
             pos = linha.find(";");
-            this->rg = stoi(linha.substr(0, pos));//convert int
+            this->nome = linha.substr(0, pos);
             linha.erase(0, pos + 1);
 
             pos = linha.find(";");
@@ -49,8 +49,8 @@ Autor* Autor::toModel(std::string linha){
 }
 
 void Autor::printDetails() {
-  std::cout<<"Nome: "<<nome
-  <<"\nRG: "<<rg
+  std::cout<<"Codigo: "<<id
+  <<"\nNome: "<<nome
   <<"\nNascionalidade: "<<nacionalidade
   <<"\nNascido no ano de: "<<anoNascimento<<std::endl;
 }

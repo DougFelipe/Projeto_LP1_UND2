@@ -74,6 +74,8 @@ public:
     void imprimir() const;
 
     std::string alterar(std::string valor);
+
+    No<P>* getCauda();
 };
 
 template <class P>
@@ -229,5 +231,11 @@ std::string ListaEncadeada<P>::alterar(std::string valor){
 
     return retorno;
 }
+
+template <class P>
+No<P>* ListaEncadeada<P>::getCauda(){
+    return this->cauda;
+}
+
 
 #endif  
