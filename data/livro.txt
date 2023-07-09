@@ -1,3 +1,3 @@
 1;O Hobbit;1950;Happer collins;JK Tolkien;Aventura
 2;Silmarillion;1968;Happer collins;JK Tolkien;Aventura
-3;As cronicas de narnia;1950;HApper collins;C.S lewis;Fantasia
+3;As Cronicas de Narnia;1950;HApper collins;C.S lewis;Fantasia

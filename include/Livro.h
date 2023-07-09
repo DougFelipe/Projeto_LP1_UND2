@@ -151,7 +151,7 @@ class Livro {
    */
     bool comparar(std::string valor);
 
-    /**
+  /**
    * @brief Altera os dados do Livro. 
    */
     void alterar();

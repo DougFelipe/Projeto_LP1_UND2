@@ -89,9 +89,8 @@ void Biblioteca::modificarArquivo(std::string nomeArquivo, int op){
     std::ofstream file;
     file.open(nomeArquivo);
     if(file.is_open()){
-        if(op < 3) file << lista.alterar(valor, op);
-        else if(op == 3) file << lista.alterar(valor, op);
-        
+        file << lista.alterar(valor, op);
+        file.close();
     }
 
 }
@@ -118,12 +117,44 @@ bool Biblioteca::existe(std::string nomeArquivo, std::string valor){
         file.open(nomeArquivo);
         if(file.is_open()){  
             file << campo;
+            file.close();
         }
         return true;
     }
     return false;
 
 }
+
+
+template <class E>
+void Biblioteca::filtro(std::string nomeArquivo, int op){
+
+    Vetor<E> lista(1);
+    
+    std::ifstream arquivoLeitura(nomeArquivo);
+    if (arquivoLeitura.is_open()) {
+        std::string linha;
+        while (std::getline(arquivoLeitura, linha)) {
+            E objeto;
+            if(lista.sizeOf() == lista.sizeOfLimit()){
+               lista.ampliar();
+            }
+             lista.push_back(*objeto.toModel(linha));
+
+        }
+        arquivoLeitura.close();
+    } else {
+        std::cout << "\nVocê precisa cadastrar primeiro!" <<nomeArquivo<< std::endl;
+        return;
+    }
+    std::cout << "\n---------------------------" << std::endl;
+    lista.imprime();
+        
+    std::cout<<"[Enter] Voltar ";
+    std::cin.ignore();
+    getchar();
+}
+
 
 void Biblioteca::escreverAutor(){
     std::string nome;
@@ -271,7 +302,7 @@ void Biblioteca::buscarAutor(){
                 //logica para buscar um autor
                 break;
             case 5:
-                //logica para buscar todos os livros do autor
+                filtro<Livro>("data/livro.txt", 0);
                 break;
             default:
                 std::cout << "Opção Inválida" << std::endl;
