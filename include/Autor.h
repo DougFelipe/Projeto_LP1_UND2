@@ -20,6 +20,7 @@ class Autor : public Pessoa {
 private:
   std::string nacionalidade; 
   int anoNascimento; 
+  int livrosCadastrados;
 
 public:
   /**
@@ -30,6 +31,7 @@ public:
   /**
    * @brief Construtor com parametros da classe Autor.
    *
+   * @param id O ID do autor.
    * @param nome O nome do Autor.
    * @param rg O RG do Autor.
    * @param nacionalidade O país onde o Autor nasceu.
@@ -65,6 +67,20 @@ public:
    */
   void setAnoNascimento(int ano);
 
+   /**
+   * @brief Obtém a quantidade de livros cadastrados desse autor.
+   *
+   * @return quantidade de livros cadastrados desse autor.
+   */
+  int getLivrosCadastrados();
+
+  /**
+   * @brief Define a quantidade de livros cadastrados desse autor.
+   *
+   * @param qtd A nova quantidade de livros cadastrados desse autor.
+   */
+  void setLivrosCadastrados(int qtd);
+
   /**
    * @brief Retorna uma string com os valores separados por ';' para poder salvar em uma linha do arquivo. 
    *
@@ -86,12 +102,22 @@ public:
    */
   void printDetails() override;
 
+  /**
+   * @brief Compara se o valor passado pelo parametro é igual ao nome do autor. 
+   * @param valor Valor para a comparação.
+   * @return true se forem iguais ou falso se forem diferentes.
+   */
   bool comparar(std::string valor);
 
   /**
    * @brief Altera os dados do Autor.
    */
   void alterar();
+
+  /**
+   * @brief Incrementa mais um a cada livro que for cadastrado com essse autor.
+   */
+  void incrementarLivro();
 };
 
 #endif

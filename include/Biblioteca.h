@@ -64,6 +64,9 @@ public:
   template <class E>
   void modificarArquivo(std::string nomeArquivo, int op);
 
+  template <class E>
+  bool existe(std::string nomeArquivo, std::string valor);
+
   /**
    * @brief Recebe os dados do Autor que serão armazenados. 
    */

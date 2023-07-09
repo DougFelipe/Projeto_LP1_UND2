@@ -25,14 +25,24 @@ public:
 
   /**
    * @brief Construtor com parametros da classe Livro.
-   *
+   * @param id O ID da Pessoa.
    * @param nome O nome da Pessoa.
    * @param rg O RG da Pessoa.
    */
   Pessoa(int id, std::string nome);
   
+  /**
+   * @brief Obtém o id da Pessoa.
+   *
+   * @return id da Pessoa.
+   */
   int getId();
 
+  /**
+   * @brief Define o ID da Pessoa.
+   *
+   * @param id O novo ID da Pessoa.
+   */
   void setId(int id);
 
   /**

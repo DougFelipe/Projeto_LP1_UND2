@@ -67,7 +67,7 @@ void Biblioteca::ler(std::string nomeArquivo){
 template <class E>
 void Biblioteca::modificarArquivo(std::string nomeArquivo, int op){
     ListaEncadeada<E> lista;
-    // Lendo o arquivo de texto e imprimindo na tela
+    
     std::ifstream arquivoLeitura(nomeArquivo);
     if (arquivoLeitura.is_open()) {
         std::string linha;
@@ -89,12 +89,41 @@ void Biblioteca::modificarArquivo(std::string nomeArquivo, int op){
     std::ofstream file;
     file.open(nomeArquivo);
     if(file.is_open()){
-        file << lista.alterar(valor, op);
+        if(op < 3) file << lista.alterar(valor, op);
+        else if(op == 3) file << lista.alterar(valor, op);
+        
     }
 
 }
 
+template <class E>
+bool Biblioteca::existe(std::string nomeArquivo, std::string valor){
+    ListaEncadeada<E> lista;
+    
+    std::ifstream arquivoLeitura(nomeArquivo);
+    if (arquivoLeitura.is_open()) {
+        std::string linha;
+        while (std::getline(arquivoLeitura, linha)) {
+            E objeto;
+           lista.adicionarFim(*objeto.toModel(linha));
+        }
+        arquivoLeitura.close();
+    } else {
+        std::cout << "\nVocê precisa cadastrar primeiro!" <<nomeArquivo<< std::endl;
+        return false;
+    }
+    std::string campo = "";
+    if(lista.existe(valor, &campo)){
+        std::ofstream file;
+        file.open(nomeArquivo);
+        if(file.is_open()){  
+            file << campo;
+        }
+        return true;
+    }
+    return false;
 
+}
 
 void Biblioteca::escreverAutor(){
     std::string nome;
@@ -161,13 +190,19 @@ void Biblioteca::escrevreLivro(){
     std::cout<<"Digite o autor do livro: ";
     std::cin.ignore(); 
     std::getline(std::cin, autor);
-
-    //verifica se existe autor
+    //verifica se existe esse autor
+    while(!existe<Autor>("data/autor.txt", autor)){
+        std::cout<<"Esse autor não existe!\nDigite novamente: ";
+        std::getline(std::cin, autor);
+    }
 
     std::cout<<"Digite a editora do livro: ";
     std::getline(std::cin, editora);
-
-    //verifica se existe editora
+    //verifica se existe essa editora
+    while(!existe<Editora>("data/editora.txt", editora)){
+        std::cout<<"Essa editora não existe!\nDigite novamente: ";
+        std::getline(std::cin, editora);
+    }
 
     std::cout<<"Qual o genero do livro: ";
     std::getline(std::cin, genero);
@@ -217,6 +252,7 @@ void Biblioteca::buscarAutor(){
             std::cout << "2. Remover autor\n" << std::endl;
             std::cout << "3. Ver todos os dados\n"<<std::endl;
             std::cout << "4. Procurar por um Autor\n"<<std::endl;
+            std::cout << "5. Ver todos os livros do autor\n"<<std::endl;
             std::cin >> optionMenu;
 
             switch (optionMenu)
@@ -233,6 +269,9 @@ void Biblioteca::buscarAutor(){
                 break;
             case 4:
                 //logica para buscar um autor
+                break;
+            case 5:
+                //logica para buscar todos os livros do autor
                 break;
             default:
                 std::cout << "Opção Inválida" << std::endl;

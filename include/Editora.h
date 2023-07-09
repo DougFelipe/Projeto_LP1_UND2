@@ -21,7 +21,9 @@ class Editora{
   int id;
     std::string nome;
     int anoFundacao;
+    int qtdLivrosCadastrados;
   public:
+  
   /**
    * @brief Construtor vazio da classe Editora.
    */
@@ -29,7 +31,7 @@ class Editora{
 
   /**
    * @brief Construtor com parametros da classe Editora.
-   *
+   * @param id O ID da editora.
    * @param nome O nome da editora.
    * @param anoFundacao O ano em que a editora foi fundada.
    */
@@ -74,6 +76,20 @@ class Editora{
     void setAnoFundacao(int ano);
 
   /**
+   * @brief Obtém a quantidade de livros cadastrados dessa editora.
+   *
+   * @return quantidade de livros cadastrados dessa editora.
+   */
+    int getQtdLivrosCadastrados();
+
+  /**
+   * @brief Define a quantidade de livros cadastrados dessa editora.
+   *
+   * @param qtd A nova quantidade de livros cadastrados dessa editora.
+   */
+    void setQtdLivrosCadastrados(int qtd);
+  
+  /**
    * @brief Retorna uma string com os valores separados por ';' para poder salvar em uma linha do arquivo. 
    *
    * @return string com os atributos separados por ';'.
@@ -94,12 +110,22 @@ class Editora{
    */
     Editora* toModel(std::string linha);
 
+  /**
+   * @brief Compara se o valor passado pelo parametro é igual ao nome da editora. 
+   * @param valor Valor para a comparação.
+   * @return true se forem iguais ou falso se forem diferentes.
+   */
     bool comparar(std::string valor);
 
-    /**
+  /**
    * @brief Altera os dados da Editora. 
    */
     void alterar();
+
+  /**
+   * @brief Incrementa mais um a cada livro que for cadastrado com essa editora.
+   */
+    void incrementarLivro();
 };
 
 #endif
