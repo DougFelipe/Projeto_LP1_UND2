@@ -16,6 +16,9 @@ class Arquivo{
 
         template <class T>
         void criarListaSequencial(std::string nomeArquivo, Vetor<T> *lista);
+
+        template <class T>
+        void reescreverArquivo(std::string nomeArquivo, std::string conteudo);
 };
 
 
@@ -73,5 +76,15 @@ ListaEncadeada<T> Arquivo::criarListaEncadeada(std::string nomeArquivo) {
     }
  }
 
+
+ template <class T>
+void Arquivo::reescreverArquivo(std::string nomeArquivo, std::string conteudo){
+    std::ofstream file;
+    file.open(nomeArquivo);
+    if(file.is_open()){
+        file << conteudo;
+        file.close();
+    }
+}
 
 #endif

@@ -1,6 +1,4 @@
 #include "Biblioteca.h"
-#include "ListaEncadeada.hpp"
-
 
 template <class E>
 int Biblioteca::pegarUltimoId(std::string nomeArquivo){
@@ -23,7 +21,7 @@ void Biblioteca::ler(std::string nomeArquivo){
    
    ListaEncadeada<E> lista = arquivo.criarListaEncadeada<E>(nomeArquivo);
     
-    std::cout << "\n--------------------------" << std::endl;
+    std::cout << "\n---------------------------" << std::endl;
     lista.imprimir();
         
     std::cout<<"[Enter] Voltar ";
@@ -42,27 +40,18 @@ void Biblioteca::modificarArquivo(std::string nomeArquivo, int op){
     int valor;
     std::cin>>valor;
 
-    std::ofstream file;
-    file.open(nomeArquivo);
-    if(file.is_open()){
-        file << lista.alterar(valor, op);
-        file.close();
-    }
+    arquivo.reescreverArquivo<E>(nomeArquivo, lista.alterar(valor, op));
 
 }
 
 template <class E>
 bool Biblioteca::existe(std::string nomeArquivo, std::string valor){
+    //incrementa autor e editora
    ListaEncadeada<E> lista = arquivo.criarListaEncadeada<E>(nomeArquivo);
    
     std::string campo = "";
     if(lista.existe(valor, &campo)){
-        std::ofstream file;
-        file.open(nomeArquivo);
-        if(file.is_open()){  
-            file << campo;
-            file.close();
-        }
+        arquivo.reescreverArquivo<E>(nomeArquivo, campo);
         return true;
     }
     return false;
@@ -109,11 +98,37 @@ void Biblioteca::buscaElemento(std::string nomeArquivo){
     std::cin>>id;
 
     lista.findById(id);
-    std::cout<<"\n[Enter] Voltar \n";
+    std::cout<<"\n[Enter] Voltar\n";
         
     std::cin.ignore();
     getchar();
 }
+
+
+void Biblioteca::alugarLivro(){
+    Vetor<Livro> listaLivro(1);
+    arquivo.criarListaSequencial<Livro>("data/livro.txt", &listaLivro);
+
+    Vetor<Leitor> listaLeitor(1);
+    arquivo.criarListaSequencial<Leitor>("data/leitor.txt", &listaLeitor);
+
+    int idLivro, idLeitor;
+
+    std::cout<<"Digite o id do Leitor para buscar: ";
+    std::cin>>idLeitor;
+
+    std::cout<<"Digite o id do Livro para buscar: ";
+    std::cin>>idLivro;
+
+    std::string campo = listaLeitor.alugar(
+        listaLivro.buscaBinariaRecursiva(idLivro, 0, listaLivro.sizeOf()),
+        listaLeitor.buscaBinariaRecursiva(idLeitor, 0, listaLeitor.sizeOf()),
+        listaLivro.getValor(idLivro).getTitulo()
+        );
+    arquivo.reescreverArquivo<Leitor>("data/leitor.txt", campo);
+    
+}
+
 
 void Biblioteca::escreverAutor(){
     std::string nome;
@@ -325,7 +340,7 @@ void Biblioteca::buscarLivro(){
                  modificarArquivo<Livro>("data/livro.txt",2);
                 break;
             case 3:
-            // Lógica para alugar livro
+                alugarLivro();
                 break;
             case 4:
                 ler<Livro>("data/livro.txt");

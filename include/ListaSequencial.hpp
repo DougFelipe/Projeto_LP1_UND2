@@ -2,7 +2,9 @@
 #define LISTA_H
 
 #include "iostream"
-#include "Utilidades.hpp"
+#include <chrono>
+#include <ctime>
+
 template <class E>
 class Vetor {
 private:
@@ -27,7 +29,10 @@ public:
   void reverse();
   void ampliar();
   void filtra(std::string valor, int op);
-
+  std::string alugar(int livro, int leitor, std::string titulo);
+  E getValor(int id);
+  bool equalsIgnoreCase(const std::string &str1, const std::string &str2);
+  std::string minuscula(std::string str);
   /**
   * @brief Função que realiza uma busca recursiva em uma lista sequencial.
   *
@@ -38,6 +43,16 @@ public:
   * @return a posição do valor encontrado.
   */
   int buscaBinariaRecursiva(int chave, int inicio, int fim);
+
+/**
+* @brief Função que realiza uma busca iterativa em uma lista encadeada de Livros.
+*
+* @param chave O valor(chave) do atributo a ser encontrado.
+*
+* @return a posição do valor encontrado.
+*/
+  int buscaBinariaIterativa(int chave);
+
   void findById(int chave);
 
   /**
@@ -296,6 +311,27 @@ int Vetor<E>::buscaBinariaRecursiva(int chave, int inicio, int fim) {
 
     return -1;
 }
+
+template <class E>
+int Vetor<E>::buscaBinariaIterativa(int chave) {
+    int inicio = 0;
+    int fim = qtd - 1;
+
+    while (inicio <= fim) {
+        int meio = inicio + (fim - inicio) / 2;
+
+        if (list[meio].getId() == chave)
+            return meio;
+
+        if (list[meio].getId() < chave)
+            inicio = meio + 1;
+        else
+            fim = meio - 1;
+    }
+
+    return -1;
+}
+
 template<class E>
 void Vetor<E>::findById(int chave){
   if(buscaBinariaRecursiva(chave, 0, qtd) == -1){
@@ -304,4 +340,65 @@ void Vetor<E>::findById(int chave){
   }
   list[buscaBinariaRecursiva(chave, 0, qtd)].printDetails();
 }
+
+template<class E>
+E Vetor<E>::getValor(int id){
+  return list[buscaBinariaRecursiva(id, 0, qtd)];
+}
+
+template<class E>
+std::string Vetor<E>::alugar(int livro, int leitor, std::string titulo){
+  list[leitor].setLivro(titulo);
+  
+
+
+  //pegando data atual
+  std::chrono::system_clock::time_point now = std::chrono::system_clock::now();
+
+  // Convertendo o tempo atual em um formato legível
+  std::time_t currentTime = std::chrono::system_clock::to_time_t(now);
+
+  // Convertendo o tempo em uma estrutura tm (para acessar os componentes da data)
+  std::tm* ptm = std::localtime(&currentTime);
+
+  std::string dataAtual = std::to_string(ptm->tm_mday) + "/" + std::to_string( ptm->tm_mon + 1) + "/" + std::to_string(ptm->tm_year + 1900);
+
+
+  list[leitor].setDataAluguel(dataAtual);
+
+  std::string retorno;
+  for(int i = 0; i<qtd; i++){
+      retorno += list[i].toString();
+  }
+  return retorno;
+}
+
+
+
+template<class E>
+bool Vetor<E>::equalsIgnoreCase(const std::string &str1, const std::string &str2) {
+  // criei essa função somente para ficar melhor de comparar as strings
+  if (str1.length() != str2.length()) {
+    return false;
+  }
+
+  for (size_t i = 0; i < str1.length(); i++) {
+    if (std::tolower(str1[i]) != std::tolower(str2[i])) {
+      return false;
+    }
+  }
+
+  return true;
+}
+
+
+template<class E>
+std::string Vetor<E>::minuscula(std::string str) {
+    std::string result;
+    for (char c : str) {
+        result += std::tolower(c);
+    }
+    return result;
+}
+
 #endif

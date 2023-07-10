@@ -16,6 +16,7 @@
 #include "Editora.h"
 #include "ListaSequencial.hpp"
 #include "Arquivo.hpp"
+#include "ListaEncadeada.hpp"
 /**
  * @brief Classe que representa uma Biblioteca.
  *
@@ -80,6 +81,9 @@ public:
   template <class E>
   void buscaElemento(std::string nomeArquivo);
   
+
+  void alugarLivro();
+
   /**
    * @brief Recebe os dados do Autor que serão armazenados. 
    */

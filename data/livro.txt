@@ -3,3 +3,4 @@
 3;As Cronicas de Narnia;1960;HApper collins;C.S lewis;Fantasia
 4;O Laberinto do fauno;1980;intrinseca;Cornelia Funke;Terror
 5;O Senhor dos aneis;1957;Happer collins;JK Tolkien;Aventura
+6;A queda de Gondolin;1970;happer collins;jk tolkien;acao
