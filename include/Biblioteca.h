@@ -15,6 +15,7 @@
 #include "Livro.h"
 #include "Editora.h"
 #include "ListaSequencial.hpp"
+#include "Arquivo.hpp"
 /**
  * @brief Classe que representa uma Biblioteca.
  *
@@ -23,8 +24,7 @@
 class Biblioteca {
 
 public:
-
-  
+  Arquivo arquivo;
   /**
    * @brief Função template que retorna o ultimo id do objeto cadastrato.
    *
@@ -77,7 +77,9 @@ public:
   template <class E>
   void filtro(std::string nomeArquivo, int op);
 
-
+  template <class E>
+  void buscaElemento(std::string nomeArquivo);
+  
   /**
    * @brief Recebe os dados do Autor que serão armazenados. 
    */
@@ -117,6 +119,7 @@ public:
    * @brief Responsavel pelo sub-menu do Livro, onde direciona para o metodo reponsavel pela operação
    */
   void buscarLivro();
+
   
 };
 

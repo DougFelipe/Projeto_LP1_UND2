@@ -4,17 +4,8 @@
 
 template <class E>
 int Biblioteca::pegarUltimoId(std::string nomeArquivo){
-    ListaEncadeada<E> lista;
-    std::ifstream arquivoLeitura(nomeArquivo);
-    if (arquivoLeitura.is_open()) {
-        std::string linha;
-        while (std::getline(arquivoLeitura, linha)) {
-            E objeto;
-           lista.adicionarFim(*objeto.toModel(linha));
-        }
-
-        arquivoLeitura.close();
-    } 
+   
+   ListaEncadeada<E> lista = arquivo.criarListaEncadeada<E>(nomeArquivo);
 
     if(lista.vazia()){
         return 1;
@@ -23,64 +14,29 @@ int Biblioteca::pegarUltimoId(std::string nomeArquivo){
 
 template <class E>
 void Biblioteca::cadastrar(E obj, std::string nomeArquivo){
- std::ofstream arquivo;
-        // continua a escrita sem apagar o conteudo
-        arquivo.open(nomeArquivo, std::ios::app);
-        if (arquivo.is_open()) {
-            arquivo << obj.toString();
 
-            arquivo.close();
-        }
+       arquivo.salvar(obj, nomeArquivo);
 }
 
 template <class E>
 void Biblioteca::ler(std::string nomeArquivo){
-   ListaEncadeada<E> lista;
-    // Lendo o arquivo de texto e imprimindo na tela
-    std::ifstream arquivoLeitura(nomeArquivo);
-    if (arquivoLeitura.is_open()) {
-        std::string linha;
-        while (std::getline(arquivoLeitura, linha)) {
-            E objeto;
-           lista.adicionarFim(*objeto.toModel(linha));
-        }
-        arquivoLeitura.close();
-    } else {
-        std::cout << "Nenhum dado encontrado!"<<std::endl;
-        std::cout<<"[Enter] Voltar ";
-        
-        std::cin.ignore();
-        getchar();
-        return;
-    }
-
-    std::cout << "\n---------------------------" << std::endl;
+   
+   ListaEncadeada<E> lista = arquivo.criarListaEncadeada<E>(nomeArquivo);
+    
+    std::cout << "\n--------------------------" << std::endl;
     lista.imprimir();
         
-        std::cout<<"[Enter] Voltar ";
+    std::cout<<"[Enter] Voltar ";
         
-        std::cin.ignore();
-        getchar();
+    std::cin.ignore();
+    getchar();
         
 }
 
 template <class E>
 void Biblioteca::modificarArquivo(std::string nomeArquivo, int op){
-    ListaEncadeada<E> lista;
-    
-    std::ifstream arquivoLeitura(nomeArquivo);
-    if (arquivoLeitura.is_open()) {
-        std::string linha;
-        while (std::getline(arquivoLeitura, linha)) {
-            E objeto;
-           lista.adicionarFim(*objeto.toModel(linha));
-        }
-        arquivoLeitura.close();
-    } else {
-        std::cout << "Erro ao abrir o arquivo " <<nomeArquivo<< std::endl;
-        return;
-    }
-
+  
+   ListaEncadeada<E> lista = arquivo.criarListaEncadeada<E>(nomeArquivo);
 
     std::cout<<"Digite o codigo para buscar: ";
     int valor;
@@ -97,20 +53,8 @@ void Biblioteca::modificarArquivo(std::string nomeArquivo, int op){
 
 template <class E>
 bool Biblioteca::existe(std::string nomeArquivo, std::string valor){
-    ListaEncadeada<E> lista;
-    
-    std::ifstream arquivoLeitura(nomeArquivo);
-    if (arquivoLeitura.is_open()) {
-        std::string linha;
-        while (std::getline(arquivoLeitura, linha)) {
-            E objeto;
-           lista.adicionarFim(*objeto.toModel(linha));
-        }
-        arquivoLeitura.close();
-    } else {
-        std::cout << "\nVocê precisa cadastrar primeiro!" <<nomeArquivo<< std::endl;
-        return false;
-    }
+   ListaEncadeada<E> lista = arquivo.criarListaEncadeada<E>(nomeArquivo);
+   
     std::string campo = "";
     if(lista.existe(valor, &campo)){
         std::ofstream file;
@@ -125,36 +69,51 @@ bool Biblioteca::existe(std::string nomeArquivo, std::string valor){
 
 }
 
-
 template <class E>
 void Biblioteca::filtro(std::string nomeArquivo, int op){
 
     Vetor<E> lista(1);
-    
-    std::ifstream arquivoLeitura(nomeArquivo);
-    if (arquivoLeitura.is_open()) {
-        std::string linha;
-        while (std::getline(arquivoLeitura, linha)) {
-            E objeto;
-            if(lista.sizeOf() == lista.sizeOfLimit()){
-               lista.ampliar();
-            }
-             lista.push_back(*objeto.toModel(linha));
+    std::string valor;
+    char c = ' ';
 
-        }
-        arquivoLeitura.close();
-    } else {
-        std::cout << "\nVocê precisa cadastrar primeiro!" <<nomeArquivo<< std::endl;
-        return;
-    }
-    std::cout << "\n---------------------------" << std::endl;
-    lista.imprime();
+    arquivo.criarListaSequencial<E>(nomeArquivo, &lista);
+    
+    std::cout<<"De quem você quer filtrar?:  ";
+    std::cin.ignore();
+    std::getline(std::cin, valor);
+    lista.filtra(valor,op);
+
+    do{
+        std::cout << "\n---------------------------" << std::endl;
+        lista.imprime();
+        std::cout<<"[q] Voltar  [n] Ordenar pelo nome  [i] Ordenar pelo ano : ";
         
-    std::cout<<"[Enter] Voltar ";
+        std::cin>>c;
+
+        if(c=='n'){
+            lista.ordenarPorTitulo();
+        } else if(c=='i'){
+            lista.ordenarPorAnoPublicacao();
+        }
+    
+    }while(c!='q');
+}
+
+template <class E>
+void Biblioteca::buscaElemento(std::string nomeArquivo){
+    Vetor<E> lista(1);
+    arquivo.criarListaSequencial<E>(nomeArquivo, &lista);
+
+    int id;
+    std::cout<<"Digite o id para buscar: ";
+    std::cin>>id;
+
+    lista.findById(id);
+    std::cout<<"\n[Enter] Voltar \n";
+        
     std::cin.ignore();
     getchar();
 }
-
 
 void Biblioteca::escreverAutor(){
     std::string nome;
@@ -251,7 +210,8 @@ void Biblioteca::buscarEditora(){
             std::cout << "2. Remover editora\n" << std::endl;
             std::cout << "3. Ver todos os dados\n"<<std::endl;
             std::cout << "4. Procurar por uma editora\n"<<std::endl;
-
+            std::cout << "5. Ver todos os livros da editora\n"<<std::endl;
+            
             std::cin >> optionMenu;
 
             switch (optionMenu)
@@ -267,7 +227,10 @@ void Biblioteca::buscarEditora(){
                 ler<Editora>("data/editora.txt");
                 break;
             case 4:
-                //logica para buscar uma editora
+                buscaElemento<Editora>("data/editora.txt");
+                break;
+            case 5:
+                filtro<Livro>("data/livro.txt", 2);
                 break;
             default:
                 std::cout << "Opção Inválida" << std::endl;
@@ -299,10 +262,10 @@ void Biblioteca::buscarAutor(){
                 ler<Autor>("data/autor.txt");
                 break;
             case 4:
-                //logica para buscar um autor
+                buscaElemento<Autor>("data/autor.txt");
                 break;
             case 5:
-                filtro<Livro>("data/livro.txt", 0);
+                filtro<Livro>("data/livro.txt", 1);
                 break;
             default:
                 std::cout << "Opção Inválida" << std::endl;
@@ -333,7 +296,7 @@ void Biblioteca::buscarLeitor(){
                 ler<Leitor>("data/leitor.txt");
                 break;
             case 4:
-                //logica para buscar um Leitor
+                buscaElemento<Leitor>("data/leitor.txt");
                 break;
             default:
                 std::cout << "Opção Inválida" << std::endl;
@@ -349,7 +312,7 @@ void Biblioteca::buscarLivro(){
             std::cout << "2. Remover livro\n" << std::endl;
             std::cout << "3. Alugar livro\n" << std::endl;
             std::cout << "4. Ver todos os dados\n"<<std::endl;
-            std::cout << "5. Procurar por um Leitor\n"<<std::endl;
+            std::cout << "5. Procurar por um Livro \n"<<std::endl;
             std::cin >> optionMenu;
 
             switch (optionMenu)
@@ -368,9 +331,8 @@ void Biblioteca::buscarLivro(){
                 ler<Livro>("data/livro.txt");
                 break;
             case 5:
-                
+                buscaElemento<Livro>("data/livro.txt");
                 break;
-
             default:
                 std::cout << "Opção Inválida\n" << std::endl;
                 break;

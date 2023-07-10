@@ -7,9 +7,13 @@
  * @date 11/07/2023
  */
 
+#ifndef _WIN32
+#include <Windows.h> 
+SetConsoleOutputCP(CP_UTF8);
+#endif
+
 #include <iostream>
 #include <fstream>
-#include <Windows.h> 
 #include "../include/Biblioteca.h"
 
 
@@ -20,8 +24,6 @@
  */
 int main()
 {
-    SetConsoleOutputCP(CP_UTF8);
-    
     int mainMenuOp;
     
     Biblioteca biblioteca;

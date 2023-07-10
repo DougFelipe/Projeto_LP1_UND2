@@ -236,7 +236,7 @@ std::string ListaEncadeada<P>::alterar(int valor, int op){
             if(op == 1){
             atual->valor.alterar();
             } else if(op == 2) {
-                std::cout<<"Removido com sucesso!!"<<std::endl;
+                std::cout<<"Removido com sucesso!!\n"<<std::endl;
                 atual = atual->proximo;
                 continue;
             } else if(op == 3){

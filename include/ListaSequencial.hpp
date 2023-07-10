@@ -2,7 +2,7 @@
 #define LISTA_H
 
 #include "iostream"
- 
+#include "Utilidades.hpp"
 template <class E>
 class Vetor {
 private:
@@ -23,10 +23,36 @@ public:
   int pop_front();
   int pop_back();
   int removeAt(int index);
-  int find(E valor);
   void sort();
   void reverse();
   void ampliar();
+  void filtra(std::string valor, int op);
+
+  /**
+  * @brief Função que realiza uma busca recursiva em uma lista sequencial.
+  *
+  * @param chave O valor(chave) do atributo a ser encontrado.
+  * @param inicio O indice inicial.
+  * @param fim O indice final.
+  *
+  * @return a posição do valor encontrado.
+  */
+  int buscaBinariaRecursiva(int chave, int inicio, int fim);
+  void findById(int chave);
+
+  /**
+ * @brief Função que ordena um array de livros por título.
+ * 
+ * Algoritmo Bubble Sort para ordenar um array de Livros em ordem alfabética pelo título.
+ */
+  void ordenarPorTitulo();
+
+  /**
+ * @brief Função que ordena um array de livros por ano de publicação.
+ * 
+ * Algoritmo Selection Sort para ordenar um array de Livros pelo ano de publicação.
+ */
+  void ordenarPorAnoPublicacao();
 };
 
 template <class E>
@@ -165,16 +191,7 @@ int Vetor<E>::removeAt(int index) {
   return 1;
 }
 
-template <class E>
-int Vetor<E>::find(E valor) {
-  for (int i = 0; i < qtd; i++) {
-    if (list[i] == valor) {
-      return i;
-    }
-  }
 
-  return -1;
-}
 
 template <class E>
 void Vetor<E>::sort() {
@@ -206,7 +223,7 @@ void Vetor<E>::reverse() {
 
 template <class E>
 void Vetor<E>::ampliar(){
-   length++;
+  length++;
   E* aux = new E [length];
   for (int i = 0; i < qtd; i++) {
         aux[i] = list[i];
@@ -216,4 +233,75 @@ void Vetor<E>::ampliar(){
  
 }
 
+
+template <class E>
+void Vetor<E>::filtra(std::string valor, int op){
+  int pos = 0;
+   for (int i = 0; i < qtd; i++) {
+      if(equalsIgnoreCase(valor, list[i].getAutor()) && op == 1){
+        list[pos] = list[i];
+        pos++;
+      } else if (equalsIgnoreCase(valor, list[i].getEditora()) && op == 2){
+        list[pos] = list[i];
+        pos++;
+      }
+    }
+    qtd = pos;
+}
+
+template <class E>
+void Vetor<E>::ordenarPorTitulo(){
+  //bubble sort
+  for (int i = 0; i < qtd; i++) {
+        for (int j = 0; j < qtd-1; j++) {
+            if (minuscula(list[j].getTitulo()) > minuscula(list[j+1].getTitulo())) {
+                // Troca livros[j] e livros[j+1]
+                E temp = list[j];
+                list[j] = list[j+1];
+                list[j+1] = temp;
+            }
+        }
+    }
+}
+
+template <class E>
+void Vetor<E>::ordenarPorAnoPublicacao(){
+  //selection sort
+  int minimo;
+  
+    for (int i = 0; i < qtd-1; i++) {
+        minimo = i;
+        for (int j = i+1; j < qtd; j++)
+            if (list[j].getAnoPublicacao() < list[minimo].getAnoPublicacao())
+                minimo = j;
+        std::swap(list[minimo], list[i]);
+    }
+}
+
+
+
+template<class E>
+int Vetor<E>::buscaBinariaRecursiva(int chave, int inicio, int fim) {
+    if (fim >= inicio) {
+        int meio = inicio + (fim - inicio) / 2;
+
+        if (list[meio].getId() == chave)
+            return meio;
+
+        if (list[meio].getId() > chave)
+            return buscaBinariaRecursiva(chave, inicio, meio - 1);
+
+        return buscaBinariaRecursiva(chave, meio + 1, fim);
+    }
+
+    return -1;
+}
+template<class E>
+void Vetor<E>::findById(int chave){
+  if(buscaBinariaRecursiva(chave, 0, qtd) == -1){
+    std::cout<<"Não exixte nenhum com esse id";
+    return;
+  }
+  list[buscaBinariaRecursiva(chave, 0, qtd)].printDetails();
+}
 #endif
