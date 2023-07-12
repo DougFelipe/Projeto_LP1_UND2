@@ -1,6 +1,6 @@
 # Projeto Biblioteca
  O projeto consiste em um gerenciador dos livros de uma biblioteca, onde se pode cadastrar um livro, alterar, remover e buscar. Armazena quem pegou o livro para ler, quais os autores que se tem no acervo da biblioteca, quais editoras se tem parceria.
-
+- observação: Se estiver utilizando linux, remover ou comentar as linhas 11 e 25 do arquivo main.cpp
  ### Detalhes tecnicos sobre o projeto
 
  #### Sobre o TADS
