@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema Integrado de Gestão de Biblioteca: Código-Fonte de C:/Projetos/BTI/Projeto_LP1_UND2/include/Leitor.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.jpg"/></td>
+  <td id="projectalign">
+   <div id="projectname">Sistema Integrado de Gestão de Biblioteca<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema para gerenciar o acervo da biblioteca</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhum resultado encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Leitor.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_leitor_8h.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef Leitor_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define Leitor_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_livro_8h.html">Livro.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_pessoa_8h.html">Pessoa.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="class_leitor.html">   20</a></span><span class="keyword">class </span><a class="code hl_class" href="class_leitor.html">Leitor</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_pessoa.html">Pessoa</a> {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">int</span> rg;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    std::string livro;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    std::string dataAluguel;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <a class="code hl_function" href="class_leitor.html#ae2cd39a2e6ea94c26c029e943832d355">Leitor</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <a class="code hl_function" href="class_leitor.html#ae2cd39a2e6ea94c26c029e943832d355">Leitor</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, std::string <a class="code hl_variable" href="class_pessoa.html#a3d7ee683889ed031031beba721aa8470">nome</a>, <span class="keywordtype">int</span> rg);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_function" href="class_leitor.html#aab96b9bedaf1405856c0f73e7c7e8526">~Leitor</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>  </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    std::string <a class="code hl_function" href="class_leitor.html#a3c04d367f08ace56a92b0e246dd99268">getLivro</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_leitor.html#a8c52e87408962ce03ccea9dfc44c9284">setLivro</a>(std::string livro);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    std::string <a class="code hl_function" href="class_leitor.html#ac5e0bf918cfb87483b22c91e3b3ccd71">getDataALuguel</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_leitor.html#a4362291b1c35947864640c4054fcded4">setDataAluguel</a>(std::string data);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    std::string <a class="code hl_function" href="class_leitor.html#aa8cd094c1dd8973f01dfcfb5cf4b90d5">toString</a>();</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    <a class="code hl_class" href="class_leitor.html">Leitor</a>* <a class="code hl_function" href="class_leitor.html#a63175da7456b74d05cc234236e05fdd5">toModel</a>(std::string linha);</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_leitor.html#a58a2a68213298ffe998471cd01cafc63">printDetails</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_leitor.html#a2b2e63908be4f1596021204a587752a0">comparar</a>(std::string valor);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_leitor.html#ad778933f0f8bb9bf3f8f509dbf4f7994">alterar</a>();</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_leitor.html#afb9be19e66620751e47d40710b376e20">incrementarLivro</a>();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>};</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_livro_8h_html"><div class="ttname"><a href="_livro_8h.html">Livro.h</a></div><div class="ttdoc">Declaração da Classe Livro.</div></div>
+<div class="ttc" id="a_pessoa_8h_html"><div class="ttname"><a href="_pessoa_8h.html">Pessoa.h</a></div><div class="ttdoc">Declaração da Classe Pessoa.</div></div>
+<div class="ttc" id="aclass_leitor_html"><div class="ttname"><a href="class_leitor.html">Leitor</a></div><div class="ttdoc">Classe que representa um autor.</div><div class="ttdef"><b>Definition:</b> Leitor.h:20</div></div>
+<div class="ttc" id="aclass_leitor_html_a2b2e63908be4f1596021204a587752a0"><div class="ttname"><a href="class_leitor.html#a2b2e63908be4f1596021204a587752a0">Leitor::comparar</a></div><div class="ttdeci">bool comparar(std::string valor)</div><div class="ttdoc">Compara se o valor passado pelo parametro é igual ao nome do Leitor.</div><div class="ttdef"><b>Definition:</b> Leitor.cpp:70</div></div>
+<div class="ttc" id="aclass_leitor_html_a3c04d367f08ace56a92b0e246dd99268"><div class="ttname"><a href="class_leitor.html#a3c04d367f08ace56a92b0e246dd99268">Leitor::getLivro</a></div><div class="ttdeci">std::string getLivro()</div><div class="ttdoc">Obtém o livro alugado pelo Leitor.</div><div class="ttdef"><b>Definition:</b> Leitor.cpp:13</div></div>
+<div class="ttc" id="aclass_leitor_html_a4362291b1c35947864640c4054fcded4"><div class="ttname"><a href="class_leitor.html#a4362291b1c35947864640c4054fcded4">Leitor::setDataAluguel</a></div><div class="ttdeci">void setDataAluguel(std::string data)</div><div class="ttdoc">Define a data do aluguel do livro pelo Leitor.</div><div class="ttdef"><b>Definition:</b> Leitor.cpp:25</div></div>
+<div class="ttc" id="aclass_leitor_html_a58a2a68213298ffe998471cd01cafc63"><div class="ttname"><a href="class_leitor.html#a58a2a68213298ffe998471cd01cafc63">Leitor::printDetails</a></div><div class="ttdeci">void printDetails() override</div><div class="ttdoc">Imprime todos os valores do Leitor.</div><div class="ttdef"><b>Definition:</b> Leitor.cpp:61</div></div>
+<div class="ttc" id="aclass_leitor_html_a63175da7456b74d05cc234236e05fdd5"><div class="ttname"><a href="class_leitor.html#a63175da7456b74d05cc234236e05fdd5">Leitor::toModel</a></div><div class="ttdeci">Leitor * toModel(std::string linha)</div><div class="ttdoc">Responsavel por converter a string que vem do arquivo em um Leitor*, pegando os valores e salvando em...</div><div class="ttdef"><b>Definition:</b> Leitor.cpp:34</div></div>
+<div class="ttc" id="aclass_leitor_html_a8c52e87408962ce03ccea9dfc44c9284"><div class="ttname"><a href="class_leitor.html#a8c52e87408962ce03ccea9dfc44c9284">Leitor::setLivro</a></div><div class="ttdeci">void setLivro(std::string livro)</div><div class="ttdoc">Define o livro alugado pelo Leitor.</div><div class="ttdef"><b>Definition:</b> Leitor.cpp:17</div></div>
+<div class="ttc" id="aclass_leitor_html_aa8cd094c1dd8973f01dfcfb5cf4b90d5"><div class="ttname"><a href="class_leitor.html#aa8cd094c1dd8973f01dfcfb5cf4b90d5">Leitor::toString</a></div><div class="ttdeci">std::string toString()</div><div class="ttdoc">Retorna uma string com os valores separados por ';' para poder salvar em uma linha do arquivo.</div><div class="ttdef"><b>Definition:</b> Leitor.cpp:29</div></div>
+<div class="ttc" id="aclass_leitor_html_aab96b9bedaf1405856c0f73e7c7e8526"><div class="ttname"><a href="class_leitor.html#aab96b9bedaf1405856c0f73e7c7e8526">Leitor::~Leitor</a></div><div class="ttdeci">~Leitor()</div><div class="ttdoc">Destrutor da classe Leitor.</div><div class="ttdef"><b>Definition:</b> Leitor.cpp:11</div></div>
+<div class="ttc" id="aclass_leitor_html_ac5e0bf918cfb87483b22c91e3b3ccd71"><div class="ttname"><a href="class_leitor.html#ac5e0bf918cfb87483b22c91e3b3ccd71">Leitor::getDataALuguel</a></div><div class="ttdeci">std::string getDataALuguel()</div><div class="ttdoc">Obtém a data em que o Leitor alugou o livro.</div><div class="ttdef"><b>Definition:</b> Leitor.cpp:21</div></div>
+<div class="ttc" id="aclass_leitor_html_ad778933f0f8bb9bf3f8f509dbf4f7994"><div class="ttname"><a href="class_leitor.html#ad778933f0f8bb9bf3f8f509dbf4f7994">Leitor::alterar</a></div><div class="ttdeci">void alterar()</div><div class="ttdoc">Altera os dados do Leitor.</div><div class="ttdef"><b>Definition:</b> Leitor.cpp:82</div></div>
+<div class="ttc" id="aclass_leitor_html_ae2cd39a2e6ea94c26c029e943832d355"><div class="ttname"><a href="class_leitor.html#ae2cd39a2e6ea94c26c029e943832d355">Leitor::Leitor</a></div><div class="ttdeci">Leitor()</div><div class="ttdoc">Construtor vazio da classe Leitor.</div><div class="ttdef"><b>Definition:</b> Leitor.cpp:3</div></div>
+<div class="ttc" id="aclass_leitor_html_afb9be19e66620751e47d40710b376e20"><div class="ttname"><a href="class_leitor.html#afb9be19e66620751e47d40710b376e20">Leitor::incrementarLivro</a></div><div class="ttdeci">void incrementarLivro()</div><div class="ttdoc">Incrementa mais um a cada livro que for alugado por esse leitor.</div><div class="ttdef"><b>Definition:</b> Leitor.cpp:88</div></div>
+<div class="ttc" id="aclass_pessoa_html"><div class="ttname"><a href="class_pessoa.html">Pessoa</a></div><div class="ttdoc">Classe base que representa uma Pessoa.</div><div class="ttdef"><b>Definition:</b> Pessoa.h:14</div></div>
+<div class="ttc" id="aclass_pessoa_html_a3d7ee683889ed031031beba721aa8470"><div class="ttname"><a href="class_pessoa.html#a3d7ee683889ed031031beba721aa8470">Pessoa::nome</a></div><div class="ttdeci">std::string nome</div><div class="ttdef"><b>Definition:</b> Pessoa.h:17</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

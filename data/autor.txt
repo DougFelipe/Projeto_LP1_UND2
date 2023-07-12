@@ -1,4 +1,4 @@
 1;JK Tolkien;Bloemfontein;1892;3
 2;C.S Lewis;Belfast;1898;1
-3;G. K. Chesterton;Kensington;1874;0
+3;G. K. Chesterton;Kensington;1874;1
 4;Cornelia Funke;Alemanha;1958;1

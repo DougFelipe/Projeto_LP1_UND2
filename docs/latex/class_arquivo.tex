@@ -1,0 +1,239 @@
+\hypertarget{class_arquivo}{}\doxysection{Referência da Classe Arquivo}
+\label{class_arquivo}\index{Arquivo@{Arquivo}}
+
+
+Classe que representa um Aquivo.  
+
+
+
+
+{\ttfamily \#include $<$Arquivo.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{class_arquivo_a48b54f91b55a7f22573509140a71115d}{salvar}} (T obj, std\+::string nome\+Arquivo)
+\begin{DoxyCompactList}\small\item\em Metodo para salvar uma nova linha no arquivo. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\\mbox{\hyperlink{class_lista_encadeada}{Lista\+Encadeada}}$<$ T $>$ \mbox{\hyperlink{class_arquivo_aa6c4f226cee02165d224760711297b3d}{criar\+Lista\+Encadeada}} (std\+::string nome\+Arquivo)
+\begin{DoxyCompactList}\small\item\em Metodo para ler um arquivo e retornar uma lista encadeada com todos os dados lidos. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{class_arquivo_aa6ad5847de5118d13fa32bd96c6d136c}{criar\+Lista\+Sequencial}} (std\+::string nome\+Arquivo, \mbox{\hyperlink{class_vetor}{Vetor}}$<$ T $>$ $\ast$lista)
+\begin{DoxyCompactList}\small\item\em Metodo para ler um arquivo e salvar em uma lista sequencial com todos os dados lidos. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{class_arquivo_a05267f670127aae21582ca5af265e2fc}{reescrever\+Arquivo}} (std\+::string nome\+Arquivo, std\+::string conteudo)
+\begin{DoxyCompactList}\small\item\em Metodo reescrever um arquivo com as alterações. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um Aquivo. 
+
+Essa classe é responsavel pelos acessos aos arquivos 
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{class_arquivo_aa6c4f226cee02165d224760711297b3d}\label{class_arquivo_aa6c4f226cee02165d224760711297b3d}} 
+\index{Arquivo@{Arquivo}!criarListaEncadeada@{criarListaEncadeada}}
+\index{criarListaEncadeada@{criarListaEncadeada}!Arquivo@{Arquivo}}
+\doxysubsubsection{\texorpdfstring{criarListaEncadeada()}{criarListaEncadeada()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_lista_encadeada}{Lista\+Encadeada}}$<$ T $>$ Arquivo\+::criar\+Lista\+Encadeada (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+Arquivo }\end{DoxyParamCaption})}
+
+
+
+Metodo para ler um arquivo e retornar uma lista encadeada com todos os dados lidos. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em T} & A classe que sera trabalhada. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+Arquivo} & o nome do arquivo que será acessado.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+lista encadeada com todos os elementos 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{class_lista_encadeada}{ListaEncadeada<T>}}\ lista;}
+\DoxyCodeLine{00080\ \ \ \ \ std::ifstream\ arquivoLeitura(nomeArquivo);}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{if}\ (arquivoLeitura.is\_open())\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ std::string\ linha;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(arquivoLeitura,\ linha))\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ T\ objeto;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ lista.\mbox{\hyperlink{class_lista_encadeada_ad9f41516c7c105d68aabba938aa5eae5}{adicionarFim}}(*objeto.toModel(linha));}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ arquivoLeitura.close();}
+\DoxyCodeLine{00088\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Nenhum\ dado\ encontrado!"{}}<<std::endl;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}[Enter]\ Voltar\ "{}};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ getchar();}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{return}\ lista;}
+\DoxyCodeLine{00096\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_arquivo_aa6c4f226cee02165d224760711297b3d_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_arquivo_aa6c4f226cee02165d224760711297b3d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_arquivo_aa6ad5847de5118d13fa32bd96c6d136c}\label{class_arquivo_aa6ad5847de5118d13fa32bd96c6d136c}} 
+\index{Arquivo@{Arquivo}!criarListaSequencial@{criarListaSequencial}}
+\index{criarListaSequencial@{criarListaSequencial}!Arquivo@{Arquivo}}
+\doxysubsubsection{\texorpdfstring{criarListaSequencial()}{criarListaSequencial()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Arquivo\+::criar\+Lista\+Sequencial (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+Arquivo,  }\item[{\mbox{\hyperlink{class_vetor}{Vetor}}$<$ T $>$ $\ast$}]{lista }\end{DoxyParamCaption})}
+
+
+
+Metodo para ler um arquivo e salvar em uma lista sequencial com todos os dados lidos. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em T} & A classe que sera trabalhada. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+Arquivo} & o nome do arquivo que será acessado. \\
+\hline
+{\em $\ast$lista} & o ponteiro da lista que será armazenado \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00100\ \ \ \ \ std::ifstream\ arquivoLeitura(nomeArquivo);}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{if}\ (arquivoLeitura.is\_open())\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ std::string\ linha;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(arquivoLeitura,\ linha))\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ T\ objeto;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(lista-\/>\mbox{\hyperlink{class_vetor_af5815b10f789b34874ce5f6a86e5f723}{sizeOf}}()\ ==\ lista-\/>\mbox{\hyperlink{class_vetor_a2689ab751966a5906358fde7fe0c166d}{sizeOfLimit}}())\{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lista-\/>\mbox{\hyperlink{class_vetor_a74897794e67f35f2d637114412f7485f}{ampliar}}();}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ lista-\/>\mbox{\hyperlink{class_vetor_abe65152ab6f18daa7669d236c3f941c4}{push\_back}}(*objeto.toModel(linha));}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ arquivoLeitura.close();}
+\DoxyCodeLine{00112\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nVocê\ precisa\ cadastrar\ primeiro!"{}}\ <<nomeArquivo<<\ std::endl;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_arquivo_aa6ad5847de5118d13fa32bd96c6d136c_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_arquivo_aa6ad5847de5118d13fa32bd96c6d136c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_arquivo_a05267f670127aae21582ca5af265e2fc}\label{class_arquivo_a05267f670127aae21582ca5af265e2fc}} 
+\index{Arquivo@{Arquivo}!reescreverArquivo@{reescreverArquivo}}
+\index{reescreverArquivo@{reescreverArquivo}!Arquivo@{Arquivo}}
+\doxysubsubsection{\texorpdfstring{reescreverArquivo()}{reescreverArquivo()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Arquivo\+::reescrever\+Arquivo (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+Arquivo,  }\item[{std\+::string}]{conteudo }\end{DoxyParamCaption})}
+
+
+
+Metodo reescrever um arquivo com as alterações. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em T} & A classe que sera trabalhada. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+Arquivo} & o nome do arquivo que será acessado. \\
+\hline
+{\em conteudo} & O conteudo que será salvo no arquivo \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ std::ofstream\ file;}
+\DoxyCodeLine{00122\ \ \ \ \ file.open(nomeArquivo);}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{if}(file.is\_open())\{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ file\ <<\ conteudo;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ file.close();}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_arquivo_a05267f670127aae21582ca5af265e2fc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_arquivo_a48b54f91b55a7f22573509140a71115d}\label{class_arquivo_a48b54f91b55a7f22573509140a71115d}} 
+\index{Arquivo@{Arquivo}!salvar@{salvar}}
+\index{salvar@{salvar}!Arquivo@{Arquivo}}
+\doxysubsubsection{\texorpdfstring{salvar()}{salvar()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void Arquivo\+::salvar (\begin{DoxyParamCaption}\item[{T}]{obj,  }\item[{std\+::string}]{nome\+Arquivo }\end{DoxyParamCaption})}
+
+
+
+Metodo para salvar uma nova linha no arquivo. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em T} & A classe que sera trabalhada. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+Arquivo} & o nome do arquivo que será acessado. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ std::ofstream\ arquivo;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ arquivo.open(nomeArquivo,\ std::ios::app);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arquivo.is\_open())\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ obj.toString();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \}}
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_arquivo_a48b54f91b55a7f22573509140a71115d_icgraph}
+\end{center}
+\end{figure}
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Projetos/\+BTI/\+Projeto\+\_\+\+LP1\+\_\+\+UND2/include/\mbox{\hyperlink{_arquivo_8hpp}{Arquivo.\+hpp}}\end{DoxyCompactItemize}

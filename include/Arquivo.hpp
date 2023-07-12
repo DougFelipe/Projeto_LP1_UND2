@@ -1,3 +1,8 @@
+/**
+ * @file Arquivo.hpp
+ * @brief Declaração da Classe Arquivo.
+ */
+
 #ifndef ARQUIVO_H
 #define ARQUIVO_H
 
@@ -5,18 +10,52 @@
 #include <iostream>
 #include "ListaEncadeada.hpp"
 #include "ListaSequencial.hpp"
+
+/**
+ * @brief Classe que representa um Aquivo.
+ *
+ * Essa classe é responsavel pelos acessos aos arquivos
+ */
 class Arquivo{
 
     public:
+        /**
+         * @brief Metodo para salvar uma nova linha no arquivo
+         * 
+         * @tparam T A classe que sera trabalhada.
+         * @param nomeArquivo o nome do arquivo que será acessado.
+         */
         template <class T>
         void salvar(T obj, std::string nomeArquivo);
 
+        /**
+         * @brief Metodo para ler um arquivo e retornar uma lista encadeada com todos os dados lidos
+         * 
+         * @tparam T A classe que sera trabalhada.
+         * @param nomeArquivo o nome do arquivo que será acessado.
+         * 
+         * @return lista encadeada com todos os elementos
+         */
         template <class T>
         ListaEncadeada<T> criarListaEncadeada(std::string nomeArquivo);
 
+        /**
+         * @brief Metodo para ler um arquivo e salvar em uma lista sequencial com todos os dados lidos.
+         * 
+         * @tparam T A classe que sera trabalhada.
+         * @param nomeArquivo o nome do arquivo que será acessado.
+         * @param *lista o ponteiro da lista que será armazenado
+         */
         template <class T>
         void criarListaSequencial(std::string nomeArquivo, Vetor<T> *lista);
 
+        /**
+         * @brief Metodo reescrever um arquivo com as alterações
+         * 
+         * @tparam T A classe que sera trabalhada.
+         * @param nomeArquivo o nome do arquivo que será acessado.
+         * @param conteudo O conteudo que será salvo no arquivo
+         */
         template <class T>
         void reescreverArquivo(std::string nomeArquivo, std::string conteudo);
 };

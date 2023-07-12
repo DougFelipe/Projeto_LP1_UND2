@@ -1,0 +1,214 @@
+\hypertarget{class_pessoa}{}\doxysection{Referência da Classe Pessoa}
+\label{class_pessoa}\index{Pessoa@{Pessoa}}
+
+
+Classe base que representa uma \mbox{\hyperlink{class_pessoa}{Pessoa}}.  
+
+
+
+
+{\ttfamily \#include $<$Pessoa.\+h$>$}
+
+
+
+Diagrama de hierarquia para Pessoa\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_pessoa__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pessoa_a22563fe1f53faa9b1d8d10d28ae0c650}{Pessoa}} ()
+\begin{DoxyCompactList}\small\item\em Construtor vazio da classe \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pessoa_a8eaf0f540c75ce554ce4e1b06ae6d80c}{Pessoa}} (int \mbox{\hyperlink{class_pessoa_a75713853c809df02006cf87791c5af9d}{id}}, std\+::string \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}})
+\begin{DoxyCompactList}\small\item\em Construtor com parametros da classe \mbox{\hyperlink{class_livro}{Livro}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pessoa_a6699a108d29ebc18cb06c10f3a44c330}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o id da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_aaa9e1d4bf5b2ca52f2e7b545dbc00fd1}{set\+Id}} (int \mbox{\hyperlink{class_pessoa_a75713853c809df02006cf87791c5af9d}{id}})
+\begin{DoxyCompactList}\small\item\em Define o ID da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a5f4f2063d62eaea38673da5fd5283465}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a26074576a426b510ff59165b05031f57}{set\+Nome}} (std\+::string \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}})
+\begin{DoxyCompactList}\small\item\em Define o nome da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pessoa_a3a442b97ec4cb5883823acea6e1fb88f}{print\+Details}} ()=0
+\begin{DoxyCompactList}\small\item\em Função virtual pura que precisa ser implementada pelas classes derivadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_pessoa_a75713853c809df02006cf87791c5af9d}{id}}
+\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe base que representa uma \mbox{\hyperlink{class_pessoa}{Pessoa}}. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_pessoa_a22563fe1f53faa9b1d8d10d28ae0c650}\label{class_pessoa_a22563fe1f53faa9b1d8d10d28ae0c650}} 
+\index{Pessoa@{Pessoa}!Pessoa@{Pessoa}}
+\index{Pessoa@{Pessoa}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{Pessoa()}{Pessoa()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pessoa\+::\+Pessoa (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor vazio da classe \mbox{\hyperlink{class_pessoa}{Pessoa}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_pessoa_a8eaf0f540c75ce554ce4e1b06ae6d80c}\label{class_pessoa_a8eaf0f540c75ce554ce4e1b06ae6d80c}} 
+\index{Pessoa@{Pessoa}!Pessoa@{Pessoa}}
+\index{Pessoa@{Pessoa}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{Pessoa()}{Pessoa()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Pessoa\+::\+Pessoa (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Construtor com parametros da classe \mbox{\hyperlink{class_livro}{Livro}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & O ID da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \\
+\hline
+{\em nome} & O nome da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \\
+\hline
+{\em rg} & O RG da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00006\ \ \ this-\/>\textcolor{keywordtype}{id}\ =\ \mbox{\hyperlink{class_pessoa_a75713853c809df02006cf87791c5af9d}{id}};}
+\DoxyCodeLine{00007\ \ \ this-\/>\mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}\ =\ \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}};}
+\DoxyCodeLine{00008\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{class_pessoa_a6699a108d29ebc18cb06c10f3a44c330}\label{class_pessoa_a6699a108d29ebc18cb06c10f3a44c330}} 
+\index{Pessoa@{Pessoa}!getId@{getId}}
+\index{getId@{getId}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Pessoa\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o id da \mbox{\hyperlink{class_pessoa}{Pessoa}}. 
+
+\begin{DoxyReturn}{Retorna}
+id da \mbox{\hyperlink{class_pessoa}{Pessoa}}. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00011\ \ \ \textcolor{keywordflow}{return}\ this-\/>\mbox{\hyperlink{class_pessoa_a75713853c809df02006cf87791c5af9d}{id}};}
+\DoxyCodeLine{00012\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_pessoa_a5f4f2063d62eaea38673da5fd5283465}\label{class_pessoa_a5f4f2063d62eaea38673da5fd5283465}} 
+\index{Pessoa@{Pessoa}!getNome@{getNome}}
+\index{getNome@{getNome}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string Pessoa\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o nome da \mbox{\hyperlink{class_pessoa}{Pessoa}}. 
+
+\begin{DoxyReturn}{Retorna}
+nome da \mbox{\hyperlink{class_pessoa}{Pessoa}}. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}};}
+\DoxyCodeLine{00020\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_pessoa_a3a442b97ec4cb5883823acea6e1fb88f}\label{class_pessoa_a3a442b97ec4cb5883823acea6e1fb88f}} 
+\index{Pessoa@{Pessoa}!printDetails@{printDetails}}
+\index{printDetails@{printDetails}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{printDetails()}{printDetails()}}
+{\footnotesize\ttfamily virtual void Pessoa\+::print\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Função virtual pura que precisa ser implementada pelas classes derivadas. 
+
+
+
+Implementado por \mbox{\hyperlink{class_autor_aec9819c724a3dbd37bbb42638a1232b0}{Autor}} e \mbox{\hyperlink{class_leitor_a58a2a68213298ffe998471cd01cafc63}{Leitor}}.
+
+\mbox{\Hypertarget{class_pessoa_aaa9e1d4bf5b2ca52f2e7b545dbc00fd1}\label{class_pessoa_aaa9e1d4bf5b2ca52f2e7b545dbc00fd1}} 
+\index{Pessoa@{Pessoa}!setId@{setId}}
+\index{setId@{setId}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Pessoa\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+
+Define o ID da \mbox{\hyperlink{class_pessoa}{Pessoa}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & O novo ID da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ this-\/>\textcolor{keywordtype}{id}\ =\ \mbox{\hyperlink{class_pessoa_a75713853c809df02006cf87791c5af9d}{id}};}
+\DoxyCodeLine{00016\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_pessoa_a26074576a426b510ff59165b05031f57}\label{class_pessoa_a26074576a426b510ff59165b05031f57}} 
+\index{Pessoa@{Pessoa}!setNome@{setNome}}
+\index{setNome@{setNome}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily void Pessoa\+::set\+Nome (\begin{DoxyParamCaption}\item[{std\+::string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Define o nome da \mbox{\hyperlink{class_pessoa}{Pessoa}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & O novo nome da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ this-\/>\mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}\ =\ \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}};}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{class_pessoa_a75713853c809df02006cf87791c5af9d}\label{class_pessoa_a75713853c809df02006cf87791c5af9d}} 
+\index{Pessoa@{Pessoa}!id@{id}}
+\index{id@{id}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily int Pessoa\+::id\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_pessoa_a3d7ee683889ed031031beba721aa8470}\label{class_pessoa_a3d7ee683889ed031031beba721aa8470}} 
+\index{Pessoa@{Pessoa}!nome@{nome}}
+\index{nome@{nome}!Pessoa@{Pessoa}}
+\doxysubsubsection{\texorpdfstring{nome}{nome}}
+{\footnotesize\ttfamily std\+::string Pessoa\+::nome\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Projetos/\+BTI/\+Projeto\+\_\+\+LP1\+\_\+\+UND2/include/\mbox{\hyperlink{_pessoa_8h}{Pessoa.\+h}}\item 
+C\+:/\+Projetos/\+BTI/\+Projeto\+\_\+\+LP1\+\_\+\+UND2/src/\mbox{\hyperlink{_pessoa_8cpp}{Pessoa.\+cpp}}\end{DoxyCompactItemize}

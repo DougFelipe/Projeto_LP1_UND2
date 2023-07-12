@@ -75,14 +75,35 @@ public:
   template <class E>
   bool existe(std::string nomeArquivo, std::string valor);
 
+
+   /**
+   * @brief Metodo que faz o filtro de todos os livros do autor ou da editora. 
+   * 
+   * @param nomeArquivo nome do arquivo onde será feito a consulta
+   * @param op Operação a ser feita, 1 = filtra para autor 2 = filtra para editora
+   */
   template <class E>
   void filtro(std::string nomeArquivo, int op);
 
+   /**
+   * @brief Metodo para buscar um elemento. 
+   * 
+   * @param nomeArquivo arquivo onde sera feito a busca
+   */
   template <class E>
   void buscaElemento(std::string nomeArquivo);
   
 
+   /**
+   * @brief Metodo responsavel por fazer o aluguel do livro. 
+   */
   void alugarLivro();
+
+  /**
+   * @brief Metodo responsavel por fazer a entrega do livro. 
+   */
+  void entregarLivro();
+
 
   /**
    * @brief Recebe os dados do Autor que serão armazenados. 

@@ -1,0 +1,70 @@
+\hypertarget{_livro_8h_source}{}\doxysection{Livro.\+h}
+\label{_livro_8h_source}\index{C:/Projetos/BTI/Projeto\_LP1\_UND2/include/Livro.h@{C:/Projetos/BTI/Projeto\_LP1\_UND2/include/Livro.h}}
+\mbox{\hyperlink{_livro_8h}{Vá para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ LIVRO\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ LIVRO\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_livro}{Livro}}\ \{}
+\DoxyCodeLine{00020\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ titulo;}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ anoPublicacao;}
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ editora;}
+\DoxyCodeLine{00025\ \ \ \ \ std::string\ autor;}
+\DoxyCodeLine{00026\ \ \ \ \ std::string\ genero;}
+\DoxyCodeLine{00027\ \ \ }
+\DoxyCodeLine{00028\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_livro_a4b89ad279d36589f7337083cdf006861}{Livro}}();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_livro_a4b89ad279d36589f7337083cdf006861}{Livro}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ std::string\ titulo,\ \textcolor{keywordtype}{int}\ anoPublicacao,\ std::string\ editora,\ std::string\ autor,}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ std::string\ genero);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00050\ \ \ \ \ \mbox{\hyperlink{class_livro_a1f3b49a5fbaf89727b0d0317e128655f}{\string~Livro}}();}
+\DoxyCodeLine{00051\ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_livro_a7e3addd03f34db52fbbc17ad0d268d1c}{getId}}();}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_livro_a1a4192ef375e747c72e08fcb57bae32e}{setId}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00061\ \ \ \ \ std::string\ \mbox{\hyperlink{class_livro_a984cc2f3a34b3e96515151ba54021bc8}{getTitulo}}();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_livro_a7de9ca1d41a56be94ca9cf53740910c5}{setTitulo}}(std::string\ titulo);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_livro_a292c37b480232937905e88c1841925c3}{getAnoPublicacao}}();}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_livro_a90394a6784363b00797a9ca11b042c64}{setAnoPublicacao}}(\textcolor{keywordtype}{int}\ ano);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00089\ \ \ \ \ std::string\ \mbox{\hyperlink{class_livro_a44e275996f39db1214d5f9a96889785a}{getEditora}}();}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_livro_a2f7392ba8ab633a94e6d78ab55e1f22a}{setEditora}}(std::string\ editora);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00103\ \ \ \ \ std::string\ \mbox{\hyperlink{class_livro_aefbf479a0dd8b0621aa82baa35feb9e6}{getAutor}}();}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_livro_ac2298c63708a85a53a3c3d1145d41ca8}{setAutor}}(std::string\ autor);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00117\ \ \ \ \ std::string\ \mbox{\hyperlink{class_livro_aa3bc5cceba6904fec19efc9d037a0a9b}{getGenero}}();}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_livro_a09aa42059efc4429916236f2fc10a373}{setGenero}}(std::string\ genero);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00131\ \ \ \ \ std::string\ \mbox{\hyperlink{class_livro_a06d86ac249b299f07b759d041b282e9f}{toString}}();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_livro_afc501709b649f96336224d471ed7a4a2}{printDetails}}();}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00145\ \ \ \ \ \mbox{\hyperlink{class_livro}{Livro}}*\ \mbox{\hyperlink{class_livro_a9e60fe2c938ad27180aedd0019ed5a23}{toModel}}(std::string\ linha);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_livro_a9bc8c1eafe08e805d0d6249b3b35af19}{comparar}}(std::string\ valor);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_livro_aace0171a9424a8f99178ecc4e83c323f}{alterar}}();}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_livro_ae9e5bced6ab218611ddb0c480535e4ec}{incrementarLivro}}();}
+\DoxyCodeLine{00160\ \};}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

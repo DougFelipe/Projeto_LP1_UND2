@@ -1,5 +1,5 @@
 /**
- * @file ListaEncadeada.h
+ * @file ListaEncadeada.hpp
  * @brief Declaração da Classe ListaEncadeada.
  */
 
@@ -81,8 +81,21 @@ public:
    */
     std::string alterar(int valor, int op);
 
+  /**
+   * @brief Verifica se autor ou editora existe
+   * 
+   * @param valor Valor a ser buscado
+   * @param *campo Ponteiro da variavel que armazena o conteudo para reescrever o arquivo.
+   * 
+   * @return true se existe e falso se não
+   */
     bool existe(std::string valor, std::string *campo);
 
+  /**
+   * @brief Retorna o ultimo nó da lista
+   * 
+   * @return ultimo nó.
+   */
     No<P>* getCauda();
 };
 

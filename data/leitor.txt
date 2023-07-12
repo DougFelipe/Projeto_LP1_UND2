@@ -1,3 +1,4 @@
 1;Leandro Silva;23568;10/7/2023;O Senhor dos aneis
-2;Juliana Teixeira;14563;10/7/2023;O Hobbit
-3;Gabriel Barbosa;123456;10/7/2023;Silmarillion
+2;Juliana Teixeira;14563;00/00/0000;Nenhum livro alugado
+4;Ruben Felipe;147258;10/7/2023;O Laberinto do fauno
+5;Gabriel Silva;148963;00/00/0000;Nenhum livro alugado

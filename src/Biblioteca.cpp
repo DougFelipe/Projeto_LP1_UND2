@@ -121,7 +121,6 @@ void Biblioteca::alugarLivro(){
     std::cin>>idLivro;
 
     std::string campo = listaLeitor.alugar(
-        listaLivro.buscaBinariaRecursiva(idLivro, 0, listaLivro.sizeOf()),
         listaLeitor.buscaBinariaRecursiva(idLeitor, 0, listaLeitor.sizeOf()),
         listaLivro.getValor(idLivro).getTitulo()
         );
@@ -129,6 +128,19 @@ void Biblioteca::alugarLivro(){
     
 }
 
+void Biblioteca::entregarLivro(){
+    Vetor<Leitor> listaLeitor(1);
+    arquivo.criarListaSequencial<Leitor>("data/leitor.txt", &listaLeitor);
+
+    int idLeitor;
+
+    std::cout<<"Digite o id do Leitor para buscar: ";
+    std::cin>>idLeitor;
+
+     std::string campo = listaLeitor.entregar(listaLeitor.buscaBinariaIterativa(idLeitor));
+    arquivo.reescreverArquivo<Leitor>("data/leitor.txt", campo);
+    
+}
 
 void Biblioteca::escreverAutor(){
     std::string nome;
@@ -296,6 +308,7 @@ void Biblioteca::buscarLeitor(){
             std::cout << "2. Remover leitor\n" << std::endl;
             std::cout << "3. Ver todos os dados\n"<<std::endl;
             std::cout << "4. Procurar por um Leitor\n"<<std::endl;
+            std::cout << "5. Entregar Livro\n"<<std::endl;
             std::cin >> optionMenu;
 
             switch (optionMenu)
@@ -312,6 +325,9 @@ void Biblioteca::buscarLeitor(){
                 break;
             case 4:
                 buscaElemento<Leitor>("data/leitor.txt");
+                break;
+            case 5:
+                entregarLivro();
                 break;
             default:
                 std::cout << "Opção Inválida" << std::endl;

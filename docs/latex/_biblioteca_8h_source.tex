@@ -1,0 +1,73 @@
+\hypertarget{_biblioteca_8h_source}{}\doxysection{Biblioteca.\+h}
+\label{_biblioteca_8h_source}\index{C:/Projetos/BTI/Projeto\_LP1\_UND2/include/Biblioteca.h@{C:/Projetos/BTI/Projeto\_LP1\_UND2/include/Biblioteca.h}}
+\mbox{\hyperlink{_biblioteca_8h}{Vá para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ BIBLIOTECA\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ BIBLIOTECA\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_autor_8h}{Autor.h}}"{}}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_leitor_8h}{Leitor.h}}"{}}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_livro_8h}{Livro.h}}"{}}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_editora_8h}{Editora.h}}"{}}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_lista_sequencial_8hpp}{ListaSequencial.hpp}}"{}}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_arquivo_8hpp}{Arquivo.hpp}}"{}}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_lista_encadeada_8hpp}{ListaEncadeada.hpp}}"{}}}
+\DoxyCodeLine{00025\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_biblioteca}{Biblioteca}}\ \{}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \mbox{\hyperlink{class_arquivo}{Arquivo}}\ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}};}
+\DoxyCodeLine{00036\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ E>}
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_biblioteca_a3cc7237404e11a74eac2bd4689cb4014}{pegarUltimoId}}(std::string\ nomeArquivo);\ \ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00046\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ E>}
+\DoxyCodeLine{00047\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_a964d2b0748b71d6f864f70720e4f87c3}{cadastrar}}(E\ obj,\ std::string\ nomeArquivo);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00055\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ E>}
+\DoxyCodeLine{00056\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_acafdf4d142e076aeb37c667a5a1e5668}{ler}}(std::string\ nomeArquivo);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00065\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ E>}
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_aabbc1b1fa43fb555bff95e49985ffe3b}{modificarArquivo}}(std::string\ nomeArquivo,\ \textcolor{keywordtype}{int}\ op);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00075\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ E>}
+\DoxyCodeLine{00076\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_biblioteca_a52bd9e4fc57a09ad0a590489a482898d}{existe}}(std::string\ nomeArquivo,\ std::string\ valor);}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00085\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ E>}
+\DoxyCodeLine{00086\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_ab84ffe31b69f2a2f33d092eb793acd16}{filtro}}(std::string\ nomeArquivo,\ \textcolor{keywordtype}{int}\ op);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00093\ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ E>}
+\DoxyCodeLine{00094\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_a4651ff3812a53963b070e4154679334c}{buscaElemento}}(std::string\ nomeArquivo);}
+\DoxyCodeLine{00095\ \ \ }
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00100\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_a0c9e1dbb8abf0ad09fb4f0626d36cf66}{alugarLivro}}();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_ab9793c70433fa35c9c3b529c4fc44a07}{entregarLivro}}();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00111\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_a5fc7306285fdaf0591fc46000657c933}{escreverAutor}}();}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00116\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_a38013b183f5d8f5ac9543a42c6249a51}{escreverLeitor}}();}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00121\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_aab4d95484be81509b04cc8228efc8454}{escreverEditora}}();}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00126\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_a460f376ca277679a959bcdad3b2075cd}{escrevreLivro}}();}
+\DoxyCodeLine{00127\ }
+\DoxyCodeLine{00131\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_ace2e25420f640415d4c16e8782ea5b44}{buscarEditora}}();}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00136\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_af2abc3689778917c86387ab55ce6d9a3}{buscarAutor}}();}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00141\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_ab5a2bd925e98593febb12e4f29138b99}{buscarLeitor}}();}
+\DoxyCodeLine{00142\ }
+\DoxyCodeLine{00146\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_biblioteca_aad8dcb28105ad80f3141d50080ea2d04}{buscarLivro}}();}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ }
+\DoxyCodeLine{00149\ \};}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00151\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

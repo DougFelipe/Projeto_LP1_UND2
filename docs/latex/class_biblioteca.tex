@@ -1,0 +1,928 @@
+\hypertarget{class_biblioteca}{}\doxysection{Referência da Classe Biblioteca}
+\label{class_biblioteca}\index{Biblioteca@{Biblioteca}}
+
+
+Classe que representa uma \mbox{\hyperlink{class_biblioteca}{Biblioteca}}.  
+
+
+
+
+{\ttfamily \#include $<$Biblioteca.\+h$>$}
+
+
+
+Diagrama de colaboração para Biblioteca\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{class_biblioteca__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class E $>$ }\\int \mbox{\hyperlink{class_biblioteca_a3cc7237404e11a74eac2bd4689cb4014}{pegar\+Ultimo\+Id}} (std\+::string nome\+Arquivo)
+\begin{DoxyCompactList}\small\item\em Função template que retorna o ultimo id do objeto cadastrato. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class E $>$ }\\void \mbox{\hyperlink{class_biblioteca_a964d2b0748b71d6f864f70720e4f87c3}{cadastrar}} (E obj, std\+::string nome\+Arquivo)
+\begin{DoxyCompactList}\small\item\em Função template para realizar o cadastro de um objeto generico. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class E $>$ }\\void \mbox{\hyperlink{class_biblioteca_acafdf4d142e076aeb37c667a5a1e5668}{ler}} (std\+::string nome\+Arquivo)
+\begin{DoxyCompactList}\small\item\em Função template para realizar a leitura do arquivo e imprimir todos. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class E $>$ }\\void \mbox{\hyperlink{class_biblioteca_aabbc1b1fa43fb555bff95e49985ffe3b}{modificar\+Arquivo}} (std\+::string nome\+Arquivo, int op)
+\begin{DoxyCompactList}\small\item\em Função template para realizar a alteração do arquivo. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class E $>$ }\\bool \mbox{\hyperlink{class_biblioteca_a52bd9e4fc57a09ad0a590489a482898d}{existe}} (std\+::string nome\+Arquivo, std\+::string valor)
+\begin{DoxyCompactList}\small\item\em Função template para realizar uma verificação se o objeto passado existe no arquivo. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class E $>$ }\\void \mbox{\hyperlink{class_biblioteca_ab84ffe31b69f2a2f33d092eb793acd16}{filtro}} (std\+::string nome\+Arquivo, int op)
+\begin{DoxyCompactList}\small\item\em Metodo que faz o filtro de todos os livros do autor ou da editora. \end{DoxyCompactList}\item 
+{\footnotesize template$<$class E $>$ }\\void \mbox{\hyperlink{class_biblioteca_a4651ff3812a53963b070e4154679334c}{busca\+Elemento}} (std\+::string nome\+Arquivo)
+\begin{DoxyCompactList}\small\item\em Metodo para buscar um elemento. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_biblioteca_a0c9e1dbb8abf0ad09fb4f0626d36cf66}{alugar\+Livro}} ()
+\begin{DoxyCompactList}\small\item\em Metodo responsavel por fazer o aluguel do livro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_biblioteca_ab9793c70433fa35c9c3b529c4fc44a07}{entregar\+Livro}} ()
+\begin{DoxyCompactList}\small\item\em Metodo responsavel por fazer a entrega do livro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_biblioteca_a5fc7306285fdaf0591fc46000657c933}{escrever\+Autor}} ()
+\begin{DoxyCompactList}\small\item\em Recebe os dados do \mbox{\hyperlink{class_autor}{Autor}} que serão armazenados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_biblioteca_a38013b183f5d8f5ac9543a42c6249a51}{escrever\+Leitor}} ()
+\begin{DoxyCompactList}\small\item\em Recebe os dados do \mbox{\hyperlink{class_leitor}{Leitor}} que serão armazenados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_biblioteca_aab4d95484be81509b04cc8228efc8454}{escrever\+Editora}} ()
+\begin{DoxyCompactList}\small\item\em Recebe os dados da \mbox{\hyperlink{class_editora}{Editora}} que serão armazenados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_biblioteca_a460f376ca277679a959bcdad3b2075cd}{escrevre\+Livro}} ()
+\begin{DoxyCompactList}\small\item\em Recebe os dados do \mbox{\hyperlink{class_livro}{Livro}} que serão armazenados. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_biblioteca_ace2e25420f640415d4c16e8782ea5b44}{buscar\+Editora}} ()
+\begin{DoxyCompactList}\small\item\em Responsavel pelo sub-\/menu da \mbox{\hyperlink{class_editora}{Editora}}, onde direciona para o metodo reponsavel pela operação. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_biblioteca_af2abc3689778917c86387ab55ce6d9a3}{buscar\+Autor}} ()
+\begin{DoxyCompactList}\small\item\em Responsavel pelo sub-\/menu do \mbox{\hyperlink{class_autor}{Autor}} onde direciona para o metodo reponsavel pela operação. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_biblioteca_ab5a2bd925e98593febb12e4f29138b99}{buscar\+Leitor}} ()
+\begin{DoxyCompactList}\small\item\em Responsavel pelo sub-\/menu do \mbox{\hyperlink{class_leitor}{Leitor}}, onde direciona para o metodo reponsavel pela operação. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_biblioteca_aad8dcb28105ad80f3141d50080ea2d04}{buscar\+Livro}} ()
+\begin{DoxyCompactList}\small\item\em Responsavel pelo sub-\/menu do \mbox{\hyperlink{class_livro}{Livro}}, onde direciona para o metodo reponsavel pela operação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_arquivo}{Arquivo}} \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa uma \mbox{\hyperlink{class_biblioteca}{Biblioteca}}. 
+
+Essa classe contém funcionalidades relacionadas a uma \mbox{\hyperlink{class_biblioteca}{Biblioteca}}, como cadastrar um livro, autor, editora, alem de fazer buscas se existe ou não. $\ast$ ~\newline
+ 
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{class_biblioteca_a0c9e1dbb8abf0ad09fb4f0626d36cf66}\label{class_biblioteca_a0c9e1dbb8abf0ad09fb4f0626d36cf66}} 
+\index{Biblioteca@{Biblioteca}!alugarLivro@{alugarLivro}}
+\index{alugarLivro@{alugarLivro}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{alugarLivro()}{alugarLivro()}}
+{\footnotesize\ttfamily void Biblioteca\+::alugar\+Livro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo responsavel por fazer o aluguel do livro. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \mbox{\hyperlink{class_vetor}{Vetor<Livro>}}\ listaLivro(1);}
+\DoxyCodeLine{00110\ \ \ \ \ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}.\mbox{\hyperlink{class_arquivo_aa6ad5847de5118d13fa32bd96c6d136c}{criarListaSequencial}}<\mbox{\hyperlink{class_livro}{Livro}}>(\textcolor{stringliteral}{"{}data/livro.txt"{}},\ \&listaLivro);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \mbox{\hyperlink{class_vetor}{Vetor<Leitor>}}\ listaLeitor(1);}
+\DoxyCodeLine{00113\ \ \ \ \ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}.\mbox{\hyperlink{class_arquivo_aa6ad5847de5118d13fa32bd96c6d136c}{criarListaSequencial}}<\mbox{\hyperlink{class_leitor}{Leitor}}>(\textcolor{stringliteral}{"{}data/leitor.txt"{}},\ \&listaLeitor);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keywordtype}{int}\ idLivro,\ idLeitor;}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00117\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ id\ do\ Leitor\ para\ buscar:\ "{}};}
+\DoxyCodeLine{00118\ \ \ \ \ std::cin>>idLeitor;}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ id\ do\ Livro\ para\ buscar:\ "{}};}
+\DoxyCodeLine{00121\ \ \ \ \ std::cin>>idLivro;}
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \ \ \ \ std::string\ campo\ =\ listaLeitor.alugar(}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ listaLeitor.buscaBinariaRecursiva(idLeitor,\ 0,\ listaLeitor.sizeOf()),}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ listaLivro.getValor(idLivro).getTitulo()}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00127\ \ \ \ \ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}.\mbox{\hyperlink{class_arquivo_a05267f670127aae21582ca5af265e2fc}{reescreverArquivo}}<\mbox{\hyperlink{class_leitor}{Leitor}}>(\textcolor{stringliteral}{"{}data/leitor.txt"{}},\ campo);}
+\DoxyCodeLine{00128\ \ \ \ \ }
+\DoxyCodeLine{00129\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_a0c9e1dbb8abf0ad09fb4f0626d36cf66_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_a0c9e1dbb8abf0ad09fb4f0626d36cf66_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_a4651ff3812a53963b070e4154679334c}\label{class_biblioteca_a4651ff3812a53963b070e4154679334c}} 
+\index{Biblioteca@{Biblioteca}!buscaElemento@{buscaElemento}}
+\index{buscaElemento@{buscaElemento}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{buscaElemento()}{buscaElemento()}}
+{\footnotesize\ttfamily template$<$class E $>$ \\
+void Biblioteca\+::busca\+Elemento (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+Arquivo }\end{DoxyParamCaption})}
+
+
+
+Metodo para buscar um elemento. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+Arquivo} & arquivo onde sera feito a busca \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ \ \ \mbox{\hyperlink{class_vetor}{Vetor<E>}}\ lista(1);}
+\DoxyCodeLine{00094\ \ \ \ \ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}.\mbox{\hyperlink{class_arquivo_aa6ad5847de5118d13fa32bd96c6d136c}{criarListaSequencial}}<E>(nomeArquivo,\ \&lista);}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \textcolor{keywordtype}{int}\ id;}
+\DoxyCodeLine{00097\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ id\ para\ buscar:\ "{}};}
+\DoxyCodeLine{00098\ \ \ \ \ std::cin>>id;}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ lista.findById(\textcolor{keywordtype}{id});}
+\DoxyCodeLine{00101\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}\(\backslash\)n[Enter]\ Voltar\(\backslash\)n"{}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00104\ \ \ \ \ getchar();}
+\DoxyCodeLine{00105\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_a4651ff3812a53963b070e4154679334c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_af2abc3689778917c86387ab55ce6d9a3}\label{class_biblioteca_af2abc3689778917c86387ab55ce6d9a3}} 
+\index{Biblioteca@{Biblioteca}!buscarAutor@{buscarAutor}}
+\index{buscarAutor@{buscarAutor}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{buscarAutor()}{buscarAutor()}}
+{\footnotesize\ttfamily void Biblioteca\+::buscar\+Autor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Responsavel pelo sub-\/menu do \mbox{\hyperlink{class_autor}{Autor}} onde direciona para o metodo reponsavel pela operação. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \textcolor{comment}{//\ Lógica\ para\ buscar\ autor}}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ optionMenu;}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Escolha\ uma\ opção\ no\ menu\ de\ autor:\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}1.\ Alterar\ autor\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}2.\ Remover\ autor\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}3.\ Ver\ todos\ os\ dados\(\backslash\)n"{}}<<std::endl;}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}4.\ Procurar\ por\ um\ Autor\(\backslash\)n"{}}<<std::endl;}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}5.\ Ver\ todos\ os\ livros\ do\ autor\(\backslash\)n"{}}<<std::endl;}
+\DoxyCodeLine{00277\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin\ >>\ optionMenu;}
+\DoxyCodeLine{00278\ }
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (optionMenu)}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modificarArquivo<Autor>(\textcolor{stringliteral}{"{}data/autor.txt"{}},\ 1);}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00284\ }
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modificarArquivo<Autor>(\textcolor{stringliteral}{"{}data/autor.txt"{}},\ 2);}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ler<Autor>(\textcolor{stringliteral}{"{}data/autor.txt"{}});}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ buscaElemento<Autor>(\textcolor{stringliteral}{"{}data/autor.txt"{}});}
+\DoxyCodeLine{00293\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{00295\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ filtro<Livro>(\textcolor{stringliteral}{"{}data/livro.txt"{}},\ 1);}
+\DoxyCodeLine{00296\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00297\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00298\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Opção\ Inválida"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00301\ \}\ }
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{class_biblioteca_af2abc3689778917c86387ab55ce6d9a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_ace2e25420f640415d4c16e8782ea5b44}\label{class_biblioteca_ace2e25420f640415d4c16e8782ea5b44}} 
+\index{Biblioteca@{Biblioteca}!buscarEditora@{buscarEditora}}
+\index{buscarEditora@{buscarEditora}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{buscarEditora()}{buscarEditora()}}
+{\footnotesize\ttfamily void Biblioteca\+::buscar\+Editora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Responsavel pelo sub-\/menu da \mbox{\hyperlink{class_editora}{Editora}}, onde direciona para o metodo reponsavel pela operação. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00233\ \ \ \ \ \ \textcolor{comment}{//\ Menu\ das\ opções\ para\ editora}}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ optionMenu;}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Escolha\ uma\ opção\ no\ menu\ de\ editora:\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}1.\ Alterar\ editora\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}2.\ Remover\ editora\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}3.\ Ver\ todos\ os\ dados\(\backslash\)n"{}}<<std::endl;}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}4.\ Procurar\ por\ uma\ editora\(\backslash\)n"{}}<<std::endl;}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}5.\ Ver\ todos\ os\ livros\ da\ editora\(\backslash\)n"{}}<<std::endl;}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin\ >>\ optionMenu;}
+\DoxyCodeLine{00243\ }
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (optionMenu)}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modificarArquivo<Editora>(\textcolor{stringliteral}{"{}data/editora.txt"{}},\ 1);}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00249\ }
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modificarArquivo<Editora>(\textcolor{stringliteral}{"{}data/editora.txt"{}},\ 2);}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ler<Editora>(\textcolor{stringliteral}{"{}data/editora.txt"{}});}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ buscaElemento<Editora>(\textcolor{stringliteral}{"{}data/editora.txt"{}});}
+\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ filtro<Livro>(\textcolor{stringliteral}{"{}data/livro.txt"{}},\ 2);}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Opção\ Inválida"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00266\ \}\ }
+
+\end{DoxyCode}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{class_biblioteca_ace2e25420f640415d4c16e8782ea5b44_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_ab5a2bd925e98593febb12e4f29138b99}\label{class_biblioteca_ab5a2bd925e98593febb12e4f29138b99}} 
+\index{Biblioteca@{Biblioteca}!buscarLeitor@{buscarLeitor}}
+\index{buscarLeitor@{buscarLeitor}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{buscarLeitor()}{buscarLeitor()}}
+{\footnotesize\ttfamily void Biblioteca\+::buscar\+Leitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Responsavel pelo sub-\/menu do \mbox{\hyperlink{class_leitor}{Leitor}}, onde direciona para o metodo reponsavel pela operação. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00304\ \ \ \ \ \ \textcolor{comment}{//\ Lógica\ para\ buscar\ leitor}}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ optionMenu;}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Escolha\ uma\ opção\ para\ buscar\ leitor:\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}1.\ Alterar\ leitor\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}2.\ Remover\ leitor\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}3.\ Ver\ todos\ os\ dados\(\backslash\)n"{}}<<std::endl;}
+\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}4.\ Procurar\ por\ um\ Leitor\(\backslash\)n"{}}<<std::endl;}
+\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}5.\ Entregar\ Livro\(\backslash\)n"{}}<<std::endl;}
+\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin\ >>\ optionMenu;}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (optionMenu)}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modificarArquivo<Leitor>(\textcolor{stringliteral}{"{}data/leitor.txt"{}},\ 1);}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00319\ }
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modificarArquivo<Leitor>(\textcolor{stringliteral}{"{}data/leitor.txt"{}},\ 2);}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ler<Leitor>(\textcolor{stringliteral}{"{}data/leitor.txt"{}});}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ buscaElemento<Leitor>(\textcolor{stringliteral}{"{}data/leitor.txt"{}});}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_biblioteca_ab9793c70433fa35c9c3b529c4fc44a07}{entregarLivro}}();}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Opção\ Inválida"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00336\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_ab5a2bd925e98593febb12e4f29138b99_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{class_biblioteca_ab5a2bd925e98593febb12e4f29138b99_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_aad8dcb28105ad80f3141d50080ea2d04}\label{class_biblioteca_aad8dcb28105ad80f3141d50080ea2d04}} 
+\index{Biblioteca@{Biblioteca}!buscarLivro@{buscarLivro}}
+\index{buscarLivro@{buscarLivro}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{buscarLivro()}{buscarLivro()}}
+{\footnotesize\ttfamily void Biblioteca\+::buscar\+Livro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Responsavel pelo sub-\/menu do \mbox{\hyperlink{class_livro}{Livro}}, onde direciona para o metodo reponsavel pela operação. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00339\ \ \ \ \ \ \textcolor{comment}{//\ Lógica\ para\ buscar\ livro}}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ optionMenu;}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Escolha\ uma\ opção\ no\ menu\ de\ livros:\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}1.\ Alterar\ livro\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}2.\ Remover\ livro\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}3.\ Alugar\ livro\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}4.\ Ver\ todos\ os\ dados\(\backslash\)n"{}}<<std::endl;}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}5.\ Procurar\ por\ um\ Livro\ \(\backslash\)n"{}}<<std::endl;}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ std::cin\ >>\ optionMenu;}
+\DoxyCodeLine{00348\ }
+\DoxyCodeLine{00349\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (optionMenu)}
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00352\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modificarArquivo<Livro>(\textcolor{stringliteral}{"{}data/livro.txt"{}},1);}
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00354\ }
+\DoxyCodeLine{00355\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ modificarArquivo<Livro>(\textcolor{stringliteral}{"{}data/livro.txt"{}},2);}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_biblioteca_a0c9e1dbb8abf0ad09fb4f0626d36cf66}{alugarLivro}}();}
+\DoxyCodeLine{00360\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ler<Livro>(\textcolor{stringliteral}{"{}data/livro.txt"{}});}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ buscaElemento<Livro>(\textcolor{stringliteral}{"{}data/livro.txt"{}});}
+\DoxyCodeLine{00366\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00367\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00368\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Opção\ Inválida\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00369\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00370\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00371\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_aad8dcb28105ad80f3141d50080ea2d04_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{class_biblioteca_aad8dcb28105ad80f3141d50080ea2d04_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_a964d2b0748b71d6f864f70720e4f87c3}\label{class_biblioteca_a964d2b0748b71d6f864f70720e4f87c3}} 
+\index{Biblioteca@{Biblioteca}!cadastrar@{cadastrar}}
+\index{cadastrar@{cadastrar}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{cadastrar()}{cadastrar()}}
+{\footnotesize\ttfamily template$<$class E $>$ \\
+void Biblioteca\+::cadastrar (\begin{DoxyParamCaption}\item[{E}]{obj,  }\item[{std\+::string}]{nome\+Arquivo }\end{DoxyParamCaption})}
+
+
+
+Função template para realizar o cadastro de um objeto generico. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em E} & A classe a ser utilizada na operação. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parâmetros}
+{\em obj} & O objeto que será armazenado no arquivo. \\
+\hline
+{\em nome\+Arquivo} & O nome do arquivo onde será feito o cadastro. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}.\mbox{\hyperlink{class_arquivo_a48b54f91b55a7f22573509140a71115d}{salvar}}(obj,\ nomeArquivo);}
+\DoxyCodeLine{00017\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{class_biblioteca_a964d2b0748b71d6f864f70720e4f87c3_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_a964d2b0748b71d6f864f70720e4f87c3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_ab9793c70433fa35c9c3b529c4fc44a07}\label{class_biblioteca_ab9793c70433fa35c9c3b529c4fc44a07}} 
+\index{Biblioteca@{Biblioteca}!entregarLivro@{entregarLivro}}
+\index{entregarLivro@{entregarLivro}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{entregarLivro()}{entregarLivro()}}
+{\footnotesize\ttfamily void Biblioteca\+::entregar\+Livro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Metodo responsavel por fazer a entrega do livro. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \mbox{\hyperlink{class_vetor}{Vetor<Leitor>}}\ listaLeitor(1);}
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}.\mbox{\hyperlink{class_arquivo_aa6ad5847de5118d13fa32bd96c6d136c}{criarListaSequencial}}<\mbox{\hyperlink{class_leitor}{Leitor}}>(\textcolor{stringliteral}{"{}data/leitor.txt"{}},\ \&listaLeitor);}
+\DoxyCodeLine{00134\ }
+\DoxyCodeLine{00135\ \ \ \ \ \textcolor{keywordtype}{int}\ idLeitor;}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ id\ do\ Leitor\ para\ buscar:\ "{}};}
+\DoxyCodeLine{00138\ \ \ \ \ std::cin>>idLeitor;}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ std::string\ campo\ =\ listaLeitor.entregar(listaLeitor.buscaBinariaIterativa(idLeitor));}
+\DoxyCodeLine{00141\ \ \ \ \ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}.\mbox{\hyperlink{class_arquivo_a05267f670127aae21582ca5af265e2fc}{reescreverArquivo}}<\mbox{\hyperlink{class_leitor}{Leitor}}>(\textcolor{stringliteral}{"{}data/leitor.txt"{}},\ campo);}
+\DoxyCodeLine{00142\ \ \ \ \ }
+\DoxyCodeLine{00143\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_ab9793c70433fa35c9c3b529c4fc44a07_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_ab9793c70433fa35c9c3b529c4fc44a07_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_a5fc7306285fdaf0591fc46000657c933}\label{class_biblioteca_a5fc7306285fdaf0591fc46000657c933}} 
+\index{Biblioteca@{Biblioteca}!escreverAutor@{escreverAutor}}
+\index{escreverAutor@{escreverAutor}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{escreverAutor()}{escreverAutor()}}
+{\footnotesize\ttfamily void Biblioteca\+::escrever\+Autor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recebe os dados do \mbox{\hyperlink{class_autor}{Autor}} que serão armazenados. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00146\ \ \ \ \ std::string\ nome;}
+\DoxyCodeLine{00147\ \ \ \ \ std::string\ nacion;}
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{keywordtype}{int}\ ano;}
+\DoxyCodeLine{00149\ }
+\DoxyCodeLine{00150\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ nome:\ "{}};}
+\DoxyCodeLine{00151\ \ \ \ \ std::cin.ignore();\ }
+\DoxyCodeLine{00152\ \ \ \ \ std::getline(std::cin,\ nome);}
+\DoxyCodeLine{00153\ \ \ \ \ }
+\DoxyCodeLine{00154\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ onde\ ele\ nasceu:\ "{}};}
+\DoxyCodeLine{00155\ \ \ \ \ std::getline(std::cin,\ nacion);}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ seu\ ano\ de\ nascimento:\ "{}};}
+\DoxyCodeLine{00158\ \ \ \ \ std::cin>>ano;}
+\DoxyCodeLine{00159\ }
+\DoxyCodeLine{00160\ \ \ \ \ \mbox{\hyperlink{class_autor}{Autor}}\ autor(pegarUltimoId<Autor>(\textcolor{stringliteral}{"{}data/autor.txt"{}}),\ nome,\ nacion,\ ano);}
+\DoxyCodeLine{00161\ \ \ \ \ \mbox{\hyperlink{class_biblioteca_a964d2b0748b71d6f864f70720e4f87c3}{cadastrar}}(autor,\ \textcolor{stringliteral}{"{}data/autor.txt"{}});}
+\DoxyCodeLine{00162\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_a5fc7306285fdaf0591fc46000657c933_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{class_biblioteca_a5fc7306285fdaf0591fc46000657c933_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_aab4d95484be81509b04cc8228efc8454}\label{class_biblioteca_aab4d95484be81509b04cc8228efc8454}} 
+\index{Biblioteca@{Biblioteca}!escreverEditora@{escreverEditora}}
+\index{escreverEditora@{escreverEditora}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{escreverEditora()}{escreverEditora()}}
+{\footnotesize\ttfamily void Biblioteca\+::escrever\+Editora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recebe os dados da \mbox{\hyperlink{class_editora}{Editora}} que serão armazenados. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00181\ \ \ \ \ std::string\ nome;}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordtype}{int}\ ano;}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ nome\ da\ empresa:\ "{}};}
+\DoxyCodeLine{00185\ \ \ \ \ std::cin.ignore();\ }
+\DoxyCodeLine{00186\ \ \ \ \ std::getline(std::cin,\ nome);}
+\DoxyCodeLine{00187\ }
+\DoxyCodeLine{00188\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ ano\ de\ sua\ fundacao:\ "{}};}
+\DoxyCodeLine{00189\ \ \ \ \ std::cin>>ano;}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \mbox{\hyperlink{class_editora}{Editora}}\ editora(pegarUltimoId<Editora>(\textcolor{stringliteral}{"{}data/editora.txt"{}}),nome,\ ano);}
+\DoxyCodeLine{00192\ \ \ \ \ \mbox{\hyperlink{class_biblioteca_a964d2b0748b71d6f864f70720e4f87c3}{cadastrar}}(editora,\ \textcolor{stringliteral}{"{}data/editora.txt"{}});}
+\DoxyCodeLine{00193\ \ \ \ \ }
+\DoxyCodeLine{00194\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_aab4d95484be81509b04cc8228efc8454_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{class_biblioteca_aab4d95484be81509b04cc8228efc8454_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_a38013b183f5d8f5ac9543a42c6249a51}\label{class_biblioteca_a38013b183f5d8f5ac9543a42c6249a51}} 
+\index{Biblioteca@{Biblioteca}!escreverLeitor@{escreverLeitor}}
+\index{escreverLeitor@{escreverLeitor}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{escreverLeitor()}{escreverLeitor()}}
+{\footnotesize\ttfamily void Biblioteca\+::escrever\+Leitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recebe os dados do \mbox{\hyperlink{class_leitor}{Leitor}} que serão armazenados. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00165\ \ \ \ \ std::string\ nome;}
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordtype}{int}\ rg;}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ nome:\ "{}};}
+\DoxyCodeLine{00169\ \ \ \ \ std::cin.ignore();\ }
+\DoxyCodeLine{00170\ \ \ \ \ std::getline(std::cin,\ nome);}
+\DoxyCodeLine{00171\ }
+\DoxyCodeLine{00172\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ RG:\ "{}};}
+\DoxyCodeLine{00173\ \ \ \ \ std::cin>>rg;}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00175\ \ \ \ \ \mbox{\hyperlink{class_leitor}{Leitor}}\ leitor(pegarUltimoId<Leitor>(\textcolor{stringliteral}{"{}data/leitor.txt"{}}),\ nome,\ rg);}
+\DoxyCodeLine{00176\ \ \ \ \ \mbox{\hyperlink{class_biblioteca_a964d2b0748b71d6f864f70720e4f87c3}{cadastrar}}(leitor,\ \textcolor{stringliteral}{"{}data/leitor.txt"{}});}
+\DoxyCodeLine{00177\ \ \ \ \ }
+\DoxyCodeLine{00178\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_a38013b183f5d8f5ac9543a42c6249a51_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{class_biblioteca_a38013b183f5d8f5ac9543a42c6249a51_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_a460f376ca277679a959bcdad3b2075cd}\label{class_biblioteca_a460f376ca277679a959bcdad3b2075cd}} 
+\index{Biblioteca@{Biblioteca}!escrevreLivro@{escrevreLivro}}
+\index{escrevreLivro@{escrevreLivro}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{escrevreLivro()}{escrevreLivro()}}
+{\footnotesize\ttfamily void Biblioteca\+::escrevre\+Livro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recebe os dados do \mbox{\hyperlink{class_livro}{Livro}} que serão armazenados. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00197\ \ \ \ \ std::string\ titulo,\ autor,\ editora,\ genero;}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordtype}{int}\ ano;}
+\DoxyCodeLine{00199\ }
+\DoxyCodeLine{00200\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ Titulo\ do\ livro:\ "{}};}
+\DoxyCodeLine{00201\ \ \ \ \ std::cin.ignore();\ }
+\DoxyCodeLine{00202\ \ \ \ \ std::getline(std::cin,\ titulo);}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00204\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ ano\ do\ seu\ lançamento:\ "{}};}
+\DoxyCodeLine{00205\ \ \ \ \ std::cin>>ano;}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ autor\ do\ livro:\ "{}};}
+\DoxyCodeLine{00208\ \ \ \ \ std::cin.ignore();\ }
+\DoxyCodeLine{00209\ \ \ \ \ std::getline(std::cin,\ autor);}
+\DoxyCodeLine{00210\ \ \ \ \ \textcolor{comment}{//verifica\ se\ existe\ esse\ autor}}
+\DoxyCodeLine{00211\ \ \ \ \ \textcolor{keywordflow}{while}(!existe<Autor>(\textcolor{stringliteral}{"{}data/autor.txt"{}},\ autor))\{}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Esse\ autor\ não\ existe!\(\backslash\)nDigite\ novamente:\ "{}};}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ std::getline(std::cin,\ autor);}
+\DoxyCodeLine{00214\ \ \ \ \ \}}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00216\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ a\ editora\ do\ livro:\ "{}};}
+\DoxyCodeLine{00217\ \ \ \ \ std::getline(std::cin,\ editora);}
+\DoxyCodeLine{00218\ \ \ \ \ \textcolor{comment}{//verifica\ se\ existe\ essa\ editora}}
+\DoxyCodeLine{00219\ \ \ \ \ \textcolor{keywordflow}{while}(!existe<Editora>(\textcolor{stringliteral}{"{}data/editora.txt"{}},\ editora))\{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Essa\ editora\ não\ existe!\(\backslash\)nDigite\ novamente:\ "{}};}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ std::getline(std::cin,\ editora);}
+\DoxyCodeLine{00222\ \ \ \ \ \}}
+\DoxyCodeLine{00223\ }
+\DoxyCodeLine{00224\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Qual\ o\ genero\ do\ livro:\ "{}};}
+\DoxyCodeLine{00225\ \ \ \ \ std::getline(std::cin,\ genero);}
+\DoxyCodeLine{00226\ }
+\DoxyCodeLine{00227\ \ \ \ \ \mbox{\hyperlink{class_livro}{Livro}}\ livro(pegarUltimoId<Livro>(\textcolor{stringliteral}{"{}data/livro.txt"{}}),titulo,\ ano,\ editora,\ autor,\ genero);}
+\DoxyCodeLine{00228\ \ \ \ \ \mbox{\hyperlink{class_biblioteca_a964d2b0748b71d6f864f70720e4f87c3}{cadastrar}}(livro,\ \textcolor{stringliteral}{"{}data/livro.txt"{}});}
+\DoxyCodeLine{00229\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_a460f376ca277679a959bcdad3b2075cd_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{class_biblioteca_a460f376ca277679a959bcdad3b2075cd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_a52bd9e4fc57a09ad0a590489a482898d}\label{class_biblioteca_a52bd9e4fc57a09ad0a590489a482898d}} 
+\index{Biblioteca@{Biblioteca}!existe@{existe}}
+\index{existe@{existe}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{existe()}{existe()}}
+{\footnotesize\ttfamily template$<$class E $>$ \\
+bool Biblioteca\+::existe (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+Arquivo,  }\item[{std\+::string}]{valor }\end{DoxyParamCaption})}
+
+
+
+Função template para realizar uma verificação se o objeto passado existe no arquivo. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em E} & A classe a ser utilizada na operação. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+Arquivo} & O nome do arquivo onde será feito o cadastro. \\
+\hline
+{\em valor} & Conteudo a ser usado na verificação \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//incrementa\ autor\ e\ editora}}
+\DoxyCodeLine{00050\ \ \ \ \mbox{\hyperlink{class_lista_encadeada}{ListaEncadeada<E>}}\ lista\ =\ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}.\mbox{\hyperlink{class_arquivo_aa6c4f226cee02165d224760711297b3d}{criarListaEncadeada}}<E>(nomeArquivo);}
+\DoxyCodeLine{00051\ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ std::string\ campo\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordflow}{if}(lista.\mbox{\hyperlink{class_lista_encadeada_ae302a7e143e6c2b60230cdc0da5e70b5}{existe}}(valor,\ \&campo))\{}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}.\mbox{\hyperlink{class_arquivo_a05267f670127aae21582ca5af265e2fc}{reescreverArquivo}}<E>(nomeArquivo,\ campo);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_a52bd9e4fc57a09ad0a590489a482898d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_ab84ffe31b69f2a2f33d092eb793acd16}\label{class_biblioteca_ab84ffe31b69f2a2f33d092eb793acd16}} 
+\index{Biblioteca@{Biblioteca}!filtro@{filtro}}
+\index{filtro@{filtro}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{filtro()}{filtro()}}
+{\footnotesize\ttfamily template$<$class E $>$ \\
+void Biblioteca\+::filtro (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+Arquivo,  }\item[{int}]{op }\end{DoxyParamCaption})}
+
+
+
+Metodo que faz o filtro de todos os livros do autor ou da editora. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+Arquivo} & nome do arquivo onde será feito a consulta \\
+\hline
+{\em op} & Operação a ser feita, 1 = filtra para autor 2 = filtra para editora \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \mbox{\hyperlink{class_vetor}{Vetor<E>}}\ lista(1);}
+\DoxyCodeLine{00065\ \ \ \ \ std::string\ valor;}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keywordtype}{char}\ c\ =\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}.\mbox{\hyperlink{class_arquivo_aa6ad5847de5118d13fa32bd96c6d136c}{criarListaSequencial}}<E>(nomeArquivo,\ \&lista);}
+\DoxyCodeLine{00069\ \ \ \ \ }
+\DoxyCodeLine{00070\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}De\ quem\ você\ quer\ filtrar?:\ \ "{}};}
+\DoxyCodeLine{00071\ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00072\ \ \ \ \ std::getline(std::cin,\ valor);}
+\DoxyCodeLine{00073\ \ \ \ \ lista.filtra(valor,op);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordflow}{do}\{}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ lista.imprime();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}[q]\ Voltar\ \ [n]\ Ordenar\ pelo\ nome\ \ [i]\ Ordenar\ pelo\ ano\ :\ "{}};}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ std::cin>>c;}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(c==\textcolor{charliteral}{'n'})\{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ lista.ordenarPorTitulo();}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(c==\textcolor{charliteral}{'i'})\{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ lista.ordenarPorAnoPublicacao();}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \}\textcolor{keywordflow}{while}(c!=\textcolor{charliteral}{'q'});}
+\DoxyCodeLine{00089\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_ab84ffe31b69f2a2f33d092eb793acd16_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_acafdf4d142e076aeb37c667a5a1e5668}\label{class_biblioteca_acafdf4d142e076aeb37c667a5a1e5668}} 
+\index{Biblioteca@{Biblioteca}!ler@{ler}}
+\index{ler@{ler}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{ler()}{ler()}}
+{\footnotesize\ttfamily template$<$class E $>$ \\
+void Biblioteca\+::ler (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+Arquivo }\end{DoxyParamCaption})}
+
+
+
+Função template para realizar a leitura do arquivo e imprimir todos. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em E} & A classe a ser utilizada na operação. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+Arquivo} & O nome do arquivo onde será feito o cadastro. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \mbox{\hyperlink{class_lista_encadeada}{ListaEncadeada<E>}}\ lista\ =\ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}.\mbox{\hyperlink{class_arquivo_aa6c4f226cee02165d224760711297b3d}{criarListaEncadeada}}<E>(nomeArquivo);}
+\DoxyCodeLine{00023\ \ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00025\ \ \ \ \ lista.\mbox{\hyperlink{class_lista_encadeada_ab5603627f3540a3cf8e717d5e38443e2}{imprimir}}();}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00027\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}[Enter]\ Voltar\ "{}};}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00030\ \ \ \ \ getchar();}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_acafdf4d142e076aeb37c667a5a1e5668_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_aabbc1b1fa43fb555bff95e49985ffe3b}\label{class_biblioteca_aabbc1b1fa43fb555bff95e49985ffe3b}} 
+\index{Biblioteca@{Biblioteca}!modificarArquivo@{modificarArquivo}}
+\index{modificarArquivo@{modificarArquivo}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{modificarArquivo()}{modificarArquivo()}}
+{\footnotesize\ttfamily template$<$class E $>$ \\
+void Biblioteca\+::modificar\+Arquivo (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+Arquivo,  }\item[{int}]{op }\end{DoxyParamCaption})}
+
+
+
+Função template para realizar a alteração do arquivo. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em E} & A classe a ser utilizada na operação. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+Arquivo} & O nome do arquivo onde será feito o cadastro. \\
+\hline
+{\em op} & Codigo da operação\+: 1 -\/ Alterar $\vert$ 2 -\/ Remover \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00036\ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \mbox{\hyperlink{class_lista_encadeada}{ListaEncadeada<E>}}\ lista\ =\ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}.\mbox{\hyperlink{class_arquivo_aa6c4f226cee02165d224760711297b3d}{criarListaEncadeada}}<E>(nomeArquivo);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ codigo\ para\ buscar:\ "{}};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{int}\ valor;}
+\DoxyCodeLine{00041\ \ \ \ \ std::cin>>valor;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}.\mbox{\hyperlink{class_arquivo_a05267f670127aae21582ca5af265e2fc}{reescreverArquivo}}<E>(nomeArquivo,\ lista.\mbox{\hyperlink{class_lista_encadeada_a5c2d2a3bce9d3c3c72af78307471aa8d}{alterar}}(valor,\ op));}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_aabbc1b1fa43fb555bff95e49985ffe3b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_biblioteca_a3cc7237404e11a74eac2bd4689cb4014}\label{class_biblioteca_a3cc7237404e11a74eac2bd4689cb4014}} 
+\index{Biblioteca@{Biblioteca}!pegarUltimoId@{pegarUltimoId}}
+\index{pegarUltimoId@{pegarUltimoId}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{pegarUltimoId()}{pegarUltimoId()}}
+{\footnotesize\ttfamily template$<$class E $>$ \\
+int Biblioteca\+::pegar\+Ultimo\+Id (\begin{DoxyParamCaption}\item[{std\+::string}]{nome\+Arquivo }\end{DoxyParamCaption})}
+
+
+
+Função template que retorna o ultimo id do objeto cadastrato. 
+
+
+\begin{DoxyTemplParams}{Parâmetros do $<$em$>$template$<$/em$>$}
+{\em E} & A classe a ser utilizada na operação. \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome\+Arquivo} & O nome do arquivo onde será feito o cadastro. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o ultimo id cadastrado ou 1, caso seja o primeiro cadastro. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00004\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00005\ \ \ \ }
+\DoxyCodeLine{00006\ \ \ \ \mbox{\hyperlink{class_lista_encadeada}{ListaEncadeada<E>}}\ lista\ =\ \mbox{\hyperlink{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}{arquivo}}.\mbox{\hyperlink{class_arquivo_aa6c4f226cee02165d224760711297b3d}{criarListaEncadeada}}<E>(nomeArquivo);}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keywordflow}{if}(lista.\mbox{\hyperlink{class_lista_encadeada_aa31d72d4a0bb4dc6826da2e0672f131e}{vazia}}())\{}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00010\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return}\ lista.\mbox{\hyperlink{class_lista_encadeada_a2f483d6d444a732ac682371afd161b25}{getCauda}}()-\/>\mbox{\hyperlink{class_no_acbae6e0587635392efc41f35f36bd87c}{valor}}.getId()\ +\ 1;}
+\DoxyCodeLine{00011\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_biblioteca_a3cc7237404e11a74eac2bd4689cb4014_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}\label{class_biblioteca_af1ff14700b6781da0099d9b990da3a31}} 
+\index{Biblioteca@{Biblioteca}!arquivo@{arquivo}}
+\index{arquivo@{arquivo}!Biblioteca@{Biblioteca}}
+\doxysubsubsection{\texorpdfstring{arquivo}{arquivo}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_arquivo}{Arquivo}} Biblioteca\+::arquivo}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Projetos/\+BTI/\+Projeto\+\_\+\+LP1\+\_\+\+UND2/include/\mbox{\hyperlink{_biblioteca_8h}{Biblioteca.\+h}}\item 
+C\+:/\+Projetos/\+BTI/\+Projeto\+\_\+\+LP1\+\_\+\+UND2/src/\mbox{\hyperlink{_biblioteca_8cpp}{Biblioteca.\+cpp}}\end{DoxyCompactItemize}

@@ -1,3 +1,8 @@
+/**
+ * @file ListaSequencial.hpp
+ * @brief Declaração da Classe ListaSequencial.
+ */
+
 #ifndef LISTA_H
 #define LISTA_H
 
@@ -5,6 +10,13 @@
 #include <chrono>
 #include <ctime>
 
+
+/**
+ * @brief Classe que representa uma Lista Encadeada.
+ *
+ * Essa classe contém informações e funcionalidades relacionadas a uma lista sequencial, como seu valor, seu tamanho e quantidade de elementos, assim como os metodos de adicionar no inicio e fim, remover no inicio e fim e outros que voce pode ver abaixo.
+ * @tparam E a classe que sera trabalhada na lista.
+ */
 template <class E>
 class Vetor {
 private:
@@ -13,26 +25,143 @@ private:
   E* list;
 
 public:
+
+/**
+ * @brief Construtor da lista.
+ * 
+ * @param l Tamanho(length) inicial da lista.
+ */
   Vetor(int l);
+
+/**
+ * @brief Destrutor da lista.
+ */
   ~Vetor();
+
+/**
+ * @brief Função que imprime toda a lista.
+ */
   void imprime();
+
+  /**
+ * @brief Função zera a lista, zerando a variavel qtd
+ * 
+ * @return 0 se tiver elementos e -1 se não existir nenhum.
+ */
   int delet();
+
+  /**
+ * @brief Função que retorna a quantidade de elementos.
+ * 
+ * @return quantidade de elementos existentes na lista.
+ */
   int sizeOf();
+
+/**
+ * @brief Função que retorna o limete da lista.
+ * 
+ * @return limite de capacidade da lista
+ */
   int sizeOfLimit();
+
+/**
+ * @brief Função que adiciona um elemento no inicio da lista.
+ * 
+ * @tparam valor É o elemento a ser adicionado
+ */
   int push_front(E valor);
+
+/**
+ * @brief Função que adiciona um elemento no fim da lista.
+ * 
+ * @tparam valor É o elemento a ser adicionado
+ */
   int push_back(E valor);
+
+  /**
+ * @brief Função que remove um elemento da lista.
+ */
   int insert(int index, E valor);
+
+/**
+ * @brief Função que remove o primeiro elemento da lista.
+ */
   int pop_front();
+
+/**
+ * @brief Função que remove o ultimo elemento da lista.
+ */
   int pop_back();
+
+/**
+ * @brief Função que remove um elemento da lista.
+ * 
+ * @param index é o indice do elemento
+ */
   int removeAt(int index);
-  void sort();
-  void reverse();
+
+/**
+ * @brief Função aumenta o tamanho da lista em +1.
+ */
   void ampliar();
+
+/**
+ * @brief Função que filtra os livros com o  valor passado
+ * 
+ * @param valor Valor usado para filtrar
+ * @param op Operação a ser feita, 1 = filtra para autor 2 = filtra para editora
+ */
   void filtra(std::string valor, int op);
-  std::string alugar(int livro, int leitor, std::string titulo);
+
+/**
+ * @brief Função responsavel pelo aluguel dos livros
+ * 
+ * @param leitor ID do leitor que vai alugar
+ * @param titulo Titulo do livro escolhido
+ * 
+ * @return string com todos os dados para reescrever o arquivo
+ */
+  std::string alugar(int leitor, std::string titulo);
+
+  /**
+ * @brief Função responsavel pelo aluguel dos livros
+ * 
+ * @param leitor ID do leitor que vai alugar
+ * 
+ * @return string com todos os dados para reescrever o arquivo
+ */
+  std::string entregar(int leitor);
+
+/**
+ * @brief Função que retorna um objeto buscado.
+ * 
+ * Ele chama o metodo buscaBinariaRecursiva para achar pelo id
+ * 
+ * @param id ID do objeto
+ * 
+ * @return O objeto encontrado
+ */
   E getValor(int id);
+
+/**
+ * @brief Função que compara dusa strings.
+ * 
+ * @param str1 1º texto
+ * @param str2 2º texto
+ * 
+ * @return true se forem iguais ou false se forem diferentes.
+ */
   bool equalsIgnoreCase(const std::string &str1, const std::string &str2);
+
+/**
+ * @brief Função que converte string para minuscula.
+ * 
+ * @param str Texto para conversão
+ * 
+ * @return texto em minusculo
+ */
   std::string minuscula(std::string str);
+
   /**
   * @brief Função que realiza uma busca recursiva em uma lista sequencial.
   *
@@ -53,16 +182,19 @@ public:
 */
   int buscaBinariaIterativa(int chave);
 
+/**
+ * @brief Função que imprime um objeto buscado.
+ */
   void findById(int chave);
 
-  /**
+/**
  * @brief Função que ordena um array de livros por título.
  * 
  * Algoritmo Bubble Sort para ordenar um array de Livros em ordem alfabética pelo título.
  */
   void ordenarPorTitulo();
 
-  /**
+/**
  * @brief Função que ordena um array de livros por ano de publicação.
  * 
  * Algoritmo Selection Sort para ordenar um array de Livros pelo ano de publicação.
@@ -207,35 +339,6 @@ int Vetor<E>::removeAt(int index) {
 }
 
 
-
-template <class E>
-void Vetor<E>::sort() {
-  for (int i = 0; i < qtd - 1; i++) {
-    int aux = 0;
-    for (int j = 0; j < qtd - 1; j++) {
-      if (list[j] > list[j + 1]) {
-        aux = list[j];
-        list[j] = list[j + 1];
-        list[j + 1] = aux;
-      }
-    }
-  }
-}
-
-template <class E>
-void Vetor<E>::reverse() {
-  for (int i = 0; i < qtd - 1; i++) {
-    int aux = 0;
-    for (int j = 0; j < qtd - 1; j++) {
-      if (list[j] < list[j + 1]) {
-        aux = list[j];
-        list[j] = list[j + 1];
-        list[j + 1] = aux;
-      }
-    }
-  }
-}
-
 template <class E>
 void Vetor<E>::ampliar(){
   length++;
@@ -347,7 +450,7 @@ E Vetor<E>::getValor(int id){
 }
 
 template<class E>
-std::string Vetor<E>::alugar(int livro, int leitor, std::string titulo){
+std::string Vetor<E>::alugar(int leitor, std::string titulo){
   list[leitor].setLivro(titulo);
   
 
@@ -373,7 +476,18 @@ std::string Vetor<E>::alugar(int livro, int leitor, std::string titulo){
   return retorno;
 }
 
+template<class E>
+std::string Vetor<E>::entregar(int leitor){
+  list[leitor].setLivro("Nenhum livro alugado");
+  list[leitor].setDataAluguel("00/00/0000");
+  
 
+  std::string retorno;
+  for(int i = 0; i<qtd; i++){
+      retorno += list[i].toString();
+  }
+  return retorno;
+}
 
 template<class E>
 bool Vetor<E>::equalsIgnoreCase(const std::string &str1, const std::string &str2) {

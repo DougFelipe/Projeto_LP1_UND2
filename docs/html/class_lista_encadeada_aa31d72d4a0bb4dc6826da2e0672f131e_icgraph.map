@@ -1,0 +1,4 @@
+<map id="ListaEncadeada::vazia" name="ListaEncadeada::vazia">
+<area shape="rect" id="node1" title="Verifica se a lista esta vazia." alt="" coords="219,5,370,32"/>
+<area shape="rect" id="node2" href="$class_biblioteca.html#a3cc7237404e11a74eac2bd4689cb4014" title="Função template que retorna o ultimo id do objeto cadastrato." alt="" coords="5,5,171,32"/>
+</map>

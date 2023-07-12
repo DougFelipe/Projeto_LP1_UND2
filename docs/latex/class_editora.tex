@@ -1,0 +1,430 @@
+\hypertarget{class_editora}{}\doxysection{Referência da Classe Editora}
+\label{class_editora}\index{Editora@{Editora}}
+
+
+Classe que representa uma \mbox{\hyperlink{class_editora}{Editora}}.  
+
+
+
+
+{\ttfamily \#include $<$Editora.\+h$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_editora_a0cc6e6436a236a4d32dcfae35c43c81f}{Editora}} ()
+\begin{DoxyCompactList}\small\item\em Construtor vazio da classe \mbox{\hyperlink{class_editora}{Editora}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_editora_a2c44476e3b6938534d9dad394d51ab24}{Editora}} (int id, std\+::string nome, int ano\+Fundacao)
+\begin{DoxyCompactList}\small\item\em Construtor com parametros da classe \mbox{\hyperlink{class_editora}{Editora}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_editora_aa6f74c592226a1004e903cc82f676b7b}{$\sim$\+Editora}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe editora. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_editora_abe462a67a8d43cde2855add0fb47b226}{get\+Id}} ()
+\item 
+void \mbox{\hyperlink{class_editora_ad0517f71f861458564f9048315ed4a92}{set\+Id}} (int id)
+\item 
+std\+::string \mbox{\hyperlink{class_editora_adea7d1547c94b13068bba3c7e7cb098f}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome da editora. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_editora_a202cd5db9f12555669803e3fa5e720c0}{set\+Nome}} (std\+::string nome)
+\begin{DoxyCompactList}\small\item\em Define o nome da editora. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_editora_a21a5fb016e39b93a79caf1b4abea5cef}{get\+Ano\+Fundacao}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o ano de fundação da editora. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_editora_a7660ac80fbbda664844ab80c80bf8460}{set\+Ano\+Fundacao}} (int ano)
+\begin{DoxyCompactList}\small\item\em Define o ano de fundação da editora. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_editora_a7358297efce1a9251beabca89fe26fb5}{get\+Qtd\+Livros\+Cadastrados}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a quantidade de livros cadastrados dessa editora. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_editora_a23339fe71490024bcff22466727baf22}{set\+Qtd\+Livros\+Cadastrados}} (int qtd)
+\begin{DoxyCompactList}\small\item\em Define a quantidade de livros cadastrados dessa editora. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_editora_a89439f949e1c9063d96af96dac98d335}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Retorna uma string com os valores separados por \textquotesingle{};\textquotesingle{} para poder salvar em uma linha do arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_editora_ab69cffa6bcd05efa5c25e07554d08fb7}{print\+Details}} ()
+\begin{DoxyCompactList}\small\item\em Imprime todos os valores da \mbox{\hyperlink{class_editora}{Editora}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_editora}{Editora}} $\ast$ \mbox{\hyperlink{class_editora_aa9e35c8f7cb274c015dc89d5c4548593}{to\+Model}} (std\+::string linha)
+\begin{DoxyCompactList}\small\item\em Responsavel por converter a string que vem do arquivo em uma Editora$\ast$, pegando os valores e salvando em seus atributos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_editora_a4c9a992e79ac1df870e73fadb07fca3e}{comparar}} (std\+::string valor)
+\begin{DoxyCompactList}\small\item\em Compara se o valor passado pelo parametro é igual ao nome da editora. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_editora_af7c278ac3376b2592948d217954cfe7d}{alterar}} ()
+\begin{DoxyCompactList}\small\item\em Altera os dados da \mbox{\hyperlink{class_editora}{Editora}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_editora_ad3718edf9f919cb57555e8f791a54646}{incrementar\+Livro}} ()
+\begin{DoxyCompactList}\small\item\em Incrementa mais um a cada livro que for cadastrado com essa editora. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa uma \mbox{\hyperlink{class_editora}{Editora}}. 
+
+Essa classe contém informações e funcionalidades relacionadas a uma editora, como seu nome, ano de fundação, geters e setters, além de metodos que fazem as conversões como o to\+String e to\+Model. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_editora_a0cc6e6436a236a4d32dcfae35c43c81f}\label{class_editora_a0cc6e6436a236a4d32dcfae35c43c81f}} 
+\index{Editora@{Editora}!Editora@{Editora}}
+\index{Editora@{Editora}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{Editora()}{Editora()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Editora\+::\+Editora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor vazio da classe \mbox{\hyperlink{class_editora}{Editora}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_a2c44476e3b6938534d9dad394d51ab24}\label{class_editora_a2c44476e3b6938534d9dad394d51ab24}} 
+\index{Editora@{Editora}!Editora@{Editora}}
+\index{Editora@{Editora}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{Editora()}{Editora()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Editora\+::\+Editora (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{nome,  }\item[{int}]{ano\+Fundacao }\end{DoxyParamCaption})}
+
+
+
+Construtor com parametros da classe \mbox{\hyperlink{class_editora}{Editora}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & O ID da editora. \\
+\hline
+{\em nome} & O nome da editora. \\
+\hline
+{\em ano\+Fundacao} & O ano em que a editora foi fundada. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00006\ \ \ this-\/>\textcolor{keywordtype}{id}\ =\ id;}
+\DoxyCodeLine{00007\ \ \ this-\/>nome\ =\ nome;}
+\DoxyCodeLine{00008\ \ \ this-\/>anoFundacao\ =\ anoFundacao;}
+\DoxyCodeLine{00009\ \ \ this-\/>qtdLivrosCadastrados\ =\ 0;}
+\DoxyCodeLine{00010\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_aa6f74c592226a1004e903cc82f676b7b}\label{class_editora_aa6f74c592226a1004e903cc82f676b7b}} 
+\index{Editora@{Editora}!````~Editora@{$\sim$Editora}}
+\index{````~Editora@{$\sim$Editora}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{$\sim$Editora()}{~Editora()}}
+{\footnotesize\ttfamily Editora\+::$\sim$\+Editora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe editora. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{class_editora_af7c278ac3376b2592948d217954cfe7d}\label{class_editora_af7c278ac3376b2592948d217954cfe7d}} 
+\index{Editora@{Editora}!alterar@{alterar}}
+\index{alterar@{alterar}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{alterar()}{alterar()}}
+{\footnotesize\ttfamily void Editora\+::alterar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Altera os dados da \mbox{\hyperlink{class_editora}{Editora}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00093\ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ novo\ nome\ da\ Editora:\ "{}};}
+\DoxyCodeLine{00094\ \ \ std::cin.ignore();}
+\DoxyCodeLine{00095\ \ \ \ \ std::getline(std::cin,\ nome);}
+\DoxyCodeLine{00096\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_a4c9a992e79ac1df870e73fadb07fca3e}\label{class_editora_a4c9a992e79ac1df870e73fadb07fca3e}} 
+\index{Editora@{Editora}!comparar@{comparar}}
+\index{comparar@{comparar}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{comparar()}{comparar()}}
+{\footnotesize\ttfamily bool Editora\+::comparar (\begin{DoxyParamCaption}\item[{std\+::string}]{valor }\end{DoxyParamCaption})}
+
+
+
+Compara se o valor passado pelo parametro é igual ao nome da editora. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Valor para a comparação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se forem iguais ou falso se forem diferentes. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00081\ \ \ \textcolor{keywordflow}{if}\ (valor.size()\ !=\ nome.size())}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ valor.size();\ ++i)\ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::toupper(valor[i])\ !=\ std::toupper(nome[i]))}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00087\ \ \ \ \ \}}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00090\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_a21a5fb016e39b93a79caf1b4abea5cef}\label{class_editora_a21a5fb016e39b93a79caf1b4abea5cef}} 
+\index{Editora@{Editora}!getAnoFundacao@{getAnoFundacao}}
+\index{getAnoFundacao@{getAnoFundacao}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{getAnoFundacao()}{getAnoFundacao()}}
+{\footnotesize\ttfamily int Editora\+::get\+Ano\+Fundacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o ano de fundação da editora. 
+
+\begin{DoxyReturn}{Retorna}
+ano de fundação da editora. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ \textcolor{keywordflow}{return}\ anoFundacao;}
+\DoxyCodeLine{00031\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_abe462a67a8d43cde2855add0fb47b226}\label{class_editora_abe462a67a8d43cde2855add0fb47b226}} 
+\index{Editora@{Editora}!getId@{getId}}
+\index{getId@{getId}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Editora\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \textcolor{keywordflow}{return}\ this-\/>id;}
+\DoxyCodeLine{00016\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_adea7d1547c94b13068bba3c7e7cb098f}\label{class_editora_adea7d1547c94b13068bba3c7e7cb098f}} 
+\index{Editora@{Editora}!getNome@{getNome}}
+\index{getNome@{getNome}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{getNome()}{getNome()}}
+{\footnotesize\ttfamily std\+::string Editora\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o nome da editora. 
+
+\begin{DoxyReturn}{Retorna}
+nome da editora. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \textcolor{keywordflow}{return}\ nome;}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_a7358297efce1a9251beabca89fe26fb5}\label{class_editora_a7358297efce1a9251beabca89fe26fb5}} 
+\index{Editora@{Editora}!getQtdLivrosCadastrados@{getQtdLivrosCadastrados}}
+\index{getQtdLivrosCadastrados@{getQtdLivrosCadastrados}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{getQtdLivrosCadastrados()}{getQtdLivrosCadastrados()}}
+{\footnotesize\ttfamily int Editora\+::get\+Qtd\+Livros\+Cadastrados (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém a quantidade de livros cadastrados dessa editora. 
+
+\begin{DoxyReturn}{Retorna}
+quantidade de livros cadastrados dessa editora. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \textcolor{keywordflow}{return}\ this-\/>qtdLivrosCadastrados;}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_ad3718edf9f919cb57555e8f791a54646}\label{class_editora_ad3718edf9f919cb57555e8f791a54646}} 
+\index{Editora@{Editora}!incrementarLivro@{incrementarLivro}}
+\index{incrementarLivro@{incrementarLivro}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{incrementarLivro()}{incrementarLivro()}}
+{\footnotesize\ttfamily void Editora\+::incrementar\+Livro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Incrementa mais um a cada livro que for cadastrado com essa editora. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ this-\/>qtdLivrosCadastrados++;}
+\DoxyCodeLine{00100\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_ab69cffa6bcd05efa5c25e07554d08fb7}\label{class_editora_ab69cffa6bcd05efa5c25e07554d08fb7}} 
+\index{Editora@{Editora}!printDetails@{printDetails}}
+\index{printDetails@{printDetails}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{printDetails()}{printDetails()}}
+{\footnotesize\ttfamily void Editora\+::print\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime todos os valores da \mbox{\hyperlink{class_editora}{Editora}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ std::cout<<\textcolor{stringliteral}{"{}Codigo:\ "{}}<<\textcolor{keywordtype}{id}}
+\DoxyCodeLine{00053\ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nNome:\ "{}}<<this-\/>nome}
+\DoxyCodeLine{00054\ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nAno\ de\ Fundação:\ "{}}<<this-\/>anoFundacao}
+\DoxyCodeLine{00055\ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nTotal\ de\ livros\ cadastrados:\ "{}}<<this-\/>qtdLivrosCadastrados<<std::endl;}
+\DoxyCodeLine{00056\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_a7660ac80fbbda664844ab80c80bf8460}\label{class_editora_a7660ac80fbbda664844ab80c80bf8460}} 
+\index{Editora@{Editora}!setAnoFundacao@{setAnoFundacao}}
+\index{setAnoFundacao@{setAnoFundacao}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{setAnoFundacao()}{setAnoFundacao()}}
+{\footnotesize\ttfamily void Editora\+::set\+Ano\+Fundacao (\begin{DoxyParamCaption}\item[{int}]{ano }\end{DoxyParamCaption})}
+
+
+
+Define o ano de fundação da editora. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ano} & O novo ano de fundação da editora. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ this-\/>anoFundacao\ =\ ano;}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_ad0517f71f861458564f9048315ed4a92}\label{class_editora_ad0517f71f861458564f9048315ed4a92}} 
+\index{Editora@{Editora}!setId@{setId}}
+\index{setId@{setId}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Editora\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ this-\/>\textcolor{keywordtype}{id}\ =\ id;}
+\DoxyCodeLine{00020\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_a202cd5db9f12555669803e3fa5e720c0}\label{class_editora_a202cd5db9f12555669803e3fa5e720c0}} 
+\index{Editora@{Editora}!setNome@{setNome}}
+\index{setNome@{setNome}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{setNome()}{setNome()}}
+{\footnotesize\ttfamily void Editora\+::set\+Nome (\begin{DoxyParamCaption}\item[{std\+::string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Define o nome da editora. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nome} & O novo nome da editora. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ this-\/>nome\ =\ nome;}
+\DoxyCodeLine{00027\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_a23339fe71490024bcff22466727baf22}\label{class_editora_a23339fe71490024bcff22466727baf22}} 
+\index{Editora@{Editora}!setQtdLivrosCadastrados@{setQtdLivrosCadastrados}}
+\index{setQtdLivrosCadastrados@{setQtdLivrosCadastrados}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{setQtdLivrosCadastrados()}{setQtdLivrosCadastrados()}}
+{\footnotesize\ttfamily void Editora\+::set\+Qtd\+Livros\+Cadastrados (\begin{DoxyParamCaption}\item[{int}]{qtd }\end{DoxyParamCaption})}
+
+
+
+Define a quantidade de livros cadastrados dessa editora. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em qtd} & A nova quantidade de livros cadastrados dessa editora. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ this-\/>qtdLivrosCadastrados\ =\ qtd;}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_aa9e35c8f7cb274c015dc89d5c4548593}\label{class_editora_aa9e35c8f7cb274c015dc89d5c4548593}} 
+\index{Editora@{Editora}!toModel@{toModel}}
+\index{toModel@{toModel}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{toModel()}{toModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_editora}{Editora}} $\ast$ Editora\+::to\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{linha }\end{DoxyParamCaption})}
+
+
+
+Responsavel por converter a string que vem do arquivo em uma Editora$\ast$, pegando os valores e salvando em seus atributos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & A string com todos os valores separados por \textquotesingle{};\textquotesingle{}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+A Editora$\ast$ preenchida com as informações recebidas. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ pos\ =\ 0;}
+\DoxyCodeLine{00061\ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Separando\ os\ atributos\ por\ vírgula}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\textcolor{keywordtype}{id}\ =\ stoi(linha.substr(0,\ pos));}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>nome\ =\ linha.substr(0,\ pos);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>anoFundacao\ =\ stoi(linha.substr(0,\ pos));}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>qtdLivrosCadastrados\ =\ stoi(linha);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00078\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_editora_a89439f949e1c9063d96af96dac98d335}\label{class_editora_a89439f949e1c9063d96af96dac98d335}} 
+\index{Editora@{Editora}!toString@{toString}}
+\index{toString@{toString}!Editora@{Editora}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string Editora\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna uma string com os valores separados por \textquotesingle{};\textquotesingle{} para poder salvar em uma linha do arquivo. 
+
+\begin{DoxyReturn}{Retorna}
+string com os atributos separados por \textquotesingle{};\textquotesingle{}. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ std::string\ retorno\ =\ std::to\_string(this-\/>\textcolor{keywordtype}{id})\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ this-\/>nome\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ std::to\_string(this-\/>anoFundacao)}
+\DoxyCodeLine{00047\ \ \ \ +\ \textcolor{stringliteral}{"{};"{}}\ +\ std::to\_string(this-\/>qtdLivrosCadastrados)\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00048\ \ \ \textcolor{keywordflow}{return}\ retorno;}
+\DoxyCodeLine{00049\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Projetos/\+BTI/\+Projeto\+\_\+\+LP1\+\_\+\+UND2/include/\mbox{\hyperlink{_editora_8h}{Editora.\+h}}\item 
+C\+:/\+Projetos/\+BTI/\+Projeto\+\_\+\+LP1\+\_\+\+UND2/src/\mbox{\hyperlink{_editora_8cpp}{Editora.\+cpp}}\end{DoxyCompactItemize}

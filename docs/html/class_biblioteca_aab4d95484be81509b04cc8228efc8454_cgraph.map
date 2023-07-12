@@ -1,0 +1,5 @@
+<map id="Biblioteca::escreverEditora" name="Biblioteca::escreverEditora">
+<area shape="rect" id="node1" title="Recebe os dados da Editora que serão armazenados." alt="" coords="5,5,181,32"/>
+<area shape="rect" id="node2" href="$class_biblioteca.html#a964d2b0748b71d6f864f70720e4f87c3" title="Função template para realizar o cadastro de um objeto generico." alt="" coords="229,5,369,32"/>
+<area shape="rect" id="node3" href="$class_arquivo.html#a48b54f91b55a7f22573509140a71115d" title="Metodo para salvar uma nova linha no arquivo." alt="" coords="417,5,521,32"/>
+</map>

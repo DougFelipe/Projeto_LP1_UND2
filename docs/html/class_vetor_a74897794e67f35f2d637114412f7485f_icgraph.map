@@ -1,0 +1,11 @@
+<map id="Vetor::ampliar" name="Vetor::ampliar">
+<area shape="rect" id="node1" title="Função aumenta o tamanho da lista em +1." alt="" coords="769,81,871,108"/>
+<area shape="rect" id="node2" href="$class_arquivo.html#aa6ad5847de5118d13fa32bd96c6d136c" title="Metodo para ler um arquivo e salvar em uma lista sequencial com todos os dados lidos." alt="" coords="532,81,721,108"/>
+<area shape="rect" id="node3" href="$class_biblioteca.html#a0c9e1dbb8abf0ad09fb4f0626d36cf66" title="Metodo responsavel por fazer o aluguel do livro." alt="" coords="323,5,470,32"/>
+<area shape="rect" id="node6" href="$class_biblioteca.html#a4651ff3812a53963b070e4154679334c" title="Metodo para buscar um elemento." alt="" coords="308,56,484,83"/>
+<area shape="rect" id="node7" href="$class_biblioteca.html#ab9793c70433fa35c9c3b529c4fc44a07" title="Metodo responsavel por fazer a entrega do livro." alt="" coords="317,107,476,133"/>
+<area shape="rect" id="node9" href="$class_biblioteca.html#ab84ffe31b69f2a2f33d092eb793acd16" title="Metodo que faz o filtro de todos os livros do autor ou da editora." alt="" coords="341,157,451,184"/>
+<area shape="rect" id="node4" href="$class_biblioteca.html#aad8dcb28105ad80f3141d50080ea2d04" title="Responsavel pelo sub&#45;menu do Livro, onde direciona para o metodo reponsavel pela operação." alt="" coords="106,19,257,45"/>
+<area shape="rect" id="node5" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o sistema." alt="" coords="5,56,55,83"/>
+<area shape="rect" id="node8" href="$class_biblioteca.html#ab5a2bd925e98593febb12e4f29138b99" title="Responsavel pelo sub&#45;menu do Leitor, onde direciona para o metodo reponsavel pela operação." alt="" coords="103,81,260,108"/>
+</map>

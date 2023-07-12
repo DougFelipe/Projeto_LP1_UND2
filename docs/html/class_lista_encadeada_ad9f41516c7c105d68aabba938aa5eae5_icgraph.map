@@ -1,0 +1,8 @@
+<map id="ListaEncadeada::adicionarFim" name="ListaEncadeada::adicionarFim">
+<area shape="rect" id="node1" title="Insere um elemento no final da lista." alt="" coords="471,81,667,108"/>
+<area shape="rect" id="node2" href="$class_arquivo.html#aa6c4f226cee02165d224760711297b3d" title="Metodo para ler um arquivo e retornar uma lista encadeada com todos os dados lidos." alt="" coords="234,81,423,108"/>
+<area shape="rect" id="node3" href="$class_biblioteca.html#a52bd9e4fc57a09ad0a590489a482898d" title="Função template para realizar uma verificação se o objeto passado existe no arquivo." alt="" coords="35,5,156,32"/>
+<area shape="rect" id="node4" href="$class_biblioteca.html#acafdf4d142e076aeb37c667a5a1e5668" title="Função template para realizar a leitura do arquivo e imprimir todos." alt="" coords="45,56,146,83"/>
+<area shape="rect" id="node5" href="$class_biblioteca.html#aabbc1b1fa43fb555bff95e49985ffe3b" title="Função template para realizar a alteração do arquivo." alt="" coords="5,107,186,133"/>
+<area shape="rect" id="node6" href="$class_biblioteca.html#a3cc7237404e11a74eac2bd4689cb4014" title="Função template que retorna o ultimo id do objeto cadastrato." alt="" coords="13,157,178,184"/>
+</map>
