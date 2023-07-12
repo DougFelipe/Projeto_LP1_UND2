@@ -1,5 +1,5 @@
 /**
- * @file ListaEncadeada.h
+ * @file ListaEncadeada.hpp
  * @brief Declaração da Classe ListaEncadeada.
  */
 
@@ -81,6 +81,21 @@ public:
    */
     std::string alterar(int valor, int op);
 
+  /**
+   * @brief Verifica se autor ou editora existe
+   * 
+   * @param valor Valor a ser buscado
+   * @param *campo Ponteiro da variavel que armazena o conteudo para reescrever o arquivo.
+   * 
+   * @return true se existe e falso se não
+   */
+    bool existe(std::string valor, std::string *campo);
+
+  /**
+   * @brief Retorna o ultimo nó da lista
+   * 
+   * @return ultimo nó.
+   */
     No<P>* getCauda();
 };
 
@@ -227,17 +242,18 @@ std::string ListaEncadeada<P>::alterar(int valor, int op){
      std::string retorno;
      No<P>* atual = cabeca;
     while (atual != nullptr) {
-        if(atual->valor.getId() == valor){
+         if(atual->valor.getId() == valor){
             std::cout<<std::endl;
             atual->valor.printDetails();
             std::cout<<std::endl;
-
             if(op == 1){
             atual->valor.alterar();
-            } else {
-                std::cout<<"Removido com sucesso!!"<<std::endl;
+            } else if(op == 2) {
+                std::cout<<"Removido com sucesso!!\n"<<std::endl;
                 atual = atual->proximo;
                 continue;
+            } else if(op == 3){
+                atual->valor.incrementarLivro();
             }
             
         }
@@ -248,7 +264,21 @@ std::string ListaEncadeada<P>::alterar(int valor, int op){
     return retorno;
 }
 
+template <class P>
+bool ListaEncadeada<P>::existe(std::string valor, std::string *campo){
+    No<P>* atual = cabeca;
+    while (atual != nullptr) {
+        if(atual->valor.comparar(valor)){
+            *campo = alterar(atual->valor.getId(), 3);
+            return true;
+        }
+        
+        atual = atual->proximo;  
 
+    }
+
+    return false;
+}
 
 template <class P>
 No<P>* ListaEncadeada<P>::getCauda(){

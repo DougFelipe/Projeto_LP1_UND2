@@ -1,0 +1,534 @@
+\hypertarget{class_livro}{}\doxysection{Referência da Classe Livro}
+\label{class_livro}\index{Livro@{Livro}}
+
+
+Classe que representa um \mbox{\hyperlink{class_livro}{Livro}}.  
+
+
+
+
+{\ttfamily \#include $<$Livro.\+h$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_livro_a4b89ad279d36589f7337083cdf006861}{Livro}} ()
+\begin{DoxyCompactList}\small\item\em Construtor vazio da classe \mbox{\hyperlink{class_livro}{Livro}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_livro_a588c34f3e86a65164bce9e2f7ec77786}{Livro}} (int id, std\+::string titulo, int ano\+Publicacao, std\+::string editora, std\+::string autor, std\+::string genero)
+\begin{DoxyCompactList}\small\item\em Construtor com parametros da classe \mbox{\hyperlink{class_livro}{Livro}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_livro_a1f3b49a5fbaf89727b0d0317e128655f}{$\sim$\+Livro}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{class_livro}{Livro}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_livro_a7e3addd03f34db52fbbc17ad0d268d1c}{get\+Id}} ()
+\item 
+void \mbox{\hyperlink{class_livro_a1a4192ef375e747c72e08fcb57bae32e}{set\+Id}} (int id)
+\item 
+std\+::string \mbox{\hyperlink{class_livro_a984cc2f3a34b3e96515151ba54021bc8}{get\+Titulo}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o titulo do livro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_livro_a7de9ca1d41a56be94ca9cf53740910c5}{set\+Titulo}} (std\+::string titulo)
+\begin{DoxyCompactList}\small\item\em Define o titulo do livro. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_livro_a292c37b480232937905e88c1841925c3}{get\+Ano\+Publicacao}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o ano de publicação do livro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_livro_a90394a6784363b00797a9ca11b042c64}{set\+Ano\+Publicacao}} (int ano)
+\begin{DoxyCompactList}\small\item\em Define o ano de publicação do livro. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_livro_a44e275996f39db1214d5f9a96889785a}{get\+Editora}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o ano de publicação do livro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_livro_a2f7392ba8ab633a94e6d78ab55e1f22a}{set\+Editora}} (std\+::string editora)
+\begin{DoxyCompactList}\small\item\em Define a editora do livro. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_livro_aefbf479a0dd8b0621aa82baa35feb9e6}{get\+Autor}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o autor do livro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_livro_ac2298c63708a85a53a3c3d1145d41ca8}{set\+Autor}} (std\+::string autor)
+\begin{DoxyCompactList}\small\item\em Define o autor do livro. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_livro_aa3bc5cceba6904fec19efc9d037a0a9b}{get\+Genero}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o genero do livro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_livro_a09aa42059efc4429916236f2fc10a373}{set\+Genero}} (std\+::string genero)
+\begin{DoxyCompactList}\small\item\em Define o genero do livro. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_livro_a06d86ac249b299f07b759d041b282e9f}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Retorna uma string com os valores separados por \textquotesingle{};\textquotesingle{} para poder salvar em uma linha do arquivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_livro_afc501709b649f96336224d471ed7a4a2}{print\+Details}} ()
+\begin{DoxyCompactList}\small\item\em Imprime todos os valores do \mbox{\hyperlink{class_livro}{Livro}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_livro}{Livro}} $\ast$ \mbox{\hyperlink{class_livro_a9e60fe2c938ad27180aedd0019ed5a23}{to\+Model}} (std\+::string linha)
+\begin{DoxyCompactList}\small\item\em Responsavel por converter a string que vem do arquivo em um Livro$\ast$, pegando os valores e salvando em seus atributos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_livro_a9bc8c1eafe08e805d0d6249b3b35af19}{comparar}} (std\+::string valor)
+\begin{DoxyCompactList}\small\item\em Compara se o valor passado pelo parametro é igual ao nome do \mbox{\hyperlink{class_livro}{Livro}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_livro_aace0171a9424a8f99178ecc4e83c323f}{alterar}} ()
+\begin{DoxyCompactList}\small\item\em Altera os dados do \mbox{\hyperlink{class_livro}{Livro}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_livro_ae9e5bced6ab218611ddb0c480535e4ec}{incrementar\+Livro}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um \mbox{\hyperlink{class_livro}{Livro}}. 
+
+Essa classe contém informações e funcionalidades relacionadas a um \mbox{\hyperlink{class_livro}{Livro}}, como seu titulo, ano de publicação, editora, autor, genero, geters e setters, além de metodos que fazem as conversões como o to\+String e to\+Model. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_livro_a4b89ad279d36589f7337083cdf006861}\label{class_livro_a4b89ad279d36589f7337083cdf006861}} 
+\index{Livro@{Livro}!Livro@{Livro}}
+\index{Livro@{Livro}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{Livro()}{Livro()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Livro\+::\+Livro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor vazio da classe \mbox{\hyperlink{class_livro}{Livro}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_a588c34f3e86a65164bce9e2f7ec77786}\label{class_livro_a588c34f3e86a65164bce9e2f7ec77786}} 
+\index{Livro@{Livro}!Livro@{Livro}}
+\index{Livro@{Livro}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{Livro()}{Livro()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Livro\+::\+Livro (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{titulo,  }\item[{int}]{ano\+Publicacao,  }\item[{std\+::string}]{editora,  }\item[{std\+::string}]{autor,  }\item[{std\+::string}]{genero }\end{DoxyParamCaption})}
+
+
+
+Construtor com parametros da classe \mbox{\hyperlink{class_livro}{Livro}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em titulo} & O titulo do \mbox{\hyperlink{class_livro}{Livro}}. \\
+\hline
+{\em ano\+Publicacao} & O ano da publicação do livro. \\
+\hline
+{\em editora} & A editora do \mbox{\hyperlink{class_livro}{Livro}}. \\
+\hline
+{\em autor} & O autor que escreveu o \mbox{\hyperlink{class_livro}{Livro}}. \\
+\hline
+{\em genero} & O gênero do livro. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00007\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\textcolor{keywordtype}{id}\ =\ id;}
+\DoxyCodeLine{00008\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>titulo\ =\ titulo;}
+\DoxyCodeLine{00009\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>anoPublicacao\ =\ anoPublicacao;}
+\DoxyCodeLine{00010\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>editora\ =\ editora;}
+\DoxyCodeLine{00011\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>autor\ =\ autor;}
+\DoxyCodeLine{00012\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>genero\ =\ genero;}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_a1f3b49a5fbaf89727b0d0317e128655f}\label{class_livro_a1f3b49a5fbaf89727b0d0317e128655f}} 
+\index{Livro@{Livro}!````~Livro@{$\sim$Livro}}
+\index{````~Livro@{$\sim$Livro}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{$\sim$Livro()}{~Livro()}}
+{\footnotesize\ttfamily Livro\+::$\sim$\+Livro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe \mbox{\hyperlink{class_livro}{Livro}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{class_livro_aace0171a9424a8f99178ecc4e83c323f}\label{class_livro_aace0171a9424a8f99178ecc4e83c323f}} 
+\index{Livro@{Livro}!alterar@{alterar}}
+\index{alterar@{alterar}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{alterar()}{alterar()}}
+{\footnotesize\ttfamily void Livro\+::alterar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Altera os dados do \mbox{\hyperlink{class_livro}{Livro}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ novo\ titulo:\ "{}};}
+\DoxyCodeLine{00124\ \ \ std::cin.ignore();}
+\DoxyCodeLine{00125\ \ \ std::getline(std::cin,\ titulo);}
+\DoxyCodeLine{00126\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_a9bc8c1eafe08e805d0d6249b3b35af19}\label{class_livro_a9bc8c1eafe08e805d0d6249b3b35af19}} 
+\index{Livro@{Livro}!comparar@{comparar}}
+\index{comparar@{comparar}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{comparar()}{comparar()}}
+{\footnotesize\ttfamily bool Livro\+::comparar (\begin{DoxyParamCaption}\item[{std\+::string}]{valor }\end{DoxyParamCaption})}
+
+
+
+Compara se o valor passado pelo parametro é igual ao nome do \mbox{\hyperlink{class_livro}{Livro}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Valor para a comparação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se forem iguais ou falso se forem diferentes. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00111\ \ \ \textcolor{keywordflow}{if}\ (valor.size()\ !=\ titulo.size())}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00113\ }
+\DoxyCodeLine{00114\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ valor.size();\ ++i)\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::toupper(valor[i])\ !=\ std::toupper(titulo[i]))}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00117\ \ \ \ \ \}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00120\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_a292c37b480232937905e88c1841925c3}\label{class_livro_a292c37b480232937905e88c1841925c3}} 
+\index{Livro@{Livro}!getAnoPublicacao@{getAnoPublicacao}}
+\index{getAnoPublicacao@{getAnoPublicacao}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{getAnoPublicacao()}{getAnoPublicacao()}}
+{\footnotesize\ttfamily int Livro\+::get\+Ano\+Publicacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o ano de publicação do livro. 
+
+\begin{DoxyReturn}{Retorna}
+ano de publicação do \mbox{\hyperlink{class_livro}{Livro}}. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00034\ \ \ \textcolor{keywordflow}{return}\ anoPublicacao;}
+\DoxyCodeLine{00035\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_aefbf479a0dd8b0621aa82baa35feb9e6}\label{class_livro_aefbf479a0dd8b0621aa82baa35feb9e6}} 
+\index{Livro@{Livro}!getAutor@{getAutor}}
+\index{getAutor@{getAutor}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{getAutor()}{getAutor()}}
+{\footnotesize\ttfamily std\+::string Livro\+::get\+Autor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o autor do livro. 
+
+\begin{DoxyReturn}{Retorna}
+autor do \mbox{\hyperlink{class_livro}{Livro}}. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00050\ \ \ \textcolor{keywordflow}{return}\ autor;}
+\DoxyCodeLine{00051\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_a44e275996f39db1214d5f9a96889785a}\label{class_livro_a44e275996f39db1214d5f9a96889785a}} 
+\index{Livro@{Livro}!getEditora@{getEditora}}
+\index{getEditora@{getEditora}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{getEditora()}{getEditora()}}
+{\footnotesize\ttfamily std\+::string Livro\+::get\+Editora (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o ano de publicação do livro. 
+
+\begin{DoxyReturn}{Retorna}
+ano de publicação do \mbox{\hyperlink{class_livro}{Livro}}. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \textcolor{keywordflow}{return}\ editora;}
+\DoxyCodeLine{00043\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_aa3bc5cceba6904fec19efc9d037a0a9b}\label{class_livro_aa3bc5cceba6904fec19efc9d037a0a9b}} 
+\index{Livro@{Livro}!getGenero@{getGenero}}
+\index{getGenero@{getGenero}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{getGenero()}{getGenero()}}
+{\footnotesize\ttfamily std\+::string Livro\+::get\+Genero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o genero do livro. 
+
+\begin{DoxyReturn}{Retorna}
+genero do \mbox{\hyperlink{class_livro}{Livro}}. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \textcolor{keywordflow}{return}\ genero;}
+\DoxyCodeLine{00059\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_a7e3addd03f34db52fbbc17ad0d268d1c}\label{class_livro_a7e3addd03f34db52fbbc17ad0d268d1c}} 
+\index{Livro@{Livro}!getId@{getId}}
+\index{getId@{getId}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily int Livro\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ \textcolor{keywordflow}{return}\ this-\/>id;}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_a984cc2f3a34b3e96515151ba54021bc8}\label{class_livro_a984cc2f3a34b3e96515151ba54021bc8}} 
+\index{Livro@{Livro}!getTitulo@{getTitulo}}
+\index{getTitulo@{getTitulo}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{getTitulo()}{getTitulo()}}
+{\footnotesize\ttfamily std\+::string Livro\+::get\+Titulo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o titulo do livro. 
+
+\begin{DoxyReturn}{Retorna}
+titulo do \mbox{\hyperlink{class_livro}{Livro}}. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ \textcolor{keywordflow}{return}\ titulo;}
+\DoxyCodeLine{00027\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_ae9e5bced6ab218611ddb0c480535e4ec}\label{class_livro_ae9e5bced6ab218611ddb0c480535e4ec}} 
+\index{Livro@{Livro}!incrementarLivro@{incrementarLivro}}
+\index{incrementarLivro@{incrementarLivro}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{incrementarLivro()}{incrementarLivro()}}
+{\footnotesize\ttfamily void Livro\+::incrementar\+Livro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00129\ \ \ }
+\DoxyCodeLine{00130\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_afc501709b649f96336224d471ed7a4a2}\label{class_livro_afc501709b649f96336224d471ed7a4a2}} 
+\index{Livro@{Livro}!printDetails@{printDetails}}
+\index{printDetails@{printDetails}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{printDetails()}{printDetails()}}
+{\footnotesize\ttfamily void Livro\+::print\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime todos os valores do \mbox{\hyperlink{class_livro}{Livro}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00102\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Codigo:\ "{}}<<\textcolor{keywordtype}{id}}
+\DoxyCodeLine{00103\ \ \ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nTitulo:\ "{}}<<this-\/>titulo}
+\DoxyCodeLine{00104\ \ \ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nAno\ de\ publicação:\ "{}}<<this-\/>anoPublicacao}
+\DoxyCodeLine{00105\ \ \ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nAutor:\ "{}}<<this-\/>autor}
+\DoxyCodeLine{00106\ \ \ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nEditora:\ "{}}<<this-\/>editora}
+\DoxyCodeLine{00107\ \ \ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nGenero:\ "{}}<<this-\/>genero<<std::endl;}
+\DoxyCodeLine{00108\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_a90394a6784363b00797a9ca11b042c64}\label{class_livro_a90394a6784363b00797a9ca11b042c64}} 
+\index{Livro@{Livro}!setAnoPublicacao@{setAnoPublicacao}}
+\index{setAnoPublicacao@{setAnoPublicacao}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{setAnoPublicacao()}{setAnoPublicacao()}}
+{\footnotesize\ttfamily void Livro\+::set\+Ano\+Publicacao (\begin{DoxyParamCaption}\item[{int}]{ano }\end{DoxyParamCaption})}
+
+
+
+Define o ano de publicação do livro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ano} & O novo ano de publicação do \mbox{\hyperlink{class_livro}{Livro}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ this-\/>anoPublicacao\ =\ ano;}
+\DoxyCodeLine{00039\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_ac2298c63708a85a53a3c3d1145d41ca8}\label{class_livro_ac2298c63708a85a53a3c3d1145d41ca8}} 
+\index{Livro@{Livro}!setAutor@{setAutor}}
+\index{setAutor@{setAutor}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{setAutor()}{setAutor()}}
+{\footnotesize\ttfamily void Livro\+::set\+Autor (\begin{DoxyParamCaption}\item[{std\+::string}]{autor }\end{DoxyParamCaption})}
+
+
+
+Define o autor do livro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em autor} & O novo autor do \mbox{\hyperlink{class_livro}{Livro}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00054\ \ \ this-\/>autor\ =\ autor;}
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_a2f7392ba8ab633a94e6d78ab55e1f22a}\label{class_livro_a2f7392ba8ab633a94e6d78ab55e1f22a}} 
+\index{Livro@{Livro}!setEditora@{setEditora}}
+\index{setEditora@{setEditora}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{setEditora()}{setEditora()}}
+{\footnotesize\ttfamily void Livro\+::set\+Editora (\begin{DoxyParamCaption}\item[{std\+::string}]{editora }\end{DoxyParamCaption})}
+
+
+
+Define a editora do livro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em editora} & A nova editora do \mbox{\hyperlink{class_livro}{Livro}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00046\ \ \ this-\/>editora\ =\ editora;}
+\DoxyCodeLine{00047\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_a09aa42059efc4429916236f2fc10a373}\label{class_livro_a09aa42059efc4429916236f2fc10a373}} 
+\index{Livro@{Livro}!setGenero@{setGenero}}
+\index{setGenero@{setGenero}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{setGenero()}{setGenero()}}
+{\footnotesize\ttfamily void Livro\+::set\+Genero (\begin{DoxyParamCaption}\item[{std\+::string}]{genero }\end{DoxyParamCaption})}
+
+
+
+Define o genero do livro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em genero} & O novo genero do \mbox{\hyperlink{class_livro}{Livro}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ this-\/>genero\ =\ genero;}
+\DoxyCodeLine{00063\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_a1a4192ef375e747c72e08fcb57bae32e}\label{class_livro_a1a4192ef375e747c72e08fcb57bae32e}} 
+\index{Livro@{Livro}!setId@{setId}}
+\index{setId@{setId}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily void Livro\+::set\+Id (\begin{DoxyParamCaption}\item[{int}]{id }\end{DoxyParamCaption})}
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ this-\/>\textcolor{keywordtype}{id}\ =\ id;}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_a7de9ca1d41a56be94ca9cf53740910c5}\label{class_livro_a7de9ca1d41a56be94ca9cf53740910c5}} 
+\index{Livro@{Livro}!setTitulo@{setTitulo}}
+\index{setTitulo@{setTitulo}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{setTitulo()}{setTitulo()}}
+{\footnotesize\ttfamily void Livro\+::set\+Titulo (\begin{DoxyParamCaption}\item[{std\+::string}]{titulo }\end{DoxyParamCaption})}
+
+
+
+Define o titulo do livro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em titulo} & O novo titulo do \mbox{\hyperlink{class_livro}{Livro}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ this-\/>titulo\ =\ titulo;}
+\DoxyCodeLine{00031\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_a9e60fe2c938ad27180aedd0019ed5a23}\label{class_livro_a9e60fe2c938ad27180aedd0019ed5a23}} 
+\index{Livro@{Livro}!toModel@{toModel}}
+\index{toModel@{toModel}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{toModel()}{toModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_livro}{Livro}} $\ast$ Livro\+::to\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{linha }\end{DoxyParamCaption})}
+
+
+
+Responsavel por converter a string que vem do arquivo em um Livro$\ast$, pegando os valores e salvando em seus atributos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & A string com todos os valores separados por \textquotesingle{};\textquotesingle{}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o Livro$\ast$ preenchido com as informações recebidas. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ pos\ =\ 0;}
+\DoxyCodeLine{00073\ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Separando\ os\ atributos\ por\ ponto\ vírgula}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\textcolor{keywordtype}{id}\ =\ stoi(linha.substr(0,\ pos));}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>titulo\ =\ linha.substr(0,\ pos);}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>anoPublicacao\ =\ stoi(linha.substr(0,\ pos));\textcolor{comment}{//convert\ int}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>editora=\ linha.substr(0,\ pos);}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>autor\ =\ linha.substr(0,\ pos);}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>genero\ =\ linha;}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00099\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_livro_a06d86ac249b299f07b759d041b282e9f}\label{class_livro_a06d86ac249b299f07b759d041b282e9f}} 
+\index{Livro@{Livro}!toString@{toString}}
+\index{toString@{toString}!Livro@{Livro}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string Livro\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna uma string com os valores separados por \textquotesingle{};\textquotesingle{} para poder salvar em uma linha do arquivo. 
+
+\begin{DoxyReturn}{Retorna}
+string com os atributos separados por \textquotesingle{};\textquotesingle{}. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ std::string\ retorno\ =\ std::to\_string(this-\/>\textcolor{keywordtype}{id})\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ this-\/>titulo\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ std::to\_string(this-\/>anoPublicacao)\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ this-\/>editora\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ this-\/>autor\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ this-\/>genero\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \textcolor{keywordflow}{return}\ retorno;}
+\DoxyCodeLine{00069\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Projetos/\+BTI/\+Projeto\+\_\+\+LP1\+\_\+\+UND2/include/\mbox{\hyperlink{_livro_8h}{Livro.\+h}}\item 
+C\+:/\+Projetos/\+BTI/\+Projeto\+\_\+\+LP1\+\_\+\+UND2/src/\mbox{\hyperlink{_livro_8cpp}{Livro.\+cpp}}\end{DoxyCompactItemize}

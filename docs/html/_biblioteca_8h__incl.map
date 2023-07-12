@@ -1,0 +1,17 @@
+<map id="C:/Projetos/BTI/Projeto_LP1_UND2/include/Biblioteca.h" name="C:/Projetos/BTI/Projeto_LP1_UND2/include/Biblioteca.h">
+<area shape="rect" id="node1" title="Declaração da Classe Biblioteca." alt="" coords="302,5,511,48"/>
+<area shape="rect" id="node2" title=" " alt="" coords="360,245,432,272"/>
+<area shape="rect" id="node3" title=" " alt="" coords="44,245,97,272"/>
+<area shape="rect" id="node4" title=" " alt="" coords="466,171,531,197"/>
+<area shape="rect" id="node5" href="$_autor_8h.html" title="Declaração da Classe Autor." alt="" coords="78,96,141,123"/>
+<area shape="rect" id="node7" href="$_leitor_8h.html" title="Declaração da Classe Leitor." alt="" coords="266,96,331,123"/>
+<area shape="rect" id="node8" href="$_livro_8h.html" title="Declaração da Classe Livro." alt="" coords="333,171,392,197"/>
+<area shape="rect" id="node9" href="$_editora_8h.html" title="Declaração da Classe Editora." alt="" coords="185,171,258,197"/>
+<area shape="rect" id="node10" href="$_lista_sequencial_8hpp.html" title="Declaração da Classe ListaSequencial." alt="" coords="605,171,744,197"/>
+<area shape="rect" id="node13" href="$_arquivo_8hpp.html" title="Declaração da Classe Arquivo." alt="" coords="524,96,612,123"/>
+<area shape="rect" id="node14" href="$_lista_encadeada_8hpp.html" title="Declaração da Classe ListaEncadeada." alt="" coords="768,171,907,197"/>
+<area shape="rect" id="node6" href="$_pessoa_8h.html" title="Declaração da Classe Pessoa." alt="" coords="32,171,109,197"/>
+<area shape="rect" id="node11" title=" " alt="" coords="684,245,745,272"/>
+<area shape="rect" id="node12" title=" " alt="" coords="607,245,660,272"/>
+<area shape="rect" id="node15" href="$_no_8h.html" title="Declaração da Classe No." alt="" coords="813,245,861,272"/>
+</map>

@@ -1,0 +1,434 @@
+\hypertarget{class_autor}{}\doxysection{Referência da Classe Autor}
+\label{class_autor}\index{Autor@{Autor}}
+
+
+Classe que representa um autor.  
+
+
+
+
+{\ttfamily \#include $<$Autor.\+h$>$}
+
+
+
+Diagrama de hierarquia para Autor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=129pt]{class_autor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Autor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=129pt]{class_autor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_autor_a28111338918ed4358ca4adc2cc694b23}{Autor}} ()
+\begin{DoxyCompactList}\small\item\em Construtor vazio da classe \mbox{\hyperlink{class_autor}{Autor}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_autor_a1ca5a8fd7ddafcb3f76ec9bbf666e2c2}{Autor}} (int \mbox{\hyperlink{class_pessoa_a75713853c809df02006cf87791c5af9d}{id}}, std\+::string \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}, std\+::string nacionalidade, int ano\+Nascimento)
+\begin{DoxyCompactList}\small\item\em Construtor com parametros da classe \mbox{\hyperlink{class_autor}{Autor}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_autor_aacabda7d814f378cbeb762f1a81181ce}{get\+Nacionalidade}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a nacionalidade do autor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autor_a5673f12b14456d802fb50d9893f8fc05}{set\+Nacionalidade}} (std\+::string nacionalidade)
+\begin{DoxyCompactList}\small\item\em Define a nacionalidade do autor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_autor_aa93af444e310f01b994f64c599db1ca8}{get\+Ano\+Nascimento}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o ano de nascimento do autor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autor_ae26ba16b972de0844eaea7bf51e9ba6d}{set\+Ano\+Nascimento}} (int ano)
+\begin{DoxyCompactList}\small\item\em Define o ano em que nasceu o autor. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_autor_afa18ff2e337be152105e802da9eca389}{get\+Livros\+Cadastrados}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a quantidade de livros cadastrados desse autor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autor_aa1d731b5cfe0e3055e61912f3925fab4}{set\+Livros\+Cadastrados}} (int qtd)
+\begin{DoxyCompactList}\small\item\em Define a quantidade de livros cadastrados desse autor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_autor_acf2092d5b195e8ef11272031dbfffaef}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Retorna uma string com os valores separados por \textquotesingle{};\textquotesingle{} para poder salvar em uma linha do arquivo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_autor}{Autor}} $\ast$ \mbox{\hyperlink{class_autor_ad95103f9930df4d2fa673c702f00e0ae}{to\+Model}} (std\+::string linha)
+\begin{DoxyCompactList}\small\item\em Responsavel por converter a string que vem do arquivo em um Autor$\ast$, pegando os valores e salvando em seus atributos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autor_aec9819c724a3dbd37bbb42638a1232b0}{print\+Details}} () override
+\begin{DoxyCompactList}\small\item\em Imprime todos os valores do \mbox{\hyperlink{class_autor}{Autor}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_autor_a666ce7efe1ac06deb81cb9d0c88bcc6d}{comparar}} (std\+::string valor)
+\begin{DoxyCompactList}\small\item\em Compara se o valor passado pelo parametro é igual ao nome do autor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autor_af6fe1dd0f33d24324a900517ae1cbdba}{alterar}} ()
+\begin{DoxyCompactList}\small\item\em Altera os dados do \mbox{\hyperlink{class_autor}{Autor}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_autor_adf32e5d0da1f5a3fd0b34eb1c6ebf81f}{incrementar\+Livro}} ()
+\begin{DoxyCompactList}\small\item\em Incrementa mais um a cada livro que for cadastrado com essse autor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_pessoa}{Pessoa}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pessoa_a22563fe1f53faa9b1d8d10d28ae0c650}{Pessoa}} ()
+\begin{DoxyCompactList}\small\item\em Construtor vazio da classe \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pessoa_a8eaf0f540c75ce554ce4e1b06ae6d80c}{Pessoa}} (int \mbox{\hyperlink{class_pessoa_a75713853c809df02006cf87791c5af9d}{id}}, std\+::string \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}})
+\begin{DoxyCompactList}\small\item\em Construtor com parametros da classe \mbox{\hyperlink{class_livro}{Livro}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pessoa_a6699a108d29ebc18cb06c10f3a44c330}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o id da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_aaa9e1d4bf5b2ca52f2e7b545dbc00fd1}{set\+Id}} (int \mbox{\hyperlink{class_pessoa_a75713853c809df02006cf87791c5af9d}{id}})
+\begin{DoxyCompactList}\small\item\em Define o ID da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a5f4f2063d62eaea38673da5fd5283465}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a26074576a426b510ff59165b05031f57}{set\+Nome}} (std\+::string \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}})
+\begin{DoxyCompactList}\small\item\em Define o nome da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pessoa_a3a442b97ec4cb5883823acea6e1fb88f}{print\+Details}} ()=0
+\begin{DoxyCompactList}\small\item\em Função virtual pura que precisa ser implementada pelas classes derivadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+\doxysubsubsection*{Atributos Protegidos herdados de \mbox{\hyperlink{class_pessoa}{Pessoa}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_pessoa_a75713853c809df02006cf87791c5af9d}{id}}
+\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um autor. 
+
+Essa classe contém informações e funcionalidades relacionadas a um autor, como sua nacionalidade, ano de nascimento, geters e setters, além de metodos que fazem as conversões como o to\+String e to\+Model. Ela herda da classe \mbox{\hyperlink{class_pessoa}{Pessoa}}. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_autor_a28111338918ed4358ca4adc2cc694b23}\label{class_autor_a28111338918ed4358ca4adc2cc694b23}} 
+\index{Autor@{Autor}!Autor@{Autor}}
+\index{Autor@{Autor}!Autor@{Autor}}
+\doxysubsubsection{\texorpdfstring{Autor()}{Autor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Autor\+::\+Autor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor vazio da classe \mbox{\hyperlink{class_autor}{Autor}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_autor_a1ca5a8fd7ddafcb3f76ec9bbf666e2c2}\label{class_autor_a1ca5a8fd7ddafcb3f76ec9bbf666e2c2}} 
+\index{Autor@{Autor}!Autor@{Autor}}
+\index{Autor@{Autor}!Autor@{Autor}}
+\doxysubsubsection{\texorpdfstring{Autor()}{Autor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Autor\+::\+Autor (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{nome,  }\item[{std\+::string}]{nacionalidade,  }\item[{int}]{ano\+Nascimento }\end{DoxyParamCaption})}
+
+
+
+Construtor com parametros da classe \mbox{\hyperlink{class_autor}{Autor}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & O ID do autor. \\
+\hline
+{\em nome} & O nome do \mbox{\hyperlink{class_autor}{Autor}}. \\
+\hline
+{\em rg} & O RG do \mbox{\hyperlink{class_autor}{Autor}}. \\
+\hline
+{\em nacionalidade} & O país onde o \mbox{\hyperlink{class_autor}{Autor}} nasceu. \\
+\hline
+{\em ano\+Nascimento} & O ano que o autor nasceu. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_pessoa_a22563fe1f53faa9b1d8d10d28ae0c650}{Pessoa}}(\textcolor{keywordtype}{id},\ \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}})\{}
+\DoxyCodeLine{00007\ \ \ this-\/>livrosCadastrados\ =\ 0;}
+\DoxyCodeLine{00008\ \ \ this-\/>nacionalidade\ =\ nacionalidade;}
+\DoxyCodeLine{00009\ \ \ this-\/>anoNascimento\ =\ anoNascimento;}
+\DoxyCodeLine{00010\ \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{class_autor_af6fe1dd0f33d24324a900517ae1cbdba}\label{class_autor_af6fe1dd0f33d24324a900517ae1cbdba}} 
+\index{Autor@{Autor}!alterar@{alterar}}
+\index{alterar@{alterar}!Autor@{Autor}}
+\doxysubsubsection{\texorpdfstring{alterar()}{alterar()}}
+{\footnotesize\ttfamily void Autor\+::alterar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Altera os dados do \mbox{\hyperlink{class_autor}{Autor}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ novo\ nome\ do\ autor:\ "{}};}
+\DoxyCodeLine{00086\ \ \ std::cin.ignore();}
+\DoxyCodeLine{00087\ \ \ std::getline(std::cin,\ \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}});}
+\DoxyCodeLine{00088\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_autor_a666ce7efe1ac06deb81cb9d0c88bcc6d}\label{class_autor_a666ce7efe1ac06deb81cb9d0c88bcc6d}} 
+\index{Autor@{Autor}!comparar@{comparar}}
+\index{comparar@{comparar}!Autor@{Autor}}
+\doxysubsubsection{\texorpdfstring{comparar()}{comparar()}}
+{\footnotesize\ttfamily bool Autor\+::comparar (\begin{DoxyParamCaption}\item[{std\+::string}]{valor }\end{DoxyParamCaption})}
+
+
+
+Compara se o valor passado pelo parametro é igual ao nome do autor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Valor para a comparação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se forem iguais ou falso se forem diferentes. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00073\ \ \textcolor{keywordflow}{if}\ (valor.size()\ !=\ \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}.size())}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ valor.size();\ ++i)\ \{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::toupper(valor[i])\ !=\ std::toupper(\mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}[i]))}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00079\ \ \ \ \ \}}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00082\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_autor_aa93af444e310f01b994f64c599db1ca8}\label{class_autor_aa93af444e310f01b994f64c599db1ca8}} 
+\index{Autor@{Autor}!getAnoNascimento@{getAnoNascimento}}
+\index{getAnoNascimento@{getAnoNascimento}!Autor@{Autor}}
+\doxysubsubsection{\texorpdfstring{getAnoNascimento()}{getAnoNascimento()}}
+{\footnotesize\ttfamily int Autor\+::get\+Ano\+Nascimento (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o ano de nascimento do autor. 
+
+\begin{DoxyReturn}{Retorna}
+ano de nascimento do autor. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \{\ \textcolor{keywordflow}{return}\ anoNascimento;\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_autor_afa18ff2e337be152105e802da9eca389}\label{class_autor_afa18ff2e337be152105e802da9eca389}} 
+\index{Autor@{Autor}!getLivrosCadastrados@{getLivrosCadastrados}}
+\index{getLivrosCadastrados@{getLivrosCadastrados}!Autor@{Autor}}
+\doxysubsubsection{\texorpdfstring{getLivrosCadastrados()}{getLivrosCadastrados()}}
+{\footnotesize\ttfamily int Autor\+::get\+Livros\+Cadastrados (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém a quantidade de livros cadastrados desse autor. 
+
+\begin{DoxyReturn}{Retorna}
+quantidade de livros cadastrados desse autor. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \textcolor{keywordflow}{return}\ this-\/>livrosCadastrados;}
+\DoxyCodeLine{00024\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_autor_aacabda7d814f378cbeb762f1a81181ce}\label{class_autor_aacabda7d814f378cbeb762f1a81181ce}} 
+\index{Autor@{Autor}!getNacionalidade@{getNacionalidade}}
+\index{getNacionalidade@{getNacionalidade}!Autor@{Autor}}
+\doxysubsubsection{\texorpdfstring{getNacionalidade()}{getNacionalidade()}}
+{\footnotesize\ttfamily std\+::string Autor\+::get\+Nacionalidade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém a nacionalidade do autor. 
+
+\begin{DoxyReturn}{Retorna}
+nacionalidade do autor. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012\ \{\ \textcolor{keywordflow}{return}\ nacionalidade;\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_autor_adf32e5d0da1f5a3fd0b34eb1c6ebf81f}\label{class_autor_adf32e5d0da1f5a3fd0b34eb1c6ebf81f}} 
+\index{Autor@{Autor}!incrementarLivro@{incrementarLivro}}
+\index{incrementarLivro@{incrementarLivro}!Autor@{Autor}}
+\doxysubsubsection{\texorpdfstring{incrementarLivro()}{incrementarLivro()}}
+{\footnotesize\ttfamily void Autor\+::incrementar\+Livro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Incrementa mais um a cada livro que for cadastrado com essse autor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00091\ \ \ this-\/>livrosCadastrados++;}
+\DoxyCodeLine{00092\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_autor_aec9819c724a3dbd37bbb42638a1232b0}\label{class_autor_aec9819c724a3dbd37bbb42638a1232b0}} 
+\index{Autor@{Autor}!printDetails@{printDetails}}
+\index{printDetails@{printDetails}!Autor@{Autor}}
+\doxysubsubsection{\texorpdfstring{printDetails()}{printDetails()}}
+{\footnotesize\ttfamily void Autor\+::print\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Imprime todos os valores do \mbox{\hyperlink{class_autor}{Autor}}. 
+
+
+
+Implementa \mbox{\hyperlink{class_pessoa_a3a442b97ec4cb5883823acea6e1fb88f}{Pessoa}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ std::cout<<\textcolor{stringliteral}{"{}Codigo:\ "{}}<<\textcolor{keywordtype}{id}}
+\DoxyCodeLine{00066\ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nNome:\ "{}}<<\mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}}
+\DoxyCodeLine{00067\ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nNascionalidade:\ "{}}<<nacionalidade}
+\DoxyCodeLine{00068\ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nNascido\ no\ ano\ de:\ "{}}<<anoNascimento}
+\DoxyCodeLine{00069\ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nLivros\ cadastrados\ deste\ autor:\ "{}}<<livrosCadastrados<<std::endl;}
+\DoxyCodeLine{00070\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_autor_ae26ba16b972de0844eaea7bf51e9ba6d}\label{class_autor_ae26ba16b972de0844eaea7bf51e9ba6d}} 
+\index{Autor@{Autor}!setAnoNascimento@{setAnoNascimento}}
+\index{setAnoNascimento@{setAnoNascimento}!Autor@{Autor}}
+\doxysubsubsection{\texorpdfstring{setAnoNascimento()}{setAnoNascimento()}}
+{\footnotesize\ttfamily void Autor\+::set\+Ano\+Nascimento (\begin{DoxyParamCaption}\item[{int}]{ano }\end{DoxyParamCaption})}
+
+
+
+Define o ano em que nasceu o autor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ano} & O novo ano de nascimento do autor. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \{\ this-\/>anoNascimento\ =\ ano;\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_autor_aa1d731b5cfe0e3055e61912f3925fab4}\label{class_autor_aa1d731b5cfe0e3055e61912f3925fab4}} 
+\index{Autor@{Autor}!setLivrosCadastrados@{setLivrosCadastrados}}
+\index{setLivrosCadastrados@{setLivrosCadastrados}!Autor@{Autor}}
+\doxysubsubsection{\texorpdfstring{setLivrosCadastrados()}{setLivrosCadastrados()}}
+{\footnotesize\ttfamily void Autor\+::set\+Livros\+Cadastrados (\begin{DoxyParamCaption}\item[{int}]{qtd }\end{DoxyParamCaption})}
+
+
+
+Define a quantidade de livros cadastrados desse autor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em qtd} & A nova quantidade de livros cadastrados desse autor. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00027\ \ \ \ \ this-\/>livrosCadastrados\ =\ qtd;}
+\DoxyCodeLine{00028\ \ \ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_autor_a5673f12b14456d802fb50d9893f8fc05}\label{class_autor_a5673f12b14456d802fb50d9893f8fc05}} 
+\index{Autor@{Autor}!setNacionalidade@{setNacionalidade}}
+\index{setNacionalidade@{setNacionalidade}!Autor@{Autor}}
+\doxysubsubsection{\texorpdfstring{setNacionalidade()}{setNacionalidade()}}
+{\footnotesize\ttfamily void Autor\+::set\+Nacionalidade (\begin{DoxyParamCaption}\item[{std\+::string}]{nacionalidade }\end{DoxyParamCaption})}
+
+
+
+Define a nacionalidade do autor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em nacionalidade} & A nova nacionalidade do autor. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ this-\/>nacionalidade\ =\ nacionalidade;}
+\DoxyCodeLine{00016\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_autor_ad95103f9930df4d2fa673c702f00e0ae}\label{class_autor_ad95103f9930df4d2fa673c702f00e0ae}} 
+\index{Autor@{Autor}!toModel@{toModel}}
+\index{toModel@{toModel}!Autor@{Autor}}
+\doxysubsubsection{\texorpdfstring{toModel()}{toModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_autor}{Autor}} $\ast$ Autor\+::to\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{linha }\end{DoxyParamCaption})}
+
+
+
+Responsavel por converter a string que vem do arquivo em um Autor$\ast$, pegando os valores e salvando em seus atributos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & A string com todos os valores separados por \textquotesingle{};\textquotesingle{}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o Autor$\ast$ preenchido com as informações recebidas. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ pos\ =\ 0;}
+\DoxyCodeLine{00041\ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Separando\ os\ atributos\ por\ ponto\ vírgula}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\textcolor{keywordtype}{id}\ =\ stoi(linha.substr(0,\ pos));}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}\ =\ linha.substr(0,\ pos);}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>nacionalidade\ =\ linha.substr(0,\ pos);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>anoNascimento\ =\ stoi(linha.substr(0,\ pos));}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>livrosCadastrados\ =\ stoi(linha);;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00062\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_autor_acf2092d5b195e8ef11272031dbfffaef}\label{class_autor_acf2092d5b195e8ef11272031dbfffaef}} 
+\index{Autor@{Autor}!toString@{toString}}
+\index{toString@{toString}!Autor@{Autor}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string Autor\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna uma string com os valores separados por \textquotesingle{};\textquotesingle{} para poder salvar em uma linha do arquivo. 
+
+\begin{DoxyReturn}{Retorna}
+string com os atributos separados por \textquotesingle{};\textquotesingle{}. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00031\ \ \ }
+\DoxyCodeLine{00032\ \ \ std::string\ retorno\ =\ std::to\_string(this-\/>\textcolor{keywordtype}{id})\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ this-\/>\mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}\ +\ \textcolor{stringliteral}{"{};"{}}\ }
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ +\ this-\/>nacionalidade\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ std::to\_string(this-\/>anoNascimento)\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ std::to\_string(this-\/>livrosCadastrados)\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \textcolor{keywordflow}{return}\ retorno;}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Projetos/\+BTI/\+Projeto\+\_\+\+LP1\+\_\+\+UND2/include/\mbox{\hyperlink{_autor_8h}{Autor.\+h}}\item 
+C\+:/\+Projetos/\+BTI/\+Projeto\+\_\+\+LP1\+\_\+\+UND2/src/\mbox{\hyperlink{_autor_8cpp}{Autor.\+cpp}}\end{DoxyCompactItemize}

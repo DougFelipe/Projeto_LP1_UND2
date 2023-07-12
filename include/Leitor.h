@@ -32,7 +32,7 @@ class Leitor : public Pessoa {
 
   /**
    * @brief Construtor com alguns parametros da classe Leitor.
-   *
+   * @param id O ID do Leitor.
    * @param nome O nome do Autor.
    * @param rg O RG do Autor.
    */
@@ -92,12 +92,22 @@ class Leitor : public Pessoa {
    */
     void printDetails() override;
 
+  /**
+   * @brief Compara se o valor passado pelo parametro é igual ao nome do Leitor. 
+   * @param valor Valor para a comparação.
+   * @return true se forem iguais ou falso se forem diferentes.
+   */
     bool comparar(std::string valor);
 
-    /**
+  /**
    * @brief Altera os dados do Leitor. 
    */
     void alterar();
+
+  /**
+   * @brief Incrementa mais um a cada livro que for alugado por esse leitor.
+   */
+    void incrementarLivro();
 };
 
 #endif

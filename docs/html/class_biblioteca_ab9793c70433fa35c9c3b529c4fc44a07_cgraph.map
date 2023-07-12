@@ -1,0 +1,11 @@
+<map id="Biblioteca::entregarLivro" name="Biblioteca::entregarLivro">
+<area shape="rect" id="node1" title="Metodo responsavel por fazer a entrega do livro." alt="" coords="5,107,165,133"/>
+<area shape="rect" id="node2" href="$class_vetor.html#a2e54d4b2d9be2cdf89c0f7cb0b3522c5" title="Função que realiza uma busca iterativa em uma lista encadeada de Livros." alt="" coords="217,31,397,57"/>
+<area shape="rect" id="node3" href="$class_arquivo.html#aa6ad5847de5118d13fa32bd96c6d136c" title="Metodo para ler um arquivo e salvar em uma lista sequencial com todos os dados lidos." alt="" coords="213,81,401,108"/>
+<area shape="rect" id="node8" href="$class_vetor.html#af96c3f72644b6a6f68edc380adb7d3d0" title="Função responsavel pelo aluguel dos livros." alt="" coords="253,132,361,159"/>
+<area shape="rect" id="node9" href="$class_arquivo.html#a05267f670127aae21582ca5af265e2fc" title="Metodo reescrever um arquivo com as alterações." alt="" coords="221,183,393,209"/>
+<area shape="rect" id="node4" href="$class_vetor.html#a74897794e67f35f2d637114412f7485f" title="Função aumenta o tamanho da lista em +1." alt="" coords="461,5,563,32"/>
+<area shape="rect" id="node5" href="$class_vetor.html#abe65152ab6f18daa7669d236c3f941c4" title="Função que adiciona um elemento no fim da lista." alt="" coords="450,56,573,83"/>
+<area shape="rect" id="node6" href="$class_vetor.html#af5815b10f789b34874ce5f6a86e5f723" title="Função que retorna a quantidade de elementos." alt="" coords="463,107,560,133"/>
+<area shape="rect" id="node7" href="$class_vetor.html#a2689ab751966a5906358fde7fe0c166d" title="Função que retorna o limete da lista." alt="" coords="449,157,574,184"/>
+</map>

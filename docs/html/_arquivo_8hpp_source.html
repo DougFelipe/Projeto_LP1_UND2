@@ -1,0 +1,193 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sistema Integrado de Gestão de Biblioteca: Código-Fonte de C:/Projetos/BTI/Projeto_LP1_UND2/include/Arquivo.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="logo.jpg"/></td>
+  <td id="projectalign">
+   <div id="projectname">Sistema Integrado de Gestão de Biblioteca<span id="projectnumber">&#160;1.0</span>
+   </div>
+   <div id="projectbrief">Sistema para gerenciar o acervo da biblioteca</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhum resultado encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">Arquivo.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_arquivo_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef ARQUIVO_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define ARQUIVO_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_lista_encadeada_8hpp.html">ListaEncadeada.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="_lista_sequencial_8hpp.html">ListaSequencial.hpp</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_arquivo.html">   19</a></span><span class="keyword">class </span><a class="code hl_class" href="class_arquivo.html">Arquivo</a>{</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_arquivo.html#a48b54f91b55a7f22573509140a71115d">salvar</a>(T obj, std::string nomeArquivo);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_class" href="class_lista_encadeada.html">ListaEncadeada&lt;T&gt;</a> <a class="code hl_function" href="class_arquivo.html#aa6c4f226cee02165d224760711297b3d">criarListaEncadeada</a>(std::string nomeArquivo);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_arquivo.html#aa6ad5847de5118d13fa32bd96c6d136c">criarListaSequencial</a>(std::string nomeArquivo, <a class="code hl_class" href="class_vetor.html">Vetor&lt;T&gt;</a> *lista);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_arquivo.html#a05267f670127aae21582ca5af265e2fc">reescreverArquivo</a>(std::string nomeArquivo, std::string conteudo);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>};</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_arquivo.html#a48b54f91b55a7f22573509140a71115d">   65</a></span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_arquivo.html#a48b54f91b55a7f22573509140a71115d">Arquivo::salvar</a>(T obj, std::string nomeArquivo){</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        std::ofstream arquivo;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        arquivo.open(nomeArquivo, std::ios::app);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        <span class="keywordflow">if</span> (arquivo.is_open()) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            arquivo &lt;&lt; obj.toString();</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            arquivo.close();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> }</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_arquivo.html#aa6c4f226cee02165d224760711297b3d">   78</a></span><a class="code hl_class" href="class_lista_encadeada.html">ListaEncadeada&lt;T&gt;</a> <a class="code hl_function" href="class_arquivo.html#aa6c4f226cee02165d224760711297b3d">Arquivo::criarListaEncadeada</a>(std::string nomeArquivo) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <a class="code hl_class" href="class_lista_encadeada.html">ListaEncadeada&lt;T&gt;</a> lista;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    std::ifstream arquivoLeitura(nomeArquivo);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keywordflow">if</span> (arquivoLeitura.is_open()) {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        std::string linha;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        <span class="keywordflow">while</span> (std::getline(arquivoLeitura, linha)) {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            T objeto;</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>           lista.<a class="code hl_function" href="class_lista_encadeada.html#ad9f41516c7c105d68aabba938aa5eae5">adicionarFim</a>(*objeto.toModel(linha));</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        }</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>        arquivoLeitura.close();</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;Nenhum dado encontrado!&quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        std::cout&lt;&lt;<span class="stringliteral">&quot;[Enter] Voltar &quot;</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        </div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        std::cin.ignore();</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        getchar();</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    }</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    <span class="keywordflow">return</span> lista;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>}</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span> <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_arquivo.html#aa6ad5847de5118d13fa32bd96c6d136c">   99</a></span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_arquivo.html#aa6ad5847de5118d13fa32bd96c6d136c">Arquivo::criarListaSequencial</a>(std::string nomeArquivo, <a class="code hl_class" href="class_vetor.html">Vetor&lt;T&gt;</a> *lista){</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    std::ifstream arquivoLeitura(nomeArquivo);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    <span class="keywordflow">if</span> (arquivoLeitura.is_open()) {</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        std::string linha;</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>        <span class="keywordflow">while</span> (std::getline(arquivoLeitura, linha)) {</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            T objeto;</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>            <span class="keywordflow">if</span>(lista-&gt;<a class="code hl_function" href="class_vetor.html#af5815b10f789b34874ce5f6a86e5f723">sizeOf</a>() == lista-&gt;<a class="code hl_function" href="class_vetor.html#a2689ab751966a5906358fde7fe0c166d">sizeOfLimit</a>()){</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>               lista-&gt;<a class="code hl_function" href="class_vetor.html#a74897794e67f35f2d637114412f7485f">ampliar</a>();</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            }</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>             lista-&gt;<a class="code hl_function" href="class_vetor.html#abe65152ab6f18daa7669d236c3f941c4">push_back</a>(*objeto.toModel(linha));</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        }</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        arquivoLeitura.close();</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        std::cout &lt;&lt; <span class="stringliteral">&quot;\nVocê precisa cadastrar primeiro!&quot;</span> &lt;&lt;nomeArquivo&lt;&lt; std::endl;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    }</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> }</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span> </div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> <span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno"><a class="line" href="class_arquivo.html#a05267f670127aae21582ca5af265e2fc">  120</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_arquivo.html#a05267f670127aae21582ca5af265e2fc">Arquivo::reescreverArquivo</a>(std::string nomeArquivo, std::string conteudo){</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>    std::ofstream file;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    file.open(nomeArquivo);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>    <span class="keywordflow">if</span>(file.is_open()){</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>        file &lt;&lt; conteudo;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        file.close();</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>    }</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>}</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span> </div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_lista_encadeada_8hpp_html"><div class="ttname"><a href="_lista_encadeada_8hpp.html">ListaEncadeada.hpp</a></div><div class="ttdoc">Declaração da Classe ListaEncadeada.</div></div>
+<div class="ttc" id="a_lista_sequencial_8hpp_html"><div class="ttname"><a href="_lista_sequencial_8hpp.html">ListaSequencial.hpp</a></div><div class="ttdoc">Declaração da Classe ListaSequencial.</div></div>
+<div class="ttc" id="aclass_arquivo_html"><div class="ttname"><a href="class_arquivo.html">Arquivo</a></div><div class="ttdoc">Classe que representa um Aquivo.</div><div class="ttdef"><b>Definition:</b> Arquivo.hpp:19</div></div>
+<div class="ttc" id="aclass_arquivo_html_a05267f670127aae21582ca5af265e2fc"><div class="ttname"><a href="class_arquivo.html#a05267f670127aae21582ca5af265e2fc">Arquivo::reescreverArquivo</a></div><div class="ttdeci">void reescreverArquivo(std::string nomeArquivo, std::string conteudo)</div><div class="ttdoc">Metodo reescrever um arquivo com as alterações.</div><div class="ttdef"><b>Definition:</b> Arquivo.hpp:120</div></div>
+<div class="ttc" id="aclass_arquivo_html_a48b54f91b55a7f22573509140a71115d"><div class="ttname"><a href="class_arquivo.html#a48b54f91b55a7f22573509140a71115d">Arquivo::salvar</a></div><div class="ttdeci">void salvar(T obj, std::string nomeArquivo)</div><div class="ttdoc">Metodo para salvar uma nova linha no arquivo.</div><div class="ttdef"><b>Definition:</b> Arquivo.hpp:65</div></div>
+<div class="ttc" id="aclass_arquivo_html_aa6ad5847de5118d13fa32bd96c6d136c"><div class="ttname"><a href="class_arquivo.html#aa6ad5847de5118d13fa32bd96c6d136c">Arquivo::criarListaSequencial</a></div><div class="ttdeci">void criarListaSequencial(std::string nomeArquivo, Vetor&lt; T &gt; *lista)</div><div class="ttdoc">Metodo para ler um arquivo e salvar em uma lista sequencial com todos os dados lidos.</div><div class="ttdef"><b>Definition:</b> Arquivo.hpp:99</div></div>
+<div class="ttc" id="aclass_arquivo_html_aa6c4f226cee02165d224760711297b3d"><div class="ttname"><a href="class_arquivo.html#aa6c4f226cee02165d224760711297b3d">Arquivo::criarListaEncadeada</a></div><div class="ttdeci">ListaEncadeada&lt; T &gt; criarListaEncadeada(std::string nomeArquivo)</div><div class="ttdoc">Metodo para ler um arquivo e retornar uma lista encadeada com todos os dados lidos.</div><div class="ttdef"><b>Definition:</b> Arquivo.hpp:78</div></div>
+<div class="ttc" id="aclass_lista_encadeada_html"><div class="ttname"><a href="class_lista_encadeada.html">ListaEncadeada</a></div><div class="ttdoc">Classe que representa uma Lista Encadeada.</div><div class="ttdef"><b>Definition:</b> ListaEncadeada.hpp:19</div></div>
+<div class="ttc" id="aclass_lista_encadeada_html_ad9f41516c7c105d68aabba938aa5eae5"><div class="ttname"><a href="class_lista_encadeada.html#ad9f41516c7c105d68aabba938aa5eae5">ListaEncadeada::adicionarFim</a></div><div class="ttdeci">void adicionarFim(P valor)</div><div class="ttdoc">Insere um elemento no final da lista.</div><div class="ttdef"><b>Definition:</b> ListaEncadeada.hpp:133</div></div>
+<div class="ttc" id="aclass_vetor_html"><div class="ttname"><a href="class_vetor.html">Vetor</a></div><div class="ttdoc">Classe que representa uma Lista Encadeada.</div><div class="ttdef"><b>Definition:</b> ListaSequencial.hpp:21</div></div>
+<div class="ttc" id="aclass_vetor_html_a2689ab751966a5906358fde7fe0c166d"><div class="ttname"><a href="class_vetor.html#a2689ab751966a5906358fde7fe0c166d">Vetor::sizeOfLimit</a></div><div class="ttdeci">int sizeOfLimit()</div><div class="ttdoc">Função que retorna o limete da lista.</div><div class="ttdef"><b>Definition:</b> ListaSequencial.hpp:243</div></div>
+<div class="ttc" id="aclass_vetor_html_a74897794e67f35f2d637114412f7485f"><div class="ttname"><a href="class_vetor.html#a74897794e67f35f2d637114412f7485f">Vetor::ampliar</a></div><div class="ttdeci">void ampliar()</div><div class="ttdoc">Função aumenta o tamanho da lista em +1.</div><div class="ttdef"><b>Definition:</b> ListaSequencial.hpp:343</div></div>
+<div class="ttc" id="aclass_vetor_html_abe65152ab6f18daa7669d236c3f941c4"><div class="ttname"><a href="class_vetor.html#abe65152ab6f18daa7669d236c3f941c4">Vetor::push_back</a></div><div class="ttdeci">int push_back(E valor)</div><div class="ttdoc">Função que adiciona um elemento no fim da lista.</div><div class="ttdef"><b>Definition:</b> ListaSequencial.hpp:264</div></div>
+<div class="ttc" id="aclass_vetor_html_af5815b10f789b34874ce5f6a86e5f723"><div class="ttname"><a href="class_vetor.html#af5815b10f789b34874ce5f6a86e5f723">Vetor::sizeOf</a></div><div class="ttdeci">int sizeOf()</div><div class="ttdoc">Função que retorna a quantidade de elementos.</div><div class="ttdef"><b>Definition:</b> ListaSequencial.hpp:240</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>

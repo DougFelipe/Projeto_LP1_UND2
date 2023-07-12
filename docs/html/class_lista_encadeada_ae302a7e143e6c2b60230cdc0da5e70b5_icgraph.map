@@ -1,0 +1,4 @@
+<map id="ListaEncadeada::existe" name="ListaEncadeada::existe">
+<area shape="rect" id="node1" title="Verifica se autor ou editora existe." alt="" coords="175,5,332,32"/>
+<area shape="rect" id="node2" href="$class_biblioteca.html#a52bd9e4fc57a09ad0a590489a482898d" title="Função template para realizar uma verificação se o objeto passado existe no arquivo." alt="" coords="5,5,127,32"/>
+</map>

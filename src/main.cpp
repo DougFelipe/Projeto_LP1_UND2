@@ -7,9 +7,10 @@
  * @date 11/07/2023
  */
 
+
+#include <Windows.h> 
 #include <iostream>
 #include <fstream>
-#include <Windows.h> 
 #include "../include/Biblioteca.h"
 
 
@@ -20,8 +21,9 @@
  */
 int main()
 {
+    //Caso execute em um SO diferente do windons remover ou comentar as linhas 11 e 25
     SetConsoleOutputCP(CP_UTF8);
-    
+
     int mainMenuOp;
     
     Biblioteca biblioteca;

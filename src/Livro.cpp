@@ -124,3 +124,7 @@ void Livro::alterar(){
   std::cin.ignore();
   std::getline(std::cin, titulo);
 }
+
+void Livro::incrementarLivro(){
+  
+}

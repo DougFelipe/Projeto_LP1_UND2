@@ -1,0 +1,98 @@
+\hypertarget{_arquivo_8hpp_source}{}\doxysection{Arquivo.\+hpp}
+\label{_arquivo_8hpp_source}\index{C:/Projetos/BTI/Projeto\_LP1\_UND2/include/Arquivo.hpp@{C:/Projetos/BTI/Projeto\_LP1\_UND2/include/Arquivo.hpp}}
+\mbox{\hyperlink{_arquivo_8hpp}{Vá para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ ARQUIVO\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ ARQUIVO\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_lista_encadeada_8hpp}{ListaEncadeada.hpp}}"{}}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_lista_sequencial_8hpp}{ListaSequencial.hpp}}"{}}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_arquivo}{Arquivo}}\{}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_arquivo_a48b54f91b55a7f22573509140a71115d}{salvar}}(T\ obj,\ std::string\ nomeArquivo);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_lista_encadeada}{ListaEncadeada<T>}}\ \mbox{\hyperlink{class_arquivo_aa6c4f226cee02165d224760711297b3d}{criarListaEncadeada}}(std::string\ nomeArquivo);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_arquivo_aa6ad5847de5118d13fa32bd96c6d136c}{criarListaSequencial}}(std::string\ nomeArquivo,\ \mbox{\hyperlink{class_vetor}{Vetor<T>}}\ *lista);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_arquivo_a05267f670127aae21582ca5af265e2fc}{reescreverArquivo}}(std::string\ nomeArquivo,\ std::string\ conteudo);}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00065\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_arquivo_a48b54f91b55a7f22573509140a71115d}{Arquivo::salvar}}(T\ obj,\ std::string\ nomeArquivo)\{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ std::ofstream\ arquivo;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ arquivo.open(nomeArquivo,\ std::ios::app);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (arquivo.is\_open())\ \{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo\ <<\ obj.toString();}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ arquivo.close();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \}}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00078\ \mbox{\hyperlink{class_lista_encadeada}{ListaEncadeada<T>}}\ \mbox{\hyperlink{class_arquivo_aa6c4f226cee02165d224760711297b3d}{Arquivo::criarListaEncadeada}}(std::string\ nomeArquivo)\ \{}
+\DoxyCodeLine{00079\ \ \ \ \ \mbox{\hyperlink{class_lista_encadeada}{ListaEncadeada<T>}}\ lista;}
+\DoxyCodeLine{00080\ \ \ \ \ std::ifstream\ arquivoLeitura(nomeArquivo);}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordflow}{if}\ (arquivoLeitura.is\_open())\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ std::string\ linha;}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(arquivoLeitura,\ linha))\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ T\ objeto;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ lista.\mbox{\hyperlink{class_lista_encadeada_ad9f41516c7c105d68aabba938aa5eae5}{adicionarFim}}(*objeto.toModel(linha));}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ arquivoLeitura.close();}
+\DoxyCodeLine{00088\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Nenhum\ dado\ encontrado!"{}}<<std::endl;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}[Enter]\ Voltar\ "{}};}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ std::cin.ignore();}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ getchar();}
+\DoxyCodeLine{00094\ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordflow}{return}\ lista;}
+\DoxyCodeLine{00096\ \}}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00099\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_arquivo_aa6ad5847de5118d13fa32bd96c6d136c}{Arquivo::criarListaSequencial}}(std::string\ nomeArquivo,\ \mbox{\hyperlink{class_vetor}{Vetor<T>}}\ *lista)\{}
+\DoxyCodeLine{00100\ \ \ \ \ std::ifstream\ arquivoLeitura(nomeArquivo);}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{if}\ (arquivoLeitura.is\_open())\ \{}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ std::string\ linha;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (std::getline(arquivoLeitura,\ linha))\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ T\ objeto;}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(lista-\/>\mbox{\hyperlink{class_vetor_af5815b10f789b34874ce5f6a86e5f723}{sizeOf}}()\ ==\ lista-\/>\mbox{\hyperlink{class_vetor_a2689ab751966a5906358fde7fe0c166d}{sizeOfLimit}}())\{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lista-\/>\mbox{\hyperlink{class_vetor_a74897794e67f35f2d637114412f7485f}{ampliar}}();}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ lista-\/>\mbox{\hyperlink{class_vetor_abe65152ab6f18daa7669d236c3f941c4}{push\_back}}(*objeto.toModel(linha));}
+\DoxyCodeLine{00109\ }
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ arquivoLeitura.close();}
+\DoxyCodeLine{00112\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nVocê\ precisa\ cadastrar\ primeiro!"{}}\ <<nomeArquivo<<\ std::endl;}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00115\ \ \ \ \ \}}
+\DoxyCodeLine{00116\ \ \}}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ \ \textcolor{keyword}{template}\ <\textcolor{keyword}{class}\ T>}
+\DoxyCodeLine{00120\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_arquivo_a05267f670127aae21582ca5af265e2fc}{Arquivo::reescreverArquivo}}(std::string\ nomeArquivo,\ std::string\ conteudo)\{}
+\DoxyCodeLine{00121\ \ \ \ \ std::ofstream\ file;}
+\DoxyCodeLine{00122\ \ \ \ \ file.open(nomeArquivo);}
+\DoxyCodeLine{00123\ \ \ \ \ \textcolor{keywordflow}{if}(file.is\_open())\{}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ file\ <<\ conteudo;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ file.close();}
+\DoxyCodeLine{00126\ \ \ \ \ \}}
+\DoxyCodeLine{00127\ \}}
+\DoxyCodeLine{00128\ }
+\DoxyCodeLine{00129\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

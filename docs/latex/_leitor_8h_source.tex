@@ -1,0 +1,51 @@
+\hypertarget{_leitor_8h_source}{}\doxysection{Leitor.\+h}
+\label{_leitor_8h_source}\index{C:/Projetos/BTI/Projeto\_LP1\_UND2/include/Leitor.h@{C:/Projetos/BTI/Projeto\_LP1\_UND2/include/Leitor.h}}
+\mbox{\hyperlink{_leitor_8h}{Vá para a documentação desse arquivo.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#ifndef\ Leitor\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ Leitor\_H}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_livro_8h}{Livro.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_pessoa_8h}{Pessoa.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_leitor}{Leitor}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_pessoa}{Pessoa}}\ \{}
+\DoxyCodeLine{00021\ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ rg;}
+\DoxyCodeLine{00023\ \ \ \ \ std::string\ livro;}
+\DoxyCodeLine{00024\ \ \ \ \ std::string\ dataAluguel;}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_leitor_ae2cd39a2e6ea94c26c029e943832d355}{Leitor}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00039\ \ \ \ \ \mbox{\hyperlink{class_leitor_ae2cd39a2e6ea94c26c029e943832d355}{Leitor}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ std::string\ \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}},\ \textcolor{keywordtype}{int}\ rg);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{class_leitor_aab96b9bedaf1405856c0f73e7c7e8526}{\string~Leitor}}();}
+\DoxyCodeLine{00045\ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ std::string\ \mbox{\hyperlink{class_leitor_a3c04d367f08ace56a92b0e246dd99268}{getLivro}}();}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00058\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_leitor_a8c52e87408962ce03ccea9dfc44c9284}{setLivro}}(std::string\ livro);}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00065\ \ \ \ \ std::string\ \mbox{\hyperlink{class_leitor_ac5e0bf918cfb87483b22c91e3b3ccd71}{getDataALuguel}}();}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_leitor_a4362291b1c35947864640c4054fcded4}{setDataAluguel}}(std::string\ data);}
+\DoxyCodeLine{00073\ \ \ \ \ }
+\DoxyCodeLine{00079\ \ \ \ \ std::string\ \mbox{\hyperlink{class_leitor_aa8cd094c1dd8973f01dfcfb5cf4b90d5}{toString}}();}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00088\ \ \ \ \ \mbox{\hyperlink{class_leitor}{Leitor}}*\ \mbox{\hyperlink{class_leitor_a63175da7456b74d05cc234236e05fdd5}{toModel}}(std::string\ linha);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_leitor_a58a2a68213298ffe998471cd01cafc63}{printDetails}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_leitor_a2b2e63908be4f1596021204a587752a0}{comparar}}(std::string\ valor);}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_leitor_ad778933f0f8bb9bf3f8f509dbf4f7994}{alterar}}();}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_leitor_afb9be19e66620751e47d40710b376e20}{incrementarLivro}}();}
+\DoxyCodeLine{00111\ \};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

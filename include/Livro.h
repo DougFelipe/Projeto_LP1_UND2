@@ -144,9 +144,19 @@ class Livro {
    */
     Livro* toModel(std::string linha);
 
+  /**
+   * @brief Compara se o valor passado pelo parametro é igual ao nome do Livro. 
+   * @param valor Valor para a comparação.
+   * @return true se forem iguais ou falso se forem diferentes.
+   */
     bool comparar(std::string valor);
 
+  /**
+   * @brief Altera os dados do Livro. 
+   */
     void alterar();
+
+    void incrementarLivro();
 };
 
 #endif

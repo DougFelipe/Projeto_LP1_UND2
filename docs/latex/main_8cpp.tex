@@ -1,0 +1,158 @@
+\hypertarget{main_8cpp}{}\doxysection{Referência do Arquivo C\+:/\+Projetos/\+BTI/\+Projeto\+\_\+\+LP1\+\_\+\+UND2/src/main.cpp}
+\label{main_8cpp}\index{C:/Projetos/BTI/Projeto\_LP1\_UND2/src/main.cpp@{C:/Projetos/BTI/Projeto\_LP1\_UND2/src/main.cpp}}
+
+
+\mbox{\hyperlink{class_arquivo}{Arquivo}} principal do programa de gerenciamento de uma \mbox{\hyperlink{class_biblioteca}{Biblioteca}}.  
+
+
+{\ttfamily \#include $<$Windows.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include \char`\"{}../include/\+Biblioteca.\+h\char`\"{}}\newline
+Gráfico de dependência de inclusões para main.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Função principal que inicia o sistema. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+\mbox{\hyperlink{class_arquivo}{Arquivo}} principal do programa de gerenciamento de uma \mbox{\hyperlink{class_biblioteca}{Biblioteca}}. 
+
+\begin{DoxyAuthor}{Autor}
+Leandro Barbosa da Silva 20220054875 
+
+Douglas Felipe de Lima Silva 20220054131 
+\end{DoxyAuthor}
+\begin{DoxySince}{Desde}
+13/06/2023 
+\end{DoxySince}
+\begin{DoxyDate}{Data}
+11/07/2023 
+\end{DoxyDate}
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Função principal que inicia o sistema. 
+
+Aqui fica logalizado o Menu inicial, onde é direcionado para o metodo especifico da funcionalidade. \begin{DoxyReturn}{Retorna}
+0 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00023\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{comment}{//Caso\ execute\ em\ um\ SO\ diferente\ do\ windons\ remover\ ou\ comentar\ as\ linhas\ 11\ e\ 25}}
+\DoxyCodeLine{00025\ \ \ \ \ SetConsoleOutputCP(CP\_UTF8);}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ mainMenuOp;}
+\DoxyCodeLine{00028\ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_biblioteca}{Biblioteca}}\ biblioteca;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}>>>>>>>>\ SISTEMA\ DE\ GERENCIAMENTO\ DE\ BIBLIOTECA\ <<<<<<<<"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00032\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ 1\ para:\ Continuar"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00033\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Pressione\ qualquer\ tecla\ diferente\ de\ 1\ para\ sair"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ std::cin\ >>\ mainMenuOp;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \textcolor{keywordflow}{if}\ (mainMenuOp\ !=\ 1)\{}
+\DoxyCodeLine{00038\ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Voce\ encerrou\ o\ programa!"{}}<<std::endl;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;\ }
+\DoxyCodeLine{00040\ \ \ \}\ \textcolor{comment}{//\ Encerra\ o\ programa\ se\ a\ entrada\ for\ diferente\ de\ 1}}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordflow}{do}\ \textcolor{comment}{//\ EM\ LOOPING\ ATÉ\ QUE\ O\ USUÁRIO\ DIGITE\ 9\ PARA\ SAIR\ DO\ PROGRAMA}}
+\DoxyCodeLine{00044\ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}>>>>>>>>\ MENU\ DO\ SISTEMA\ DE\ GERENCIAMENTO\ DE\ BIBLIOTECA\ <<<<<<<<\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00046\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}>>>>>>>>\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ESCOLHA\ UMA\ OPÇÃO\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<<<<<<<\(\backslash\)n"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)nDigite\ 1\ para:\ Cadastrar\ Livro"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ 2\ para:\ Cadastrar\ Editora"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ 3\ para:\ Cadastrar\ Autor"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ 4\ para:\ Cadastrar\ Leitor"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ 5\ para:\ Buscar\ Livro"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ 6\ para:\ Buscar\ Editora"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ 7\ para:\ Buscar\ Autor"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ 8\ para:\ Buscar\ Leitor"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Digite\ 9\ para:\ Sair"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ std::cin\ >>\ mainMenuOp;}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (mainMenuOp)}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ biblioteca.\mbox{\hyperlink{class_biblioteca_a460f376ca277679a959bcdad3b2075cd}{escrevreLivro}}();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ biblioteca.\mbox{\hyperlink{class_biblioteca_aab4d95484be81509b04cc8228efc8454}{escreverEditora}}();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ biblioteca.\mbox{\hyperlink{class_biblioteca_a5fc7306285fdaf0591fc46000657c933}{escreverAutor}}();}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00083\ }
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:\ }
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ biblioteca.\mbox{\hyperlink{class_biblioteca_a38013b183f5d8f5ac9543a42c6249a51}{escreverLeitor}}();}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:\textcolor{comment}{//buscando\ livro}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ biblioteca.\mbox{\hyperlink{class_biblioteca_aad8dcb28105ad80f3141d50080ea2d04}{buscarLivro}}();}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 6:\textcolor{comment}{//buscando\ editora}}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ biblioteca.\mbox{\hyperlink{class_biblioteca_ace2e25420f640415d4c16e8782ea5b44}{buscarEditora}}();}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 7:\textcolor{comment}{//buscando\ autor}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ biblioteca.\mbox{\hyperlink{class_biblioteca_af2abc3689778917c86387ab55ce6d9a3}{buscarAutor}}();\ }
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 8:\textcolor{comment}{//buscando\ leitor}}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ biblioteca.\mbox{\hyperlink{class_biblioteca_ab5a2bd925e98593febb12e4f29138b99}{buscarLeitor}}();}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 9:}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ std::cout<<\textcolor{stringliteral}{"{}Voce\ encerrou\ o\ programa!"{}}<<std::endl;}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Opção\ Inválida"{}}\ <<\ std::endl;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (mainMenuOp\ !=\ 9);}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00114\ \}}
+
+\end{DoxyCode}
+Este é o diagrama das funções utilizadas por essa função\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}

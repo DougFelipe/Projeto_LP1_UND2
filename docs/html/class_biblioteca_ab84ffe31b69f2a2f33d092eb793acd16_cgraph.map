@@ -1,0 +1,12 @@
+<map id="Biblioteca::filtro" name="Biblioteca::filtro">
+<area shape="rect" id="node1" title="Metodo que faz o filtro de todos os livros do autor ou da editora." alt="" coords="5,183,116,209"/>
+<area shape="rect" id="node2" href="$class_arquivo.html#aa6ad5847de5118d13fa32bd96c6d136c" title="Metodo para ler um arquivo e salvar em uma lista sequencial com todos os dados lidos." alt="" coords="175,81,363,108"/>
+<area shape="rect" id="node7" href="$class_vetor.html#aa7b52092eca01364682100e36e1e1709" title="Função que filtra os livros com o valor passado." alt="" coords="227,132,311,159"/>
+<area shape="rect" id="node8" href="$class_vetor.html#a4d540e1b61ea59e607bea35b112d36b8" title="Função que imprime toda a lista." alt="" coords="216,183,322,209"/>
+<area shape="rect" id="node9" href="$class_vetor.html#ae32a32503ea4da952e704c37ac87399e" title="Função que ordena um array de livros por ano de publicação." alt="" coords="164,233,374,260"/>
+<area shape="rect" id="node10" href="$class_vetor.html#afa6a52b418988e6f0de3321589ebb37c" title="Função que ordena um array de livros por título." alt="" coords="192,284,346,311"/>
+<area shape="rect" id="node3" href="$class_vetor.html#a74897794e67f35f2d637114412f7485f" title="Função aumenta o tamanho da lista em +1." alt="" coords="434,5,536,32"/>
+<area shape="rect" id="node4" href="$class_vetor.html#abe65152ab6f18daa7669d236c3f941c4" title="Função que adiciona um elemento no fim da lista." alt="" coords="423,56,546,83"/>
+<area shape="rect" id="node5" href="$class_vetor.html#af5815b10f789b34874ce5f6a86e5f723" title="Função que retorna a quantidade de elementos." alt="" coords="436,107,533,133"/>
+<area shape="rect" id="node6" href="$class_vetor.html#a2689ab751966a5906358fde7fe0c166d" title="Função que retorna o limete da lista." alt="" coords="422,157,547,184"/>
+</map>

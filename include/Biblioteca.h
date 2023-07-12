@@ -10,11 +10,13 @@
 #include <string>
 #include <fstream>
 
-#include "../include/Autor.h"
-#include "../include/Leitor.h"
-#include "../include/Livro.h"
-#include "../include/Editora.h"
-
+#include "Autor.h"
+#include "Leitor.h"
+#include "Livro.h"
+#include "Editora.h"
+#include "ListaSequencial.hpp"
+#include "Arquivo.hpp"
+#include "ListaEncadeada.hpp"
 /**
  * @brief Classe que representa uma Biblioteca.
  *
@@ -23,8 +25,7 @@
 class Biblioteca {
 
 public:
-
-  
+  Arquivo arquivo;
   /**
    * @brief Função template que retorna o ultimo id do objeto cadastrato.
    *
@@ -46,7 +47,7 @@ public:
   void cadastrar(E obj, std::string nomeArquivo);
 
    /**
-   * @brief Função template para realizar a leitura do arquivo.
+   * @brief Função template para realizar a leitura do arquivo e imprimir todos.
    *
    * @tparam E A classe a ser utilizada na operação.
    * @param nomeArquivo O nome do arquivo onde será feito o cadastro.
@@ -59,10 +60,50 @@ public:
    *
    * @tparam E A classe a ser utilizada na operação.
    * @param nomeArquivo O nome do arquivo onde será feito o cadastro.
-   * @param Codigo da operação: 1 - Alterar | 2 - Remover
+   * @param op Codigo da operação: 1 - Alterar | 2 - Remover
    */
   template <class E>
   void modificarArquivo(std::string nomeArquivo, int op);
+
+   /**
+   * @brief Função template para realizar uma verificação se o objeto passado existe no arquivo.
+   *
+   * @tparam E A classe a ser utilizada na operação.
+   * @param nomeArquivo O nome do arquivo onde será feito o cadastro.
+   * @param valor Conteudo a ser usado na verificação
+   */
+  template <class E>
+  bool existe(std::string nomeArquivo, std::string valor);
+
+
+   /**
+   * @brief Metodo que faz o filtro de todos os livros do autor ou da editora. 
+   * 
+   * @param nomeArquivo nome do arquivo onde será feito a consulta
+   * @param op Operação a ser feita, 1 = filtra para autor 2 = filtra para editora
+   */
+  template <class E>
+  void filtro(std::string nomeArquivo, int op);
+
+   /**
+   * @brief Metodo para buscar um elemento. 
+   * 
+   * @param nomeArquivo arquivo onde sera feito a busca
+   */
+  template <class E>
+  void buscaElemento(std::string nomeArquivo);
+  
+
+   /**
+   * @brief Metodo responsavel por fazer o aluguel do livro. 
+   */
+  void alugarLivro();
+
+  /**
+   * @brief Metodo responsavel por fazer a entrega do livro. 
+   */
+  void entregarLivro();
+
 
   /**
    * @brief Recebe os dados do Autor que serão armazenados. 
@@ -103,6 +144,7 @@ public:
    * @brief Responsavel pelo sub-menu do Livro, onde direciona para o metodo reponsavel pela operação
    */
   void buscarLivro();
+
   
 };
 

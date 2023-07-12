@@ -1,0 +1,6 @@
+<map id="Biblioteca::ler" name="Biblioteca::ler">
+<area shape="rect" id="node1" title="Função template para realizar a leitura do arquivo e imprimir todos." alt="" coords="5,31,106,57"/>
+<area shape="rect" id="node2" href="$class_arquivo.html#aa6c4f226cee02165d224760711297b3d" title="Metodo para ler um arquivo e retornar uma lista encadeada com todos os dados lidos." alt="" coords="154,5,343,32"/>
+<area shape="rect" id="node4" href="$class_lista_encadeada.html#ab5603627f3540a3cf8e717d5e38443e2" title="Imprime os elementos da lista." alt="" coords="164,56,333,83"/>
+<area shape="rect" id="node3" href="$class_lista_encadeada.html#ad9f41516c7c105d68aabba938aa5eae5" title="Insere um elemento no final da lista." alt="" coords="391,5,587,32"/>
+</map>

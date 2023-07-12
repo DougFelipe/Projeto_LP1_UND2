@@ -1,0 +1,10 @@
+<map id="Arquivo::reescreverArquivo" name="Arquivo::reescreverArquivo">
+<area shape="rect" id="node1" title="Metodo reescrever um arquivo com as alterações." alt="" coords="536,81,709,108"/>
+<area shape="rect" id="node2" href="$class_biblioteca.html#a0c9e1dbb8abf0ad09fb4f0626d36cf66" title="Metodo responsavel por fazer o aluguel do livro." alt="" coords="325,5,472,32"/>
+<area shape="rect" id="node5" href="$class_biblioteca.html#ab9793c70433fa35c9c3b529c4fc44a07" title="Metodo responsavel por fazer a entrega do livro." alt="" coords="319,56,478,83"/>
+<area shape="rect" id="node7" href="$class_biblioteca.html#a52bd9e4fc57a09ad0a590489a482898d" title="Função template para realizar uma verificação se o objeto passado existe no arquivo." alt="" coords="338,107,459,133"/>
+<area shape="rect" id="node8" href="$class_biblioteca.html#aabbc1b1fa43fb555bff95e49985ffe3b" title="Função template para realizar a alteração do arquivo." alt="" coords="308,157,488,184"/>
+<area shape="rect" id="node3" href="$class_biblioteca.html#aad8dcb28105ad80f3141d50080ea2d04" title="Responsavel pelo sub&#45;menu do Livro, onde direciona para o metodo reponsavel pela operação." alt="" coords="106,5,257,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o sistema." alt="" coords="5,31,55,57"/>
+<area shape="rect" id="node6" href="$class_biblioteca.html#ab5a2bd925e98593febb12e4f29138b99" title="Responsavel pelo sub&#45;menu do Leitor, onde direciona para o metodo reponsavel pela operação." alt="" coords="103,56,260,83"/>
+</map>

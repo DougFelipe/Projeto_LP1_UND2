@@ -1,0 +1,7 @@
+<map id="Biblioteca::modificarArquivo" name="Biblioteca::modificarArquivo">
+<area shape="rect" id="node1" title="Função template para realizar a alteração do arquivo." alt="" coords="5,56,186,83"/>
+<area shape="rect" id="node2" href="$class_lista_encadeada.html#a5c2d2a3bce9d3c3c72af78307471aa8d" title="Retorna uma string com a alteração feita na lista." alt="" coords="249,5,408,32"/>
+<area shape="rect" id="node3" href="$class_arquivo.html#aa6c4f226cee02165d224760711297b3d" title="Metodo para ler um arquivo e retornar uma lista encadeada com todos os dados lidos." alt="" coords="234,56,423,83"/>
+<area shape="rect" id="node5" href="$class_arquivo.html#a05267f670127aae21582ca5af265e2fc" title="Metodo reescrever um arquivo com as alterações." alt="" coords="242,107,415,133"/>
+<area shape="rect" id="node4" href="$class_lista_encadeada.html#ad9f41516c7c105d68aabba938aa5eae5" title="Insere um elemento no final da lista." alt="" coords="471,56,667,83"/>
+</map>

@@ -84,3 +84,6 @@ void Leitor::alterar(){
  std::cin.ignore();
     std::getline(std::cin, nome);
 }
+
+void Leitor::incrementarLivro(){
+}

@@ -1,0 +1,7 @@
+<map id="Arquivo::criarListaSequencial" name="Arquivo::criarListaSequencial">
+<area shape="rect" id="node1" title="Metodo para ler um arquivo e salvar em uma lista sequencial com todos os dados lidos." alt="" coords="5,81,194,108"/>
+<area shape="rect" id="node2" href="$class_vetor.html#a74897794e67f35f2d637114412f7485f" title="Função aumenta o tamanho da lista em +1." alt="" coords="253,5,356,32"/>
+<area shape="rect" id="node3" href="$class_vetor.html#abe65152ab6f18daa7669d236c3f941c4" title="Função que adiciona um elemento no fim da lista." alt="" coords="243,56,366,83"/>
+<area shape="rect" id="node4" href="$class_vetor.html#af5815b10f789b34874ce5f6a86e5f723" title="Função que retorna a quantidade de elementos." alt="" coords="256,107,353,133"/>
+<area shape="rect" id="node5" href="$class_vetor.html#a2689ab751966a5906358fde7fe0c166d" title="Função que retorna o limete da lista." alt="" coords="242,157,367,184"/>
+</map>

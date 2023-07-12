@@ -1,0 +1,5 @@
+<map id="Biblioteca::alugarLivro" name="Biblioteca::alugarLivro">
+<area shape="rect" id="node1" title="Metodo responsavel por fazer o aluguel do livro." alt="" coords="302,5,449,32"/>
+<area shape="rect" id="node2" href="$class_biblioteca.html#aad8dcb28105ad80f3141d50080ea2d04" title="Responsavel pelo sub&#45;menu do Livro, onde direciona para o metodo reponsavel pela operação." alt="" coords="103,5,254,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicia o sistema." alt="" coords="5,5,55,32"/>
+</map>

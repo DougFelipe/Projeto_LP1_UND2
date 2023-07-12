@@ -1,0 +1,405 @@
+\hypertarget{class_leitor}{}\doxysection{Referência da Classe Leitor}
+\label{class_leitor}\index{Leitor@{Leitor}}
+
+
+Classe que representa um autor.  
+
+
+
+
+{\ttfamily \#include $<$Leitor.\+h$>$}
+
+
+
+Diagrama de hierarquia para Leitor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=129pt]{class_leitor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Leitor\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=129pt]{class_leitor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_leitor_ae2cd39a2e6ea94c26c029e943832d355}{Leitor}} ()
+\begin{DoxyCompactList}\small\item\em Construtor vazio da classe \mbox{\hyperlink{class_leitor}{Leitor}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_leitor_a240c1028152fb3ee8e1ef6939e6c2bf8}{Leitor}} (int \mbox{\hyperlink{class_pessoa_a75713853c809df02006cf87791c5af9d}{id}}, std\+::string \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}, int rg)
+\begin{DoxyCompactList}\small\item\em Construtor com alguns parametros da classe \mbox{\hyperlink{class_leitor}{Leitor}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_leitor_aab96b9bedaf1405856c0f73e7c7e8526}{$\sim$\+Leitor}} ()
+\begin{DoxyCompactList}\small\item\em Destrutor da classe \mbox{\hyperlink{class_leitor}{Leitor}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_leitor_a3c04d367f08ace56a92b0e246dd99268}{get\+Livro}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o livro alugado pelo \mbox{\hyperlink{class_leitor}{Leitor}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_leitor_a8c52e87408962ce03ccea9dfc44c9284}{set\+Livro}} (std\+::string livro)
+\begin{DoxyCompactList}\small\item\em Define o livro alugado pelo \mbox{\hyperlink{class_leitor}{Leitor}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_leitor_ac5e0bf918cfb87483b22c91e3b3ccd71}{get\+Data\+ALuguel}} ()
+\begin{DoxyCompactList}\small\item\em Obtém a data em que o \mbox{\hyperlink{class_leitor}{Leitor}} alugou o livro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_leitor_a4362291b1c35947864640c4054fcded4}{set\+Data\+Aluguel}} (std\+::string data)
+\begin{DoxyCompactList}\small\item\em Define a data do aluguel do livro pelo \mbox{\hyperlink{class_leitor}{Leitor}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_leitor_aa8cd094c1dd8973f01dfcfb5cf4b90d5}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Retorna uma string com os valores separados por \textquotesingle{};\textquotesingle{} para poder salvar em uma linha do arquivo. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_leitor}{Leitor}} $\ast$ \mbox{\hyperlink{class_leitor_a63175da7456b74d05cc234236e05fdd5}{to\+Model}} (std\+::string linha)
+\begin{DoxyCompactList}\small\item\em Responsavel por converter a string que vem do arquivo em um Leitor$\ast$, pegando os valores e salvando em seus atributos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_leitor_a58a2a68213298ffe998471cd01cafc63}{print\+Details}} () override
+\begin{DoxyCompactList}\small\item\em Imprime todos os valores do \mbox{\hyperlink{class_leitor}{Leitor}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_leitor_a2b2e63908be4f1596021204a587752a0}{comparar}} (std\+::string valor)
+\begin{DoxyCompactList}\small\item\em Compara se o valor passado pelo parametro é igual ao nome do \mbox{\hyperlink{class_leitor}{Leitor}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_leitor_ad778933f0f8bb9bf3f8f509dbf4f7994}{alterar}} ()
+\begin{DoxyCompactList}\small\item\em Altera os dados do \mbox{\hyperlink{class_leitor}{Leitor}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_leitor_afb9be19e66620751e47d40710b376e20}{incrementar\+Livro}} ()
+\begin{DoxyCompactList}\small\item\em Incrementa mais um a cada livro que for alugado por esse leitor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Membros Públicos herdados de \mbox{\hyperlink{class_pessoa}{Pessoa}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_pessoa_a22563fe1f53faa9b1d8d10d28ae0c650}{Pessoa}} ()
+\begin{DoxyCompactList}\small\item\em Construtor vazio da classe \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_pessoa_a8eaf0f540c75ce554ce4e1b06ae6d80c}{Pessoa}} (int \mbox{\hyperlink{class_pessoa_a75713853c809df02006cf87791c5af9d}{id}}, std\+::string \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}})
+\begin{DoxyCompactList}\small\item\em Construtor com parametros da classe \mbox{\hyperlink{class_livro}{Livro}}. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_pessoa_a6699a108d29ebc18cb06c10f3a44c330}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o id da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_aaa9e1d4bf5b2ca52f2e7b545dbc00fd1}{set\+Id}} (int \mbox{\hyperlink{class_pessoa_a75713853c809df02006cf87791c5af9d}{id}})
+\begin{DoxyCompactList}\small\item\em Define o ID da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a5f4f2063d62eaea38673da5fd5283465}{get\+Nome}} ()
+\begin{DoxyCompactList}\small\item\em Obtém o nome da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_pessoa_a26074576a426b510ff59165b05031f57}{set\+Nome}} (std\+::string \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}})
+\begin{DoxyCompactList}\small\item\em Define o nome da \mbox{\hyperlink{class_pessoa}{Pessoa}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pessoa_a3a442b97ec4cb5883823acea6e1fb88f}{print\+Details}} ()=0
+\begin{DoxyCompactList}\small\item\em Função virtual pura que precisa ser implementada pelas classes derivadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+\doxysubsubsection*{Atributos Protegidos herdados de \mbox{\hyperlink{class_pessoa}{Pessoa}}}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_pessoa_a75713853c809df02006cf87791c5af9d}{id}}
+\item 
+std\+::string \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe que representa um autor. 
+
+Essa classe contém informações e funcionalidades relacionadas a um \mbox{\hyperlink{class_leitor}{Leitor}}, como o livro alugado, data do aluguel, geters e setters, além de metodos que fazem as conversões como o to\+String e to\+Model. Ela herda da classe \mbox{\hyperlink{class_pessoa}{Pessoa}}. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{class_leitor_ae2cd39a2e6ea94c26c029e943832d355}\label{class_leitor_ae2cd39a2e6ea94c26c029e943832d355}} 
+\index{Leitor@{Leitor}!Leitor@{Leitor}}
+\index{Leitor@{Leitor}!Leitor@{Leitor}}
+\doxysubsubsection{\texorpdfstring{Leitor()}{Leitor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Leitor\+::\+Leitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor vazio da classe \mbox{\hyperlink{class_leitor}{Leitor}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00003\ \{\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_leitor_a240c1028152fb3ee8e1ef6939e6c2bf8}\label{class_leitor_a240c1028152fb3ee8e1ef6939e6c2bf8}} 
+\index{Leitor@{Leitor}!Leitor@{Leitor}}
+\index{Leitor@{Leitor}!Leitor@{Leitor}}
+\doxysubsubsection{\texorpdfstring{Leitor()}{Leitor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Leitor\+::\+Leitor (\begin{DoxyParamCaption}\item[{int}]{id,  }\item[{std\+::string}]{nome,  }\item[{int}]{rg }\end{DoxyParamCaption})}
+
+
+
+Construtor com alguns parametros da classe \mbox{\hyperlink{class_leitor}{Leitor}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em id} & O ID do \mbox{\hyperlink{class_leitor}{Leitor}}. \\
+\hline
+{\em nome} & O nome do \mbox{\hyperlink{class_autor}{Autor}}. \\
+\hline
+{\em rg} & O RG do \mbox{\hyperlink{class_autor}{Autor}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00005\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ :\ \mbox{\hyperlink{class_pessoa_a22563fe1f53faa9b1d8d10d28ae0c650}{Pessoa}}(\textcolor{keywordtype}{id},\ \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}})\{}
+\DoxyCodeLine{00006\ \ \ this-\/>rg\ =\ rg;}
+\DoxyCodeLine{00007\ \ \ this-\/>livro\ =\ \textcolor{stringliteral}{"{}Nenhum\ livro\ alugado"{}};}
+\DoxyCodeLine{00008\ \ \ this-\/>dataAluguel\ =\ \textcolor{stringliteral}{"{}00/00/0000"{}};}
+\DoxyCodeLine{00009\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_leitor_aab96b9bedaf1405856c0f73e7c7e8526}\label{class_leitor_aab96b9bedaf1405856c0f73e7c7e8526}} 
+\index{Leitor@{Leitor}!````~Leitor@{$\sim$Leitor}}
+\index{````~Leitor@{$\sim$Leitor}!Leitor@{Leitor}}
+\doxysubsubsection{\texorpdfstring{$\sim$Leitor()}{~Leitor()}}
+{\footnotesize\ttfamily Leitor\+::$\sim$\+Leitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrutor da classe \mbox{\hyperlink{class_leitor}{Leitor}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00011\ \{\}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentação das funções}
+\mbox{\Hypertarget{class_leitor_ad778933f0f8bb9bf3f8f509dbf4f7994}\label{class_leitor_ad778933f0f8bb9bf3f8f509dbf4f7994}} 
+\index{Leitor@{Leitor}!alterar@{alterar}}
+\index{alterar@{alterar}!Leitor@{Leitor}}
+\doxysubsubsection{\texorpdfstring{alterar()}{alterar()}}
+{\footnotesize\ttfamily void Leitor\+::alterar (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Altera os dados do \mbox{\hyperlink{class_leitor}{Leitor}}. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ std::cout<<\textcolor{stringliteral}{"{}Digite\ o\ novo\ nome\ do\ Leitor:\ "{}};}
+\DoxyCodeLine{00084\ \ std::cin.ignore();}
+\DoxyCodeLine{00085\ \ \ \ \ std::getline(std::cin,\ \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}});}
+\DoxyCodeLine{00086\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_leitor_a2b2e63908be4f1596021204a587752a0}\label{class_leitor_a2b2e63908be4f1596021204a587752a0}} 
+\index{Leitor@{Leitor}!comparar@{comparar}}
+\index{comparar@{comparar}!Leitor@{Leitor}}
+\doxysubsubsection{\texorpdfstring{comparar()}{comparar()}}
+{\footnotesize\ttfamily bool Leitor\+::comparar (\begin{DoxyParamCaption}\item[{std\+::string}]{valor }\end{DoxyParamCaption})}
+
+
+
+Compara se o valor passado pelo parametro é igual ao nome do \mbox{\hyperlink{class_leitor}{Leitor}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em valor} & Valor para a comparação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se forem iguais ou falso se forem diferentes. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \textcolor{keywordflow}{if}\ (valor.size()\ !=\ \mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}.size())}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i\ =\ 0;\ i\ <\ valor.size();\ ++i)\ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::toupper(valor[i])\ !=\ std::toupper(\mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}[i]))}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00077\ \ \ \ \ \}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00080\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_leitor_ac5e0bf918cfb87483b22c91e3b3ccd71}\label{class_leitor_ac5e0bf918cfb87483b22c91e3b3ccd71}} 
+\index{Leitor@{Leitor}!getDataALuguel@{getDataALuguel}}
+\index{getDataALuguel@{getDataALuguel}!Leitor@{Leitor}}
+\doxysubsubsection{\texorpdfstring{getDataALuguel()}{getDataALuguel()}}
+{\footnotesize\ttfamily std\+::string Leitor\+::get\+Data\+ALuguel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém a data em que o \mbox{\hyperlink{class_leitor}{Leitor}} alugou o livro. 
+
+\begin{DoxyReturn}{Retorna}
+data do aluguel do livro. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00022\ \ \ \textcolor{keywordflow}{return}\ dataAluguel;}
+\DoxyCodeLine{00023\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_leitor_a3c04d367f08ace56a92b0e246dd99268}\label{class_leitor_a3c04d367f08ace56a92b0e246dd99268}} 
+\index{Leitor@{Leitor}!getLivro@{getLivro}}
+\index{getLivro@{getLivro}!Leitor@{Leitor}}
+\doxysubsubsection{\texorpdfstring{getLivro()}{getLivro()}}
+{\footnotesize\ttfamily std\+::string Leitor\+::get\+Livro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Obtém o livro alugado pelo \mbox{\hyperlink{class_leitor}{Leitor}}. 
+
+\begin{DoxyReturn}{Retorna}
+livro alugado pelo \mbox{\hyperlink{class_leitor}{Leitor}}. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00014\ \ \ \textcolor{keywordflow}{return}\ livro;}
+\DoxyCodeLine{00015\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_leitor_afb9be19e66620751e47d40710b376e20}\label{class_leitor_afb9be19e66620751e47d40710b376e20}} 
+\index{Leitor@{Leitor}!incrementarLivro@{incrementarLivro}}
+\index{incrementarLivro@{incrementarLivro}!Leitor@{Leitor}}
+\doxysubsubsection{\texorpdfstring{incrementarLivro()}{incrementarLivro()}}
+{\footnotesize\ttfamily void Leitor\+::incrementar\+Livro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Incrementa mais um a cada livro que for alugado por esse leitor. 
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00089\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_leitor_a58a2a68213298ffe998471cd01cafc63}\label{class_leitor_a58a2a68213298ffe998471cd01cafc63}} 
+\index{Leitor@{Leitor}!printDetails@{printDetails}}
+\index{printDetails@{printDetails}!Leitor@{Leitor}}
+\doxysubsubsection{\texorpdfstring{printDetails()}{printDetails()}}
+{\footnotesize\ttfamily void Leitor\+::print\+Details (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Imprime todos os valores do \mbox{\hyperlink{class_leitor}{Leitor}}. 
+
+
+
+Implementa \mbox{\hyperlink{class_pessoa_a3a442b97ec4cb5883823acea6e1fb88f}{Pessoa}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00062\ \ \ std::cout<<\textcolor{stringliteral}{"{}Codigo:\ "{}}<<\textcolor{keywordtype}{id}}
+\DoxyCodeLine{00063\ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nNome:\ "{}}<<this-\/>\mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}}
+\DoxyCodeLine{00064\ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nRG:\ "{}}<<this-\/>rg}
+\DoxyCodeLine{00065\ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nData\ do\ aluguel:\ "{}}<<this-\/>dataAluguel}
+\DoxyCodeLine{00066\ \ \ <<\textcolor{stringliteral}{"{}\(\backslash\)nLivro\ alugado:\ "{}}<<this-\/>livro}
+\DoxyCodeLine{00067\ \ \ <<std::endl;}
+\DoxyCodeLine{00068\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_leitor_a4362291b1c35947864640c4054fcded4}\label{class_leitor_a4362291b1c35947864640c4054fcded4}} 
+\index{Leitor@{Leitor}!setDataAluguel@{setDataAluguel}}
+\index{setDataAluguel@{setDataAluguel}!Leitor@{Leitor}}
+\doxysubsubsection{\texorpdfstring{setDataAluguel()}{setDataAluguel()}}
+{\footnotesize\ttfamily void Leitor\+::set\+Data\+Aluguel (\begin{DoxyParamCaption}\item[{std\+::string}]{data }\end{DoxyParamCaption})}
+
+
+
+Define a data do aluguel do livro pelo \mbox{\hyperlink{class_leitor}{Leitor}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em data} & A nova data do aluguel. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00026\ \ \ this-\/>dataAluguel\ =\ data;}
+\DoxyCodeLine{00027\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_leitor_a8c52e87408962ce03ccea9dfc44c9284}\label{class_leitor_a8c52e87408962ce03ccea9dfc44c9284}} 
+\index{Leitor@{Leitor}!setLivro@{setLivro}}
+\index{setLivro@{setLivro}!Leitor@{Leitor}}
+\doxysubsubsection{\texorpdfstring{setLivro()}{setLivro()}}
+{\footnotesize\ttfamily void Leitor\+::set\+Livro (\begin{DoxyParamCaption}\item[{std\+::string}]{livro }\end{DoxyParamCaption})}
+
+
+
+Define o livro alugado pelo \mbox{\hyperlink{class_leitor}{Leitor}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em livro} & O novo livro alugado pelo \mbox{\hyperlink{class_leitor}{Leitor}}. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00018\ \ \ this-\/>livro\ =\ livro;}
+\DoxyCodeLine{00019\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_leitor_a63175da7456b74d05cc234236e05fdd5}\label{class_leitor_a63175da7456b74d05cc234236e05fdd5}} 
+\index{Leitor@{Leitor}!toModel@{toModel}}
+\index{toModel@{toModel}!Leitor@{Leitor}}
+\doxysubsubsection{\texorpdfstring{toModel()}{toModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_leitor}{Leitor}} $\ast$ Leitor\+::to\+Model (\begin{DoxyParamCaption}\item[{std\+::string}]{linha }\end{DoxyParamCaption})}
+
+
+
+Responsavel por converter a string que vem do arquivo em um Leitor$\ast$, pegando os valores e salvando em seus atributos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em linha} & A string com todos os valores separados por \textquotesingle{};\textquotesingle{}.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+o Leitor$\ast$ preenchido com as informações recebidas. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00035\ \ \ \ \textcolor{comment}{//\ Separando\ os\ atributos\ por\ vírgula\ e\ imprimindo\ individualmente}}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ pos\ =\ 0;}
+\DoxyCodeLine{00037\ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Separando\ os\ atributos\ por\ ponto\ vírgula}}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\textcolor{keywordtype}{id}\ =\ stoi(linha.substr(0,\ pos));}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}\ =\ linha.substr(0,\ pos);}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>rg\ =\ stoi(linha.substr(0,\ pos));\textcolor{comment}{//convert\ int}}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ linha.find(\textcolor{stringliteral}{"{};"{}});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>dataAluguel\ =\ linha.substr(0,\ pos);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ linha.erase(0,\ pos\ +\ 1);}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>livro\ =\ linha;}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{00059\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_leitor_aa8cd094c1dd8973f01dfcfb5cf4b90d5}\label{class_leitor_aa8cd094c1dd8973f01dfcfb5cf4b90d5}} 
+\index{Leitor@{Leitor}!toString@{toString}}
+\index{toString@{toString}!Leitor@{Leitor}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily std\+::string Leitor\+::to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna uma string com os valores separados por \textquotesingle{};\textquotesingle{} para poder salvar em uma linha do arquivo. 
+
+\begin{DoxyReturn}{Retorna}
+string com os atributos separados por \textquotesingle{};\textquotesingle{}. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00030\ \ \ std::string\ retorno\ =\ std::to\_string(this-\/>\textcolor{keywordtype}{id})\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ this-\/>\mbox{\hyperlink{class_pessoa_a3d7ee683889ed031031beba721aa8470}{nome}}\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ std::to\_string(this-\/>rg)\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ dataAluguel\ +\ \textcolor{stringliteral}{"{};"{}}\ +\ livro\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00031\ \ \ \textcolor{keywordflow}{return}\ retorno;}
+\DoxyCodeLine{00032\ \}}
+
+\end{DoxyCode}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Projetos/\+BTI/\+Projeto\+\_\+\+LP1\+\_\+\+UND2/include/\mbox{\hyperlink{_leitor_8h}{Leitor.\+h}}\item 
+C\+:/\+Projetos/\+BTI/\+Projeto\+\_\+\+LP1\+\_\+\+UND2/src/\mbox{\hyperlink{_leitor_8cpp}{Leitor.\+cpp}}\end{DoxyCompactItemize}
