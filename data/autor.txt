@@ -2,3 +2,11 @@
 2;C.S Lewis;Belfast;1898;1
 3;G. K. Chesterton;Kensington;1874;1
 4;Cornelia Funke;Alemanha;1958;1
+5;J.R.R. Martin;Bayonne;1948;2
+6;Jane Austen;Steventon;1775;3
+7;Ernest Hemingway;Oak Park;1899;3
+8;Virginia Woolf;Londres;1882;2
+9;George Orwell;Motihari;1903;2
+10;Agatha Christie;Torquay;1890;2
+11;Fyodor Dostoevsky;Moscou;1821;3
+12;Leo Tolstoy;Yasnaya Polyana;1828;3

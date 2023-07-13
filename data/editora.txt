@@ -2,3 +2,12 @@
 2;Pandora;2000;0
 3;Darkside Books;1995;1
 6;Intrinseca;2000;1
+4;HarperCollins;1817;2
+5;Random House;1925;3
+7;Simon & Schuster;1924;3
+8;Penguin Random House;2013;3
+9;Hachette Book Group;1837;3
+10;Macmillan Publishers;1843;3
+11;Scholastic Corporation;1920;3
+12;Oxford University Press;1586;3
+13;Cambridge University Press;1534;3
